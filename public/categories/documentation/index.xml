@@ -4,6 +4,21 @@
         <link>https://example.com/categories/documentation/</link>
         <description>Documentation - Category - Omgz</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><atom:link href="https://example.com/categories/documentation/" rel="self" type="application/rss+xml" /><item>
+    <title>Nginx Reverse Proxy</title>
+    <link>https://example.com/nginx-reverse-proxy/</link>
+    <pubDate>Thu, 06 Oct 2022 03:27:30 &#43;0200</pubDate>
+    <author>Ohmygodzilla</author>
+    <guid>https://example.com/nginx-reverse-proxy/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/images/nginx-reverse-proxy.webp" referrerpolicy="no-referrer">
+            </div>Nginx Reverse Proxy This is a guide on how to install nginx as a reverse proxy.
+Install nginx Arch
+1 2 sudo pacman -Sy #Update repository sudo pacman -S nginx #Install package Ubuntu
+1 2 sudo apt-get update #Update repository sudo apt-get install nginx #Install package Unlink defult configuration on ubuntu (optional)
+1 sudo unlink /etc/nginx/sites-enabled/default Edit default configuration file 1 sudo nvim /etc/nginx/sites-available/default Copy and paste
+1 2 3 4 5 6 7 8 9 server { listen 80; listen [::]:80; access_log /var/log/nginx/default-access.]]></description>
+</item>
+<item>
     <title>Docker Compose</title>
     <link>https://example.com/docker-compose/</link>
     <pubDate>Thu, 06 Oct 2022 02:31:23 &#43;0200</pubDate>

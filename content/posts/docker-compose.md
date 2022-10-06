@@ -17,6 +17,7 @@ categories: [documentation]
 featuredImage: "images/docker-compose.webp"
 featuredImagePreview: "images/docker-compose.webp"
 
+
 hiddenFromHomePage: false
 hiddenFromSearch: false
 twemoji: false

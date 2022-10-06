@@ -103,6 +103,26 @@
 <a href="https://www.reddit.com/user/Ohmygodzilla_" title="Reddit" target="_blank" rel="noopener noreffer me"><i class="fab fa-reddit fa-fw" aria-hidden="true"></i></a>
 </div></div>
 <article class="single summary" itemscope itemtype="http://schema.org/Article"><div class="featured-image-preview">
+            <a href="/nginx-reverse-proxy/"><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/images/nginx-reverse-proxy.webp"
+        data-srcset="/images/nginx-reverse-proxy.webp, /images/nginx-reverse-proxy.webp 1.5x, /images/nginx-reverse-proxy.webp 2x"
+        data-sizes="auto"
+        alt="/images/nginx-reverse-proxy.webp"
+        title="/images/nginx-reverse-proxy.webp" width="920" height="460" /></a>
+        </div><h1 class="single-title" itemprop="name headline">
+        <a href="/nginx-reverse-proxy/">Nginx Reverse Proxy</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Ohmygodzilla</a>
+</span>&nbsp;<span class="post-publish">published on <time datetime="2022-10-06">2022-10-06</time></span>&nbsp;<span class="post-category">included in <a href="/categories/documentation/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Documentation</a></span></div><div class="content">Nginx Reverse Proxy This is a guide on how to install nginx as a reverse proxy.
+Install nginx Arch
+1 2 sudo pacman -Sy #Update repository sudo pacman -S nginx #Install package Ubuntu
+1 2 sudo apt-get update #Update repository sudo apt-get install nginx #Install package Unlink defult configuration on ubuntu (optional)
+1 sudo unlink /etc/nginx/sites-enabled/default Edit default configuration file 1 sudo nvim /etc/nginx/sites-available/default Copy and paste
+1 2 3 4 5 6 7 8 9 server { listen 80; listen [::]:80; access_log /var/log/nginx/default-access.</div><div class="post-footer">
+        <a href="/nginx-reverse-proxy/">Read More</a><div class="post-tags">
+                <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/web-server/">web server</a>,&nbsp;<a href="/tags/reverse-proxy/">reverse-proxy</a>,&nbsp;<a href="/tags/proxy/">proxy</a>,&nbsp;<a href="/tags/nginx/">nginx</a></div></div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><div class="featured-image-preview">
             <a href="/docker-compose/"><img
         class="lazyload"
         src="/svg/loading.min.svg"

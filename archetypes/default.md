@@ -10,7 +10,7 @@ description: ""
 images: []
 
 tags: []
-# ubuntu, database, sql, cheat-sheet, docker, container
+# ubuntu, database, sql, cheat-sheet, docker, container, web server, reverse-proxy, proxy, nginx
 categories: [documentation]
 # cheat-sheet, documentation
 
