@@ -5,14 +5,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
         <title>Arch Install - Omgz</title><meta name="Description" content=""><meta property="og:title" content="Arch Install" />
-<meta property="og:description" content="My guide on how to install Arch Linux
-Base Installation Load keyboard layout
-1 loadkeys sv-latin1 Format &amp; Partition disk/s
-1 lsblk #show disks 1 cgdisk /dev/sda #partition &#34;gui&#34; efi swap root Make file system EFI
-1 mkfs.fat -F32 /dev/sda1 BTRFS
-1 mkfs.btrfs /dev/sda2 Mount (btrfs)
-1 mount /dev/sda2 /mnt #mount root to /mnt 1 cd /mnt #change directory to /mnt Create subvolumes for btrfs
-1 2 3 btrfs subvolume create @ btrfs subvolume create @home btrfs subvolume create @var Go back and unmount" />
+<meta property="og:description" content="This is my guide on how to install Arch Linux!
+Something&rsquo;s missing? here is Arch Linux Wiki installation guide.
+Base Installation Step 1. Load/Update Start by load keyboard layout and update repo mirrors
+1.1 Load keyboard layout
+1 2 ls /usr/share/kbd/keymaps/**/*.map.gz #list all layouts loadkeys sv-latin1 1.2 Update mirrorlist according to country
+1 reflector -c Sweden -a 12 --sort rate --save /etc/pacman.d/mirrorlist Step 2. Format &amp; Partion disk/s 2.1 List disks" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://example.com/arch-install/" /><meta property="og:image" content="https://example.com/logo.png"/><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2022-10-06T14:14:36+02:00" />
@@ -22,14 +20,12 @@ Base Installation Load keyboard layout
 <meta name="twitter:image" content="https://example.com/logo.png"/>
 
 <meta name="twitter:title" content="Arch Install"/>
-<meta name="twitter:description" content="My guide on how to install Arch Linux
-Base Installation Load keyboard layout
-1 loadkeys sv-latin1 Format &amp; Partition disk/s
-1 lsblk #show disks 1 cgdisk /dev/sda #partition &#34;gui&#34; efi swap root Make file system EFI
-1 mkfs.fat -F32 /dev/sda1 BTRFS
-1 mkfs.btrfs /dev/sda2 Mount (btrfs)
-1 mount /dev/sda2 /mnt #mount root to /mnt 1 cd /mnt #change directory to /mnt Create subvolumes for btrfs
-1 2 3 btrfs subvolume create @ btrfs subvolume create @home btrfs subvolume create @var Go back and unmount"/>
+<meta name="twitter:description" content="This is my guide on how to install Arch Linux!
+Something&rsquo;s missing? here is Arch Linux Wiki installation guide.
+Base Installation Step 1. Load/Update Start by load keyboard layout and update repo mirrors
+1.1 Load keyboard layout
+1 2 ls /usr/share/kbd/keymaps/**/*.map.gz #list all layouts loadkeys sv-latin1 1.2 Update mirrorlist according to country
+1 reflector -c Sweden -a 12 --sort rate --save /etc/pacman.d/mirrorlist Step 2. Format &amp; Partion disk/s 2.1 List disks"/>
 <meta name="application-name" content="Omgz">
 <meta name="apple-mobile-web-app-title" content="Omgz"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -42,7 +38,7 @@ Base Installation Load keyboard layout
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/example.com\/arch-install\/"
-        },"image": ["https:\/\/example.com\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "arch, linux, cheat-sheet","wordcount":  1408 ,
+        },"image": ["https:\/\/example.com\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "arch, linux, cheat-sheet","wordcount":  1833 ,
         "url": "https:\/\/example.com\/arch-install\/","datePublished": "2022-10-06T14:14:36+02:00","dateModified": "2022-10-06T15:11:41+02:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -118,8 +114,8 @@ Base Installation Load keyboard layout
         </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Arch Install</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Ohmygodzilla</a>
 </span>&nbsp;<span class="post-category">included in <a href="/categories/documentation/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Documentation</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2022-10-06">2022-10-06</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;1408 words&nbsp;
-                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;7 minutes&nbsp;</div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2022-10-06">2022-10-06</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;1833 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;9 minutes&nbsp;</div>
         </div><div class="featured-image"><img
         class="lazyload"
         src="/svg/loading.min.svg"
@@ -134,52 +130,115 @@ Base Installation Load keyboard layout
                 </div>
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
-    <li><a href="#base-installation">Base Installation</a></li>
-    <li><a href="#after-base-installation">After base installation</a></li>
-    <li><a href="#install-gnome">Install Gnome</a></li>
-    <li><a href="#install-kde">Install KDE</a></li>
-    <li><a href="#install-bspwm">Install BSPWM</a></li>
-    <li><a href="#install-dwm">Install DWM</a></li>
+    <li><a href="#base-installation">Base Installation</a>
+      <ul>
+        <li><a href="#step-1-loadupdate">Step 1. Load/Update</a></li>
+        <li><a href="#step-2-format--partion-disks">Step 2. Format &amp; Partion disk/s</a>
+          <ul>
+            <li><a href="#make-efi"><em>Make EFI</em></a></li>
+            <li><a href="#make-swap"><em>Make SWAP</em></a></li>
+            <li><a href="#make-ext4"><em>Make EXT4</em></a></li>
+            <li><a href="#make-btrfs"><em>Make BTRFS</em></a></li>
+          </ul>
+        </li>
+        <li><a href="#step-3-install-base-system">Step 3. Install base system</a></li>
+        <li><a href="#step-4-generate-file-system-boot-table">Step 4. Generate file system boot table</a></li>
+        <li><a href="#step-5-enter-chroot">Step 5. Enter Chroot</a></li>
+        <li><a href="#step-6-install-essentials">Step 6. Install essentials</a></li>
+        <li><a href="#step-7-installconfigure-grub">Step 7. Install/Configure GRUB</a></li>
+        <li><a href="#step-8-enable-services">Step 8. Enable services</a></li>
+        <li><a href="#step-9-add-user">Step 9. Add User</a></li>
+        <li><a href="#step-10-finish-installation">Step 10. Finish installation</a></li>
+      </ul>
+    </li>
+    <li><a href="#after-base-installation">After base installation</a>
+      <ul>
+        <li><a href="#step-1-basic-configuration">Step 1. Basic configuration</a></li>
+        <li><a href="#step-2-install-aur-helper">Step 2. Install AUR helper**</a></li>
+        <li><a href="#step-3-install-zram-optional">Step 3. Install zram (optional)</a></li>
+        <li><a href="#step-4-install-timeshift-optional">Step 4. Install timeshift (optional)</a></li>
+        <li><a href="#step-5-install-browser">Step 5. Install browser</a></li>
+        <li><a href="#step-6-install-firewall-optional">Step 6. Install firewall (optional)</a></li>
+      </ul>
+    </li>
+    <li><a href="#step-7-install-other-useful-stuff">Step 7. Install other useful stuff</a>
+      <ul>
+        <li><a href="#step-8-create-bridge-network-for-vm-optional">Step 8. Create bridge network for vm (optional)</a></li>
+        <li><a href="#step-9-install-desktop-environment">Step 9. Install Desktop Environment</a>
+          <ul>
+            <li><a href="#91-install-gnome">9.1 Install Gnome</a></li>
+            <li><a href="#92-install-kde">9.2 Install KDE</a></li>
+            <li><a href="#93-install-bspwm">9.3 Install BSPWM</a></li>
+            <li><a href="#94-install-dwm">9.4 Install DWM</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
   </ul>
 </nav></div>
-            </div><div class="content" id="content"><blockquote>
-<p>My guide on how to install Arch Linux</p>
-</blockquote>
+            </div><div class="content" id="content"><hr>
+<p><em>This is my guide on how to install Arch Linux!</em><br>
+<em>Something&rsquo;s missing? here is <a href="https://wiki.archlinux.org/title/Installation_guide" target="_blank" rel="noopener noreffer">Arch Linux Wiki</a>
+ installation guide.</em></p>
+<hr>
 <!-- more -->
 <h2 id="base-installation">Base Installation</h2>
-<p><strong>Load keyboard layout</strong></p>
+<h3 id="step-1-loadupdate">Step 1. Load/Update</h3>
+<blockquote>
+<p>Start by load keyboard layout and update repo mirrors</p>
+</blockquote>
+<p><strong>1.1</strong> <em>Load keyboard layout</em></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ls /usr/share/kbd/keymaps/**/*.map.gz <span class="c1">#list all layouts</span>
+</span></span><span class="line"><span class="cl">loadkeys sv-latin1
+</span></span></code></pre></td></tr></table>
+</div>
+</div><br>
+<p><strong>1.2</strong> <em>Update mirrorlist according to country</em></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">loadkeys sv-latin1
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">reflector -c Sweden -a <span class="m">12</span> --sort rate --save /etc/pacman.d/mirrorlist
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p><strong>Format &amp; Partition disk/s</strong></p>
+</div><p><br><br></p>
+<h3 id="step-2-format--partion-disks">Step 2. Format &amp; Partion disk/s</h3>
+<p><strong>2.1</strong> <em>List disks</em></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">lsblk <span class="c1">#show disks</span>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">lsblk
 </span></span></code></pre></td></tr></table>
 </div>
-</div><div class="highlight"><div class="chroma">
+</div><br>
+<p><strong>2.2</strong> <em>Use <code>cgdisk</code> to format and partion</em></p>
+<div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">cgdisk /dev/sda <span class="c1">#partition &#34;gui&#34;</span>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">cgdisk /dev/sda <span class="c1"># &lt;-- your disk</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><ul>
-<li>efi</li>
-<li>swap</li>
+</div><p><em>Partion table</em></p>
+<ul>
+<li>efi (around 512M)</li>
+<li>swap (optional)</li>
 <li>root</li>
+<li>home (optional)
+<br></li>
 </ul>
-<p><strong>Make file system</strong>
-<em>EFI</em></p>
+<p><strong>2.3</strong> <em>Make/Mount file system</em></p>
+<h4 id="make-efi"><em>Make EFI</em></h4>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -188,33 +247,95 @@ Base Installation Load keyboard layout
 <pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">mkfs.fat -F32 /dev/sda1
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p><em>BTRFS</em></p>
+</div><p><strong>or</strong></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">mkfs.btrfs /dev/sda2
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">mkfs.vfat /dev/sda1
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p><strong>Mount (btrfs)</strong></p>
+</div><br>
+<h4 id="make-swap"><em>Make SWAP</em></h4>
+<details>
+  <summary>Click if using SWAP</summary>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">mkswap /dev/sda2
+</span></span><span class="line"><span class="cl">swapon /dev/sda2
+</span></span></code></pre></td></tr></table>
+</div>
+</div></details>
+<br>
+<h4 id="make-ext4"><em>Make EXT4</em></h4>
+<details>
+  <summary>Click if using EXT4</summary>
+<p><strong>Make EXT4 file system</strong></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">mount /dev/sda2 /mnt <span class="c1">#mount root to /mnt</span>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">mkfs.ext4 /dev/sda3
 </span></span></code></pre></td></tr></table>
 </div>
-</div><div class="highlight"><div class="chroma">
+</div><p><strong>EXT4: Mount</strong>
+<strong><em>Mount root to /mnt</em></strong></p>
+<div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">cd</span> /mnt <span class="c1">#change directory to /mnt</span>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">mount /dev/sda3 /mnt
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p><em>Create subvolumes for btrfs</em></p>
+</div><p><strong><em>Mount EFI</em></strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">mount --mkdir /dev/sda1 /mnt/boot
+</span></span></code></pre></td></tr></table>
+</div>
+</div></details>
+<br>
+<h4 id="make-btrfs"><em>Make BTRFS</em></h4>
+<details>
+  <summary>Click if using BTRFS</summary>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">mkfs.btrfs /dev/sda3
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>BTRFS: Mount</strong>
+<strong><em>Mount root to /mnt</em></strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">mount /dev/sda3 /mnt
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong><em>Change directory to /mnt</em></strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">cd</span> /mnt
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong><em>Create subvolumes for btrfs</em></strong></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -227,7 +348,7 @@ Base Installation Load keyboard layout
 </span></span><span class="line"><span class="cl">btrfs subvolume create @var
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p><em>Go back and unmount</em></p>
+</div><p><strong><em>Go back and unmount</em></strong></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -238,16 +359,16 @@ Base Installation Load keyboard layout
 </span></span><span class="line"><span class="cl">umount /mnt
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p><em>Mount root with options</em></p>
+</div><p><strong><em>Mount root with options</em></strong></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">mount -o noatime,compress<span class="o">=</span>zstd,space_cache<span class="o">=</span>v2,discard<span class="o">=</span>async,subvol<span class="o">=</span>@ /dev/sda2 /mnt
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">mount -o noatime,compress<span class="o">=</span>zstd,space_cache<span class="o">=</span>v2,discard<span class="o">=</span>async,subvol<span class="o">=</span>@ /dev/sda3 /mnt
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p><em>Make directories</em></p>
+</div><p><strong><em>Make directories</em></strong></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -256,18 +377,18 @@ Base Installation Load keyboard layout
 <pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">mkdir -p /mnt/<span class="o">{</span>boot,home,var<span class="o">}</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p><em>Mount home and var</em></p>
+</div><p><strong><em>Mount home and var</em></strong></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">mount -o noatime,compress<span class="o">=</span>zstd,space_cache<span class="o">=</span>v2,discard<span class="o">=</span>async,subvol<span class="o">=</span>@home /dev/sda2 /mnt/home
-</span></span><span class="line"><span class="cl">mount -o noatime,compress<span class="o">=</span>zstd,space_cache<span class="o">=</span>v2,discard<span class="o">=</span>async,subvol<span class="o">=</span>@ /dev/sda2 /mnt/var
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">mount -o noatime,compress<span class="o">=</span>zstd,space_cache<span class="o">=</span>v2,discard<span class="o">=</span>async,subvol<span class="o">=</span>@home /dev/sda3 /mnt/home
+</span></span><span class="line"><span class="cl">mount -o noatime,compress<span class="o">=</span>zstd,space_cache<span class="o">=</span>v2,discard<span class="o">=</span>async,subvol<span class="o">=</span>@ /dev/sda3 /mnt/var
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p><em>Mount boot</em></p>
+</div><p><strong><em>Mount EFI</em></strong></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -276,7 +397,38 @@ Base Installation Load keyboard layout
 <pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">mount /dev/sda1 /mnt/boot
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p><strong>Install base</strong></p>
+</div></details>
+<p><br><br></p>
+<h3 id="step-3-install-base-system">Step 3. Install base system</h3>
+<p><strong>3.1</strong> <em>Install base system files and linux kernel</em></p>
+<p><strong>Only Base</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">pacstrap /mnt base linux linux-firmware
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>LTS</strong> <em>Long term support kernel</em></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">pacstrap /mnt base linux-lts linux-firmware
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>(EXT4)</strong> <em>Base plus essentials</em></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">pacstrap /mnt base linux linux-firmware intel-ucode neovim git
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>(BTRFS)</strong> <em>Base plus essentials</em>*</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -285,7 +437,16 @@ Base Installation Load keyboard layout
 <pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">pacstrap /mnt base linux linux-firmware intel-ucode neovim git btrfs-progs
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p><strong>Generate file system boot table</strong></p>
+</div><blockquote>
+<p>Motherboard drivers</p>
+<ul>
+<li><em>intel-ucode</em></li>
+<li><em>amd-ucode</em></li>
+</ul>
+</blockquote>
+<p><br><br></p>
+<h3 id="step-4-generate-file-system-boot-table">Step 4. Generate file system boot table</h3>
+<p><strong>4.1</strong> <em>Generate file system boot table with UUID</em></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -293,10 +454,12 @@ Base Installation Load keyboard layout
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">genfstab -U /mnt &gt;&gt; /mnt/etc/fstab
-</span></span><span class="line"><span class="cl">cat /mnt/etc/fstab <span class="c1">#check</span>
+</span></span><span class="line"><span class="cl">cat /mnt/etc/fstab <span class="c1">#confirm</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p><strong>Enter Chroot</strong></p>
+</div><p><br><br></p>
+<h3 id="step-5-enter-chroot">Step 5. Enter Chroot</h3>
+<p><strong>5.1</strong> <em>Enter your base install</em></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -305,7 +468,8 @@ Base Installation Load keyboard layout
 <pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">arch-chroot /mnt
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p><strong>Set time zone</strong></p>
+</div><br>
+<p><strong>5.2</strong> <em>Set time zone</em></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -314,7 +478,8 @@ Base Installation Load keyboard layout
 <pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ln -sf /usr/share/zoneinfo/Europe/Stockholm /etc/localtime
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p><strong>Sync hardware clock</strong></p>
+</div><br>
+<p><strong>5.3</strong> <em>Sync hardware clock</em></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -323,7 +488,8 @@ Base Installation Load keyboard layout
 <pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">hwclock --systohc
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p><strong>Set system language</strong></p>
+</div><br>
+<p><strong>5.4</strong> <em>Set system language</em></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -334,7 +500,7 @@ Base Installation Load keyboard layout
 </span></span><span class="line"><span class="cl">locale-gen
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p><em>or</em></p>
+</div><p><strong>or</strong></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -347,7 +513,8 @@ Base Installation Load keyboard layout
 </span></span><span class="line"><span class="cl">locale-gen
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p><strong>Add system language in locale</strong></p>
+</div><br>
+<p><strong>5.5</strong> <em>Add system language in locale</em></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -356,16 +523,18 @@ Base Installation Load keyboard layout
 <pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;LANG=en_US.UTF-8&#34;</span> &gt;&gt; /etc/locale.conf
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p><strong>Add keyboard language</strong></p>
+</div><br>
+<p><strong>5.6</strong> <em>Add keyboard layout for tty</em></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;KEYMAP=de_CH-latin1&#34;</span> &gt;&gt; /etc/vconsole.conf
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;KEYMAP=sv-latin1&#34;</span> &gt;&gt; /etc/vconsole.conf
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p><strong>Set hostname</strong></p>
+</div><br>
+<p><strong>5.7</strong> <em>Set hostname</em></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -374,7 +543,8 @@ Base Installation Load keyboard layout
 <pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;arch&#34;</span> &gt;&gt; /etc/hostname
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p><strong>Add localhost to hosts</strong></p>
+</div><br>
+<p><strong>5.8</strong> <em>Add localhost to hosts</em></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -387,7 +557,8 @@ Base Installation Load keyboard layout
 </span></span><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;127.0.1.1 arch.localdomain arch&#34;</span> &gt;&gt; /etc/hosts <span class="c1">#change &#34;arch&#34; according to hostname</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p><strong>Change password for root</strong></p>
+</div><br>
+<p><strong>5.9</strong> <em>Change password for root</em></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -396,65 +567,111 @@ Base Installation Load keyboard layout
 <pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">passwd
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p><strong>Install essentials</strong></p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span><span class="lnt">21
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">pacman -S grub grub-btrfs os-prober efibootmgr networkmanager network-manager-applet dialog wpa_supplicant mtools dosfstools inetutils dnsutils base-devel linux-headers avahi xdg-utils gvfs gvfs-smb nfs-utils acpi acpid acpi_call ntfs-3g
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1">#Audio</span>
-</span></span><span class="line"><span class="cl">pacman -S alsa-utils pipewire pipewire-alsa pipewire-pulse pipewire-jack sof-firmware
-</span></span><span class="line"><span class="cl"><span class="c1">#Battery management (laptop)</span>
-</span></span><span class="line"><span class="cl">pacman -S tlp
-</span></span><span class="line"><span class="cl"><span class="c1">#Bluetooth</span>
-</span></span><span class="line"><span class="cl">pacman -S bluez bluez-utils
-</span></span><span class="line"><span class="cl"><span class="c1">#Firewall</span>
-</span></span><span class="line"><span class="cl">pacman -S firewalld
-</span></span><span class="line"><span class="cl"><span class="c1">#Graphic</span>
-</span></span><span class="line"><span class="cl">pacman -S xf86-video-amdgpu <span class="c1">#amd</span>
-</span></span><span class="line"><span class="cl">pacman -S xf86-video-intel <span class="c1">#intel</span>
-</span></span><span class="line"><span class="cl">pacman -S nvidia nvidia-utils nvidia-settings <span class="c1">#nvidia</span>
-</span></span><span class="line"><span class="cl"><span class="c1">#Printer</span>
-</span></span><span class="line"><span class="cl">pacman -S cups hplip
-</span></span><span class="line"><span class="cl"><span class="c1">#Others</span>
-</span></span><span class="line"><span class="cl">pacman -S bash-completion flatpak ipset iptables-nft openssh reflector rsync
-</span></span><span class="line"><span class="cl">xdg-user-dirs
-</span></span><span class="line"><span class="cl"><span class="c1">#Virtual Machine</span>
-</span></span><span class="line"><span class="cl">pacman -S virt-manager qemu qemu-arch-extra edk2-ovmf bridge-utils dnsmasq nss-mdns vde2 openbsd-netcat iptables-nft ipset
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p><strong>Configure grub</strong></p>
+</div><p><br><br></p>
+<h3 id="step-6-install-essentials">Step 6. Install essentials</h3>
+<p><strong>6.1</strong> <em>Necessary packages (bootloader, network)</em></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">grub-install --target<span class="o">=</span>x86_64-efi --efi-directory<span class="o">=</span>/boot --bootloader-id<span class="o">=</span>GRUB <span class="c1">#change the directory to /boot/efi is you mounted the EFI partition at /boot/efi</span>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">pacman -S grub grub-btrfs os-prober efibootmgr networkmanager network-manager-applet dialog wpa_supplicant mtools dosfstools inetutils dnsutils base-devel linux-headers avahi xdg-utils gvfs gvfs-smb nfs-utils acpi acpid acpi_call ntfs-3g
 </span></span></code></pre></td></tr></table>
 </div>
-</div><div class="highlight"><div class="chroma">
+</div><p><em>Audio</em></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">pacman -S alsa-utils pipewire pipewire-alsa pipewire-pulse pipewire-jack sof-firmware
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><em>Battery management (laptop)</em></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">pacman -S tlp
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><em>Bluetooth</em></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">pacman -S bluez bluez-utils
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><em>Firewall</em></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">pacman -S firewalld
+</span></span><span class="line"><span class="cl">or
+</span></span><span class="line"><span class="cl">pacman -S ufw
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><em>Graphic&rsquo;s</em></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">pacman -S xf86-video-amdgpu <span class="c1">#amd</span>
+</span></span><span class="line"><span class="cl">pacman -S xf86-video-intel <span class="c1">#intel</span>
+</span></span><span class="line"><span class="cl">pacman -S nvidia nvidia-utils nvidia-settings <span class="c1">#nvidia</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><em>Printer</em></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">pacman -S cups hplip
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><em>Others</em></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">pacman -S bash-completion flatpak ipset iptables-nft openssh reflector rsync xdg-user-dirs
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><em>Virtual Machine</em></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">pacman -S virt-manager qemu qemu-arch-extra edk2-ovmf bridge-utils dnsmasq nss-mdns vde2 openbsd-netcat iptables-nft ipset
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><br><br></p>
+<h3 id="step-7-installconfigure-grub">Step 7. Install/Configure GRUB</h3>
+<p><strong>7.1</strong> <em>Configure grub</em></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">grub-install --target<span class="o">=</span>x86_64-efi --efi-directory<span class="o">=</span>/boot --bootloader-id<span class="o">=</span>GRUB <span class="c1">#change the directory to /boot/efi if you mounted the EFI partition at /boot/efi</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><br>
+<p><strong>7.2</strong> <em>Make config file</em></p>
+<div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
@@ -462,7 +679,9 @@ Base Installation Load keyboard layout
 <pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">grub-mkconfig -o /boot/grub/grub.cfg <span class="c1">#write changes to cfg</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p><strong>Enable services to boot on startup</strong></p>
+</div><p><br><br></p>
+<h3 id="step-8-enable-services">Step 8. Enable services</h3>
+<p><strong>8.1</strong> <em>Enable services to boot on startup</em></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -491,29 +710,34 @@ Base Installation Load keyboard layout
 </span></span><span class="line"><span class="cl">systemctl <span class="nb">enable</span> tlp <span class="c1">#tlp</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p><strong>Add a user</strong></p>
+</div><p><br><br></p>
+<h3 id="step-9-add-user">Step 9. Add User</h3>
+<p><strong>9.1 Method 1</strong> <em>Add a user</em></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
+</span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">useradd -m administrator <span class="c1">#add user named administrator</span>
-</span></span><span class="line"><span class="cl">passwd administrator <span class="c1">#change password</span>
-</span></span><span class="line"><span class="cl">usermod -aG libvirt administrator <span class="c1">#add administrator to libvirt group (if installed)</span>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">useradd -m Omgzilla <span class="c1"># add user named Omgzilla, change username</span>
+</span></span><span class="line"><span class="cl">passwd Omgzilla <span class="c1">#change password for Omgzilla</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># If installed virtual machine</span>
+</span></span><span class="line"><span class="cl">usermod -aG libvirt Omgzilla <span class="c1"># add user Omgzilla to libvirt group</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p><em>Add user to sudo</em></p>
+</div><p><strong>9.1.1</strong> <em>Add user to sudo</em></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;administrator ALL=(ALL) ALL&#34;</span> &gt;&gt; /etc/sudoers.d/administrator <span class="c1">#change &#34;administrator&#34; to your username</span>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;Omgzilla ALL=(ALL) ALL&#34;</span> &gt;&gt; /etc/sudoers.d/Omgzilla <span class="c1"># add user &#39;Omgzilla&#39; to sudo. change &#34;Omgzilla&#34; to your username</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p><em>or</em></p>
+</div><br>
+<p><strong>9.1 Method 2</strong> <em>Add new user, user in wheel group</em></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -523,14 +747,16 @@ Base Installation Load keyboard layout
 </span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">useradd -mG wheel administrator
-</span></span><span class="line"><span class="cl">passwd administrator
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">useradd -mG wheel Omgzilla
+</span></span><span class="line"><span class="cl">passwd Omgzilla
 </span></span><span class="line"><span class="cl"><span class="nv">EDITOR</span><span class="o">=</span>nvim visudo
-</span></span><span class="line"><span class="cl">´add following at the end of line´
-</span></span><span class="line"><span class="cl">administrator <span class="nv">ALL</span><span class="o">=(</span>ALL<span class="o">)</span> ALL
+</span></span><span class="line"><span class="cl"><span class="c1"># add following under root ALL=(ALL) ALL</span>
+</span></span><span class="line"><span class="cl">Omgzilla <span class="nv">ALL</span><span class="o">=(</span>ALL<span class="o">)</span> ALL
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p><strong>Exit chroot, unmount and reboot</strong></p>
+</div><p><br><br></p>
+<h3 id="step-10-finish-installation">Step 10. Finish installation</h3>
+<p><strong>10.1</strong> <em>Exit chroot, unmount and reboot</em></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -543,8 +769,10 @@ Base Installation Load keyboard layout
 </span></span><span class="line"><span class="cl">reboot
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h2 id="after-base-installation">After base installation</h2>
-<p><strong>Sync clock</strong></p>
+</div><p><br><br><br></p>
+<h2 id="after-base-installation">After base installation</h2>
+<h3 id="step-1-basic-configuration">Step 1. Basic configuration</h3>
+<p><strong>1.1</strong> <em>Sync clock</em></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -555,7 +783,8 @@ Base Installation Load keyboard layout
 </span></span><span class="line"><span class="cl">sudo hwclock --systohc
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p><strong>Setup reflector</strong></p>
+</div><br>
+<p><strong>1.2</strong> <em>Setup reflector</em></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -564,32 +793,38 @@ Base Installation Load keyboard layout
 <pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo reflector -c Sweden -a <span class="m">12</span> --sort rate --save /etc/pacman.d/mirrorlist
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p><strong>Install AUR helper</strong></p>
+</div><p><br><br></p>
+<h3 id="step-2-install-aur-helper">Step 2. Install AUR helper**</h3>
+<p><strong>2.1 Paru</strong> <em>Install paru</em></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span><span class="lnt">8
-</span><span class="lnt">9
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1">#Paru</span>
-</span></span><span class="line"><span class="cl">git clone https://aur.archlinux.org/paru-bin
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git clone https://aur.archlinux.org/paru-bin
 </span></span><span class="line"><span class="cl"><span class="nb">cd</span> paru-bin
 </span></span><span class="line"><span class="cl">makepkg -si
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1">#PikAUR</span>
-</span></span><span class="line"><span class="cl">git clone https://aur.archlinux.org/pikaur.git
+</span></span></code></pre></td></tr></table>
+</div>
+</div><br>
+<p><strong>2.1 PikAUR</strong> <em>Install PikAUR</em></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git clone https://aur.archlinux.org/pikaur.git
 </span></span><span class="line"><span class="cl"><span class="nb">cd</span> pikaur/
 </span></span><span class="line"><span class="cl">makepkg -si
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p><strong>Install zram (if no swap)</strong></p>
+</div><br>
+<h3 id="step-3-install-zram-optional">Step 3. Install zram (optional)</h3>
+<p><strong>3.1</strong> <em>Install zram (if no swap)</em></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -602,7 +837,9 @@ Base Installation Load keyboard layout
 </span></span><span class="line"><span class="cl">sudo systemctl <span class="nb">enable</span> --now zramd.service
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p><strong>Install  timeshift</strong></p>
+</div><br>
+<h3 id="step-4-install-timeshift-optional">Step 4. Install timeshift (optional)</h3>
+<p><strong>4.1</strong> <em>Install timeshift</em></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -611,42 +848,9 @@ Base Installation Load keyboard layout
 <pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">paru -S timeshift-bin timeshift-autosnap
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p><strong>Install auto-cpufreq (if using laptop to battery)</strong></p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">paru -S auto-cpufreq
-</span></span><span class="line"><span class="cl">sudo systemctl <span class="nb">enable</span> --now auto-cpufreq
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p><strong>Install pacman-contrib</strong></p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo pacman -S pacman-contrib
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p><strong>Install firewall</strong></p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1">#Firewalld</span>
-</span></span><span class="line"><span class="cl">sudo pacman -S firewalld
-</span></span><span class="line"><span class="cl"><span class="c1">#UFW</span>
-</span></span><span class="line"><span class="cl">sudo pacman -S ufw
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p><strong>Install browser</strong></p>
+</div><br>
+<h3 id="step-5-install-browser">Step 5. Install browser</h3>
+<p><strong>5.1</strong> <em>Install a browser</em></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -657,7 +861,42 @@ Base Installation Load keyboard layout
 </span></span><span class="line"><span class="cl">sudo pacman -S firefox <span class="c1">#firefox</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p><strong>Install System76 hybrid graphic switcher (laptop with dual graphic card)</strong></p>
+</div><br>
+<h3 id="step-6-install-firewall-optional">Step 6. Install firewall (optional)</h3>
+<p><strong>6.1</strong> *Install a firewall</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1">#Firewalld</span>
+</span></span><span class="line"><span class="cl">sudo pacman -S firewalld
+</span></span><span class="line"><span class="cl"><span class="c1">#UFW</span>
+</span></span><span class="line"><span class="cl">sudo pacman -S ufw
+</span></span><span class="line"><span class="cl">ufw allow SSH
+</span></span><span class="line"><span class="cl">ufw <span class="nb">enable</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><br>
+<h2 id="step-7-install-other-useful-stuff">Step 7. Install other useful stuff</h2>
+<p><strong>7.1</strong> <em>Install auto-cpufreq (if using laptop, for better battery)</em></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">paru -S auto-cpufreq
+</span></span><span class="line"><span class="cl">sudo systemctl <span class="nb">enable</span> --now auto-cpufreq
+</span></span></code></pre></td></tr></table>
+</div>
+</div><br>
+<p><strong>7.2</strong> <em>Install System76 hybrid graphic switcher (laptop with dual graphic cards)</em></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -672,7 +911,8 @@ Base Installation Load keyboard layout
 </span></span><span class="line"><span class="cl">paru -S --noconfirm gnome-shell-extension-system76-power-git
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p><strong>Install flatpak</strong></p>
+</div><br>
+<p><strong>7.3</strong> <em>Install flatpak</em></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -685,7 +925,38 @@ Base Installation Load keyboard layout
 </span></span><span class="line"><span class="cl">sudo flatpak install spotify
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p><strong>Install wallpapers</strong></p>
+</div><br>
+<p><strong>7.4</strong> <em>Install pacman-contrib</em></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo pacman -S pacman-contrib
+</span></span></code></pre></td></tr></table>
+</div>
+</div><br>
+<p><strong>7.5</strong> <em>Install Fonts</em></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo pacman -S adobe-source-code-pro-fonts adobe-source-han-sans-otc-fonts adobe-source-han-serif-otc-fonts awesome-terminal-fonts bdf-unifont cantarell-fonts dina-font gentium-plus-font gnu-free-fonts inter-font noto-fonts noto-fonts-cjk noto-fonts-emoji tamsyn-font tex-gyre-fonts ttf-anonymous-pro ttf-bitstream-vera ttf-cascadia-code ttf-croscore ttf-dejavu ttf-droid ttf-fantasque-sans-mono ttf-fira-code ttf-fira-mono ttf-font-awesome ttf-hack ttf-ibm-plex ttf-inconsolata ttf-jetbrains-mono ttf-junicode ttf-liberation ttf-linux-libertine ttf-monofur ttf-opensans ttf-roboto ttf-ubuntu-font-family 
+</span></span></code></pre></td></tr></table>
+</div>
+</div><br>
+<p><strong>7.6</strong> <em>Install arandr for multiple monitors</em></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo pacman -S arandr
+</span></span></code></pre></td></tr></table>
+</div>
+</div><br>
+<p><strong>7.7</strong> <em>Install wallpapers</em></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -694,7 +965,9 @@ Base Installation Load keyboard layout
 <pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo pacman -S archlinux-wallpaper
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p><strong>Bridge XML file</strong></p>
+</div><br>
+<h3 id="step-8-create-bridge-network-for-vm-optional">Step 8. Create bridge network for vm (optional)</h3>
+<p><strong>8.1</strong> <em>Create Bridge XML file</em></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -739,7 +1012,8 @@ Base Installation Load keyboard layout
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p><em>Save and exit</em></p>
-<p><strong>Enable bridged network</strong></p>
+<br>
+<p><strong>8.2</strong> <em>Enable bridged network</em></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -748,26 +1022,15 @@ Base Installation Load keyboard layout
 <pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo virsh net-autostart default
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p><strong>Multiple monitors</strong></p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo pacman -S arandr
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p><strong>Fonts</strong></p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo pacman -S adobe-source-code-pro-fonts adobe-source-han-sans-otc-fonts adobe-source-han-serif-otc-fonts awesome-terminal-fonts bdf-unifont cantarell-fonts dina-font gentium-plus-font gnu-free-fonts inter-font noto-fonts noto-fonts-cjk noto-fonts-emoji tamsyn-font tex-gyre-fonts ttf-anonymous-pro ttf-bitstream-vera ttf-cascadia-code ttf-croscore ttf-dejavu ttf-droid ttf-fantasque-sans-mono ttf-fira-code ttf-fira-mono ttf-font-awesome ttf-hack ttf-ibm-plex ttf-inconsolata ttf-jetbrains-mono ttf-junicode ttf-liberation ttf-linux-libertine ttf-monofur ttf-opensans ttf-roboto ttf-ubuntu-font-family 
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h2 id="install-gnome">Install Gnome</h2>
-<p><strong>Minimal install</strong></p>
+</div><br>
+<h3 id="step-9-install-desktop-environment">Step 9. Install Desktop Environment</h3>
+<blockquote>
+<p>Pick a Desktop Environment below</p>
+</blockquote>
+<h4 id="91-install-gnome">9.1 Install Gnome</h4>
+<details>
+  <summary>I want to install Gnome</summary>
+<p><strong>9.1.1 Method 1</strong> <em>Minimal install</em></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -776,7 +1039,7 @@ Base Installation Load keyboard layout
 <pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo pacman -S --noconfirm xorg gdm gnome gnome-tweaks
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p><strong>Full install</strong></p>
+</div><p><strong>9.1.1 Method 2</strong> <em>Full install</em></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -785,7 +1048,7 @@ Base Installation Load keyboard layout
 <pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo pacman -S --noconfirm xorg gdm gnome gnome-extra gnome-tweaks
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p><em>Arc theme #Optional</em></p>
+</div><p><strong>9.1.2</strong> <em>Arc theme (optional)</em></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -794,7 +1057,7 @@ Base Installation Load keyboard layout
 <pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo pacman -S arc-gtk-theme arc-icon-theme
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p><strong>Enable gdm</strong></p>
+</div><p><strong>9.1.3</strong> <em>Enable gdm</em></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -803,7 +1066,7 @@ Base Installation Load keyboard layout
 <pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo systemctl <span class="nb">enable</span> gdm
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p><strong>Reboot</strong></p>
+</div><p><strong>9.1.4</strong> <em>Reboot</em></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -812,8 +1075,11 @@ Base Installation Load keyboard layout
 <pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo reboot
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h2 id="install-kde">Install KDE</h2>
-<p><strong>Minimal install</strong></p>
+</div></details>
+<h4 id="92-install-kde">9.2 Install KDE</h4>
+<details>
+  <summary>I want to install KDE</summary>
+<p><strong>9.2.1 Method 1</strong> <em>Minimal install</em></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -822,7 +1088,7 @@ Base Installation Load keyboard layout
 <pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo pacman -S --noconfirm xorg sddm plasma
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p><strong>Full install</strong></p>
+</div><p><strong>9.2.1 Method 2</strong> <em>Full install</em></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -831,7 +1097,7 @@ Base Installation Load keyboard layout
 <pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo pacman -S --noconfirm xorg sddm plasma kde-applications
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p><em>Materia theme #optional</em></p>
+</div><p><strong>9.2.2</strong> <em>Materia theme (optional)</em></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -840,7 +1106,7 @@ Base Installation Load keyboard layout
 <pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo pacman -S materia-kde papirus-icon-theme 
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p><strong>Enable ssdm</strong></p>
+</div><p><strong>9.2.3</strong> <em>Enable sddm</em></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -849,7 +1115,7 @@ Base Installation Load keyboard layout
 <pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo systemctl <span class="nb">enable</span> sddm
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p><strong>Reboot</strong></p>
+</div><p><strong>9.2.4</strong> <em>Reboot</em></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -858,8 +1124,11 @@ Base Installation Load keyboard layout
 <pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo reboot
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h2 id="install-bspwm">Install BSPWM</h2>
-<p><strong>Base</strong></p>
+</div></details>
+<h4 id="93-install-bspwm">9.3 Install BSPWM</h4>
+<details>
+  <summary>I want to install BSPWM</summary>
+<p><strong>9.3.1</strong> <em>Install Base</em></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -868,20 +1137,27 @@ Base Installation Load keyboard layout
 <pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo pacman -S bspwm sxhkd
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p><strong>Xorg minimal or full</strong></p>
+</div><p><strong>Install Xorg</strong><br>
+<strong>9.3.2 Method 1</strong> <em>Xorg minimal</em></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo pacman -S xorg-server xorg-xinit
-</span></span><span class="line"><span class="cl">OR
-</span></span><span class="line"><span class="cl">sudo pacman -S xorg
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p><strong>Ly DM</strong></p>
+</div><p><strong>9.3.2 Method 2</strong> <em>Xorg full</em></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo pacman -S xorg
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>Install DM</strong><br>
+<strong>9.3.3 Method 1</strong> <em>Install Ly DM (optional)</em>*</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -892,7 +1168,7 @@ Base Installation Load keyboard layout
 </span></span><span class="line"><span class="cl">sudo systemctl <span class="nb">enable</span> ly
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p><strong>LightDM</strong></p>
+</div><p><strong>9.3.3 Method 2</strong> <em>LightDM</em></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -905,7 +1181,7 @@ Base Installation Load keyboard layout
 </span></span><span class="line"><span class="cl">paru -S lightdm-settings
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p><strong>Launcher</strong></p>
+</div><p><strong>9.3.4</strong> <em>Install a launcher</em></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -916,20 +1192,22 @@ Base Installation Load keyboard layout
 </span></span><span class="line"><span class="cl">sudo pacman -S rofi
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p><strong>File manager</strong></p>
+</div><p><strong>9.3.5</strong> <em>Install a file manager</em></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
+</span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo pacman -S nautilus
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo pacman -S ranger
+</span></span><span class="line"><span class="cl">sudo pacman -S nautilus
 </span></span><span class="line"><span class="cl">sudo pacman -S thunar
 </span></span><span class="line"><span class="cl">sudo pacman -S nnn
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p><strong>GTK preferences</strong></p>
+</div><p><strong>9.3.6</strong> <em>GTK preferences (optional)</em></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -938,7 +1216,7 @@ Base Installation Load keyboard layout
 <pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo pacman -S lxappearance
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p><strong>GTK theme and icons</strong></p>
+</div><p><strong>9.3.7</strong> <em>GTK theme and icons</em></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -947,7 +1225,7 @@ Base Installation Load keyboard layout
 <pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo pacman -S arc-gtk-theme arc-icon-theme
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p><strong>Notifications</strong></p>
+</div><p><strong>9.3.8</strong> <em>Notifications</em></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -956,7 +1234,7 @@ Base Installation Load keyboard layout
 <pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo pacman -S dunst
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p><strong>Media player controller</strong></p>
+</div><p><strong>9.3.9</strong> <em>Media player controller</em></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -965,7 +1243,7 @@ Base Installation Load keyboard layout
 <pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo pacman -S playerctl
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p><strong>Screenshots</strong></p>
+</div><p><strong>9.3.10</strong> <em>Screenshots</em></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -974,7 +1252,7 @@ Base Installation Load keyboard layout
 <pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo pacmna -S scrot
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p><strong>Statusbar</strong></p>
+</div><p><strong>9.3.11</strong> <em>Statusbar</em></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -983,7 +1261,7 @@ Base Installation Load keyboard layout
 <pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">paru -S polybar
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p><strong>Terminals</strong></p>
+</div><p><strong>9.3.12</strong> <em>Terminals</em></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -996,7 +1274,7 @@ Base Installation Load keyboard layout
 </span></span><span class="line"><span class="cl">sudo pacman -S rxvt-unicode
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p><strong>Wallpaper tools</strong></p>
+</div><p><strong>9.3.13</strong> <em>Wallpaper tools</em></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -1007,7 +1285,7 @@ Base Installation Load keyboard layout
 </span></span><span class="line"><span class="cl">sudo pacman -S nitrogen
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p><strong>X compositor</strong></p>
+</div><p><strong>9.3.14</strong> <em>X compositor</em></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -1016,9 +1294,12 @@ Base Installation Load keyboard layout
 <pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo pacman -S picom
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h2 id="install-dwm">Install DWM</h2>
-<p><strong>Install through script</strong>
-<em>Create script</em></p>
+</div></details>
+<h4 id="94-install-dwm">9.4 Install DWM</h4>
+<details>
+  <summary>I want to install DWM</summary>
+<p><strong>9.4.1 Method 1</strong> <em>Install through script</em><br>
+<strong>Step 1.</strong> <em>Create script</em></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -1027,7 +1308,7 @@ Base Installation Load keyboard layout
 <pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">nvim install-dwm.sh
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p><em>Copy and paste following</em></p>
+</div><p><strong>Step 2.</strong> <em>Copy and paste code below</em></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -1160,7 +1441,7 @@ Base Installation Load keyboard layout
 </span></span><span class="line"><span class="cl"><span class="nb">printf</span> <span class="s2">&#34;\e[1;32mDone! you can now reboot.\e[0m\n&#34;</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p><em>Save, change privileges and run</em></p>
+</div><p><strong>Step 3.</strong> <em>Save, change privileges and run</em></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -1171,7 +1452,7 @@ Base Installation Load keyboard layout
 </span></span><span class="line"><span class="cl">./install-dwm.sh
 </span></span></code></pre></td></tr></table>
 </div>
-</div></div><div class="post-footer" id="post-footer">
+</div></details></div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">

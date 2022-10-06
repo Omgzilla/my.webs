@@ -11,14 +11,12 @@
     <guid>https://example.com/arch-install/</guid>
     <description><![CDATA[<div class="featured-image">
                 <img src="/images/arch-linux.png" referrerpolicy="no-referrer">
-            </div>My guide on how to install Arch Linux
-Base Installation Load keyboard layout
-1 loadkeys sv-latin1 Format &amp; Partition disk/s
-1 lsblk #show disks 1 cgdisk /dev/sda #partition &#34;gui&#34; efi swap root Make file system EFI
-1 mkfs.fat -F32 /dev/sda1 BTRFS
-1 mkfs.btrfs /dev/sda2 Mount (btrfs)
-1 mount /dev/sda2 /mnt #mount root to /mnt 1 cd /mnt #change directory to /mnt Create subvolumes for btrfs
-1 2 3 btrfs subvolume create @ btrfs subvolume create @home btrfs subvolume create @var Go back and unmount]]></description>
+            </div>This is my guide on how to install Arch Linux!
+Something&rsquo;s missing? here is Arch Linux Wiki installation guide.
+Base Installation Step 1. Load/Update Start by load keyboard layout and update repo mirrors
+1.1 Load keyboard layout
+1 2 ls /usr/share/kbd/keymaps/**/*.map.gz #list all layouts loadkeys sv-latin1 1.2 Update mirrorlist according to country
+1 reflector -c Sweden -a 12 --sort rate --save /etc/pacman.d/mirrorlist Step 2. Format &amp; Partion disk/s 2.1 List disks]]></description>
 </item>
 <item>
     <title>Nginx Reverse Proxy</title>

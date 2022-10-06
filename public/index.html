@@ -115,14 +115,12 @@
         </div><h1 class="single-title" itemprop="name headline">
         <a href="/arch-install/">Arch Install</a>
     </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Ohmygodzilla</a>
-</span>&nbsp;<span class="post-publish">published on <time datetime="2022-10-06">2022-10-06</time></span>&nbsp;<span class="post-category">included in <a href="/categories/documentation/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Documentation</a></span></div><div class="content">My guide on how to install Arch Linux
-Base Installation Load keyboard layout
-1 loadkeys sv-latin1 Format &amp; Partition disk/s
-1 lsblk #show disks 1 cgdisk /dev/sda #partition &#34;gui&#34; efi swap root Make file system EFI
-1 mkfs.fat -F32 /dev/sda1 BTRFS
-1 mkfs.btrfs /dev/sda2 Mount (btrfs)
-1 mount /dev/sda2 /mnt #mount root to /mnt 1 cd /mnt #change directory to /mnt Create subvolumes for btrfs
-1 2 3 btrfs subvolume create @ btrfs subvolume create @home btrfs subvolume create @var Go back and unmount</div><div class="post-footer">
+</span>&nbsp;<span class="post-publish">published on <time datetime="2022-10-06">2022-10-06</time></span>&nbsp;<span class="post-category">included in <a href="/categories/documentation/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Documentation</a></span></div><div class="content">This is my guide on how to install Arch Linux!
+Something&rsquo;s missing? here is Arch Linux Wiki installation guide.
+Base Installation Step 1. Load/Update Start by load keyboard layout and update repo mirrors
+1.1 Load keyboard layout
+1 2 ls /usr/share/kbd/keymaps/**/*.map.gz #list all layouts loadkeys sv-latin1 1.2 Update mirrorlist according to country
+1 reflector -c Sweden -a 12 --sort rate --save /etc/pacman.d/mirrorlist Step 2. Format &amp; Partion disk/s 2.1 List disks</div><div class="post-footer">
         <a href="/arch-install/">Read More</a><div class="post-tags">
                 <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/arch/">arch</a>,&nbsp;<a href="/tags/linux/">linux</a>,&nbsp;<a href="/tags/cheat-sheet/">cheat-sheet</a></div></div>
 </article><article class="single summary" itemscope itemtype="http://schema.org/Article"><div class="featured-image-preview">
