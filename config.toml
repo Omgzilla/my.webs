@@ -38,7 +38,6 @@ enableEmoji = true
   link = ""
 
 # Menu config
-# 菜单配置
 [menu]
   [[menu.main]]
     weight = 1
@@ -72,7 +71,7 @@ enableEmoji = true
   # site default theme ["auto", "light", "dark"]
   defaultTheme = "auto"
   # public git repo url only then enableGitInfo is true
-  gitRepo = "https://github.com/Omgzilla/my.webs"
+  #gitRepo = "https://github.com/Omgzilla/my.webs"
   # which hash function used for SRI, when empty, no SRI is used
   # ["sha256", "sha384", "sha512", "md5"]
   fingerprint = "sha512"
@@ -159,7 +158,7 @@ enableEmoji = true
   [params.search]
     enable = true
     # type of search engine ["lunr", "algolia"]
-    type = "algolia"
+    type = "lunr"
     # max index length of the chunked content
     contentLength = 4000
     # placeholder of the search bar
@@ -210,7 +209,7 @@ enableEmoji = true
     Twitter = "Omgzilla"
     Instagram = ""
     Facebook = ""
-    Telegram = ""
+    Telegram = "Omgzilla"
     Medium = ""
     Gitlab = "Omgzilla"
     Youtubelegacy = ""
