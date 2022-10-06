@@ -404,14 +404,14 @@ enableEmoji = true
         languageCode = ""
       # Telegram comments config (https://comments.app/)
       [params.page.comment.telegram]
-        enable = false
-        siteID = ""
+        enable = true
+        siteID = "RepNDYBi"
         limit = 5
         height = ""
-        color = ""
+        color = "1"
         colorful = true
-        dislikes = false
-        outlined = false
+        dislikes = true
+        outlined = true
       # Commento comment config (https://commento.io/)
       [params.page.comment.commento]
         enable = false
