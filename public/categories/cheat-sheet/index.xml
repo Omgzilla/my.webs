@@ -4,6 +4,19 @@
         <link>https://example.com/categories/cheat-sheet/</link>
         <description>Cheat-sheets - Category - Omgz</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><atom:link href="https://example.com/categories/cheat-sheet/" rel="self" type="application/rss+xml" /><item>
+    <title>Proxmox</title>
+    <link>https://example.com/proxmox-cs/</link>
+    <pubDate>Thu, 06 Oct 2022 13:39:59 &#43;0200</pubDate>
+    <author>Ohmygodzilla</author>
+    <guid>https://example.com/proxmox-cs/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/images/proxmox.png" referrerpolicy="no-referrer">
+            </div>Increase disk size in the GUI or with the following command
+Resize Disk Increase disk size Increase disk size in the GUI or with the following command
+1 qm resize 100 virtio0 +5G Decrease disk size Before decreasing disk sizes in Proxmox, you should take a backup!
+Convert qcow2 to raw 1 qemu-img convert vm-100.qcow2 vm-100.raw Shrink the disk 1 qemu-img resize -f raw vm-100.raw 10G Convert back to qcow2# 1 qemu-img convert -p -O qcow2 vm-100.]]></description>
+</item>
+<item>
     <title>Docker Cli</title>
     <link>https://example.com/docker-cli/</link>
     <pubDate>Thu, 06 Oct 2022 02:25:34 &#43;0200</pubDate>
@@ -11,8 +24,7 @@
     <guid>https://example.com/docker-cli/</guid>
     <description><![CDATA[<div class="featured-image">
                 <img src="/images/docker-cli.png" referrerpolicy="no-referrer">
-            </div>Docker Cheat-Sheet Docker is a set of platform as a service products that use OS-Level virtualization to deliver software in packages called containers. Containers are isolated from one another and bundle their own software, libraries, and configuration files; they can communicate with each other through well-defined channels. Because all of the containers share the services of a single operating system kernel, they use fewer resources than virtual machines.
-The service has both free and premium tiers.]]></description>
+            </div><p>Docker is a set of platform as a service products that use OS-Level virtualization to deliver software in packages called containers. Containers are isolated from one another and bundle their own software, libraries, and configuration files; they can communicate with each other through well-defined channels. Because all of the containers share the services of a single operating system kernel, they use fewer resources than virtual machines.</p>]]></description>
 </item>
 </channel>
 </rss>

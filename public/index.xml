@@ -3,9 +3,39 @@
         <title>Omgz</title>
         <link>https://example.com/</link>
         <description>Omgz</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 06 Oct 2022 03:27:30 &#43;0200</lastBuildDate>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 06 Oct 2022 14:14:36 &#43;0200</lastBuildDate>
             <atom:link href="https://example.com/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>Arch Install</title>
+    <link>https://example.com/arch-install/</link>
+    <pubDate>Thu, 06 Oct 2022 14:14:36 &#43;0200</pubDate>
+    <author>Ohmygodzilla</author>
+    <guid>https://example.com/arch-install/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/images/arch-linux.png" referrerpolicy="no-referrer">
+            </div>My guide on how to install Arch Linux
+Base Installation Load keyboard layout
+1 loadkeys sv-latin1 Format &amp; Partition disk/s
+1 lsblk #show disks 1 cgdisk /dev/sda #partition &#34;gui&#34; efi swap root Make file system EFI
+1 mkfs.fat -F32 /dev/sda1 BTRFS
+1 mkfs.btrfs /dev/sda2 Mount (btrfs)
+1 mount /dev/sda2 /mnt #mount root to /mnt 1 cd /mnt #change directory to /mnt Create subvolumes for btrfs
+1 2 3 btrfs subvolume create @ btrfs subvolume create @home btrfs subvolume create @var Go back and unmount]]></description>
+</item>
+<item>
+    <title>Proxmox</title>
+    <link>https://example.com/proxmox-cs/</link>
+    <pubDate>Thu, 06 Oct 2022 13:39:59 &#43;0200</pubDate>
+    <author>Ohmygodzilla</author>
+    <guid>https://example.com/proxmox-cs/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/images/proxmox.png" referrerpolicy="no-referrer">
+            </div>Increase disk size in the GUI or with the following command
+Resize Disk Increase disk size Increase disk size in the GUI or with the following command
+1 qm resize 100 virtio0 +5G Decrease disk size Before decreasing disk sizes in Proxmox, you should take a backup!
+Convert qcow2 to raw 1 qemu-img convert vm-100.qcow2 vm-100.raw Shrink the disk 1 qemu-img resize -f raw vm-100.raw 10G Convert back to qcow2# 1 qemu-img convert -p -O qcow2 vm-100.]]></description>
+</item>
+<item>
     <title>Nginx Reverse Proxy</title>
     <link>https://example.com/nginx-reverse-proxy/</link>
     <pubDate>Thu, 06 Oct 2022 03:27:30 &#43;0200</pubDate>
@@ -28,9 +58,8 @@ Install nginx Arch
     <guid>https://example.com/docker-compose/</guid>
     <description><![CDATA[<div class="featured-image">
                 <img src="/images/docker-compose.webp" referrerpolicy="no-referrer">
-            </div>Docker-Compose &hellip;
-Networking By default Docker-Compose will create a new network for the given compose file. You can change the behavior by defining custom networks in your compose file.
-Create and assign custom network &hellip; Example:
+            </div>Docker-Compose <i class="fab fa-docker" aria-hidden="true"></i>&nbsp;Networking By default Docker-Compose will create a new network for the given compose file. You can change the behavior by defining custom networks in your compose file.
+Create and assign custom network Example:
 1 2 3 4 5 6 7 networks: custom-network: services: app: networks: - custom-network Use existing networks If you want to use an existing Docker network for your compose files, you can add the external: true parameter in your compose file Example:]]></description>
 </item>
 <item>
@@ -41,8 +70,7 @@ Create and assign custom network &hellip; Example:
     <guid>https://example.com/docker-cli/</guid>
     <description><![CDATA[<div class="featured-image">
                 <img src="/images/docker-cli.png" referrerpolicy="no-referrer">
-            </div>Docker Cheat-Sheet Docker is a set of platform as a service products that use OS-Level virtualization to deliver software in packages called containers. Containers are isolated from one another and bundle their own software, libraries, and configuration files; they can communicate with each other through well-defined channels. Because all of the containers share the services of a single operating system kernel, they use fewer resources than virtual machines.
-The service has both free and premium tiers.]]></description>
+            </div><p>Docker is a set of platform as a service products that use OS-Level virtualization to deliver software in packages called containers. Containers are isolated from one another and bundle their own software, libraries, and configuration files; they can communicate with each other through well-defined channels. Because all of the containers share the services of a single operating system kernel, they use fewer resources than virtual machines.</p>]]></description>
 </item>
 <item>
     <title>Mariadb Setup</title>

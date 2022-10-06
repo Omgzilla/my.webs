@@ -99,10 +99,51 @@
         alt="/images/omgzilla.jpg"
         title="/images/omgzilla.jpg" width="3024" height="4032" /></a></div><h1 class="home-title">Ohmygodzilla</h1><div class="home-subtitle"><div id="id-1" class="typeit"></div></div><div class="links"><a href="https://github.com/Omgzilla" title="GitHub" target="_blank" rel="noopener noreffer me"><i class="fab fa-github-alt fa-fw" aria-hidden="true"></i></a>
 <a href="https://twitter.com/Omgzilla" title="Twitter" target="_blank" rel="noopener noreffer me"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a>
+<a href="https://t.me/Omgzilla" title="Telegram" target="_blank" rel="noopener noreffer me"><i class="fab fa-telegram-plane fa-fw" aria-hidden="true"></i></a>
 <a href="https://gitlab.com/Omgzilla" title="GitLab" target="_blank" rel="noopener noreffer me"><i class="fab fa-gitlab fa-fw" aria-hidden="true"></i></a>
 <a href="https://www.reddit.com/user/Ohmygodzilla_" title="Reddit" target="_blank" rel="noopener noreffer me"><i class="fab fa-reddit fa-fw" aria-hidden="true"></i></a>
 </div></div>
 <article class="single summary" itemscope itemtype="http://schema.org/Article"><div class="featured-image-preview">
+            <a href="/arch-install/"><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/images/arch-linux.png"
+        data-srcset="/images/arch-linux.png, /images/arch-linux.png 1.5x, /images/arch-linux.png 2x"
+        data-sizes="auto"
+        alt="/images/arch-linux.png"
+        title="/images/arch-linux.png" width="1600" height="900" /></a>
+        </div><h1 class="single-title" itemprop="name headline">
+        <a href="/arch-install/">Arch Install</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Ohmygodzilla</a>
+</span>&nbsp;<span class="post-publish">published on <time datetime="2022-10-06">2022-10-06</time></span>&nbsp;<span class="post-category">included in <a href="/categories/documentation/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Documentation</a></span></div><div class="content">My guide on how to install Arch Linux
+Base Installation Load keyboard layout
+1 loadkeys sv-latin1 Format &amp; Partition disk/s
+1 lsblk #show disks 1 cgdisk /dev/sda #partition &#34;gui&#34; efi swap root Make file system EFI
+1 mkfs.fat -F32 /dev/sda1 BTRFS
+1 mkfs.btrfs /dev/sda2 Mount (btrfs)
+1 mount /dev/sda2 /mnt #mount root to /mnt 1 cd /mnt #change directory to /mnt Create subvolumes for btrfs
+1 2 3 btrfs subvolume create @ btrfs subvolume create @home btrfs subvolume create @var Go back and unmount</div><div class="post-footer">
+        <a href="/arch-install/">Read More</a><div class="post-tags">
+                <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/arch/">arch</a>,&nbsp;<a href="/tags/linux/">linux</a>,&nbsp;<a href="/tags/cheat-sheet/">cheat-sheet</a></div></div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><div class="featured-image-preview">
+            <a href="/proxmox-cs/"><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/images/proxmox.png"
+        data-srcset="/images/proxmox.png, /images/proxmox.png 1.5x, /images/proxmox.png 2x"
+        data-sizes="auto"
+        alt="/images/proxmox.png"
+        title="/images/proxmox.png" width="750" height="400" /></a>
+        </div><h1 class="single-title" itemprop="name headline">
+        <a href="/proxmox-cs/">Proxmox</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Ohmygodzilla</a>
+</span>&nbsp;<span class="post-publish">published on <time datetime="2022-10-06">2022-10-06</time></span>&nbsp;<span class="post-category">included in <a href="/categories/cheat-sheet/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Cheat-sheets</a></span></div><div class="content">Increase disk size in the GUI or with the following command
+Resize Disk Increase disk size Increase disk size in the GUI or with the following command
+1 qm resize 100 virtio0 +5G Decrease disk size Before decreasing disk sizes in Proxmox, you should take a backup!
+Convert qcow2 to raw 1 qemu-img convert vm-100.qcow2 vm-100.raw Shrink the disk 1 qemu-img resize -f raw vm-100.raw 10G Convert back to qcow2# 1 qemu-img convert -p -O qcow2 vm-100.</div><div class="post-footer">
+        <a href="/proxmox-cs/">Read More</a><div class="post-tags">
+                <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/cheat-sheet/">cheat-sheet</a>,&nbsp;<a href="/tags/virtual-machine/">virtual-machine</a>,&nbsp;<a href="/tags/container/">container</a></div></div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><div class="featured-image-preview">
             <a href="/nginx-reverse-proxy/"><img
         class="lazyload"
         src="/svg/loading.min.svg"
@@ -134,9 +175,8 @@ Install nginx Arch
         </div><h1 class="single-title" itemprop="name headline">
         <a href="/docker-compose/">Docker Compose</a>
     </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Ohmygodzilla</a>
-</span>&nbsp;<span class="post-publish">published on <time datetime="2022-10-06">2022-10-06</time></span>&nbsp;<span class="post-category">included in <a href="/categories/documentation/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Documentation</a></span></div><div class="content">Docker-Compose &hellip;
-Networking By default Docker-Compose will create a new network for the given compose file. You can change the behavior by defining custom networks in your compose file.
-Create and assign custom network &hellip; Example:
+</span>&nbsp;<span class="post-publish">published on <time datetime="2022-10-06">2022-10-06</time></span>&nbsp;<span class="post-category">included in <a href="/categories/documentation/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Documentation</a></span></div><div class="content">Docker-Compose <i class="fab fa-docker" aria-hidden="true"></i>&nbsp;Networking By default Docker-Compose will create a new network for the given compose file. You can change the behavior by defining custom networks in your compose file.
+Create and assign custom network Example:
 1 2 3 4 5 6 7 networks: custom-network: services: app: networks: - custom-network Use existing networks If you want to use an existing Docker network for your compose files, you can add the external: true parameter in your compose file Example:</div><div class="post-footer">
         <a href="/docker-compose/">Read More</a><div class="post-tags">
                 <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/docker/">docker</a></div></div>
@@ -152,8 +192,7 @@ Create and assign custom network &hellip; Example:
         </div><h1 class="single-title" itemprop="name headline">
         <a href="/docker-cli/">Docker Cli</a>
     </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Ohmygodzilla</a>
-</span>&nbsp;<span class="post-publish">published on <time datetime="2022-10-06">2022-10-06</time></span>&nbsp;<span class="post-category">included in <a href="/categories/cheat-sheet/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Cheat-sheets</a></span></div><div class="content">Docker Cheat-Sheet Docker is a set of platform as a service products that use OS-Level virtualization to deliver software in packages called containers. Containers are isolated from one another and bundle their own software, libraries, and configuration files; they can communicate with each other through well-defined channels. Because all of the containers share the services of a single operating system kernel, they use fewer resources than virtual machines.
-The service has both free and premium tiers.</div><div class="post-footer">
+</span>&nbsp;<span class="post-publish">published on <time datetime="2022-10-06">2022-10-06</time></span>&nbsp;<span class="post-category">included in <a href="/categories/cheat-sheet/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Cheat-sheets</a></span></div><div class="content"><p>Docker is a set of platform as a service products that use OS-Level virtualization to deliver software in packages called containers. Containers are isolated from one another and bundle their own software, libraries, and configuration files; they can communicate with each other through well-defined channels. Because all of the containers share the services of a single operating system kernel, they use fewer resources than virtual machines.</p></div><div class="post-footer">
         <a href="/docker-cli/">Read More</a><div class="post-tags">
                 <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/cheat-sheet/">cheat-sheet</a>,&nbsp;<a href="/tags/docker/">docker</a>,&nbsp;<a href="/tags/container/">container</a></div></div>
 </article><article class="single summary" itemscope itemtype="http://schema.org/Article"><div class="featured-image-preview">
@@ -183,5 +222,5 @@ The service has both free and premium tiers.</div><div class="post-footer">
             </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
                 <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
             </a>
-        </div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/css/lightgallery-bundle.min.css"><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.38.1/dist/autocomplete.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/algoliasearch@4.13.0/dist/algoliasearch-lite.umd.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.1/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/twemoji@14.0.2/dist/twemoji.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/lightgallery.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/plugins/thumbnail/lg-thumbnail.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/plugins/zoom/lg-zoom.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.1/sharer.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/typeit@8.5.4/dist/index.umd.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":50},"data":{"id-1":"Network Engineer, general tinkerer and a lover ;)"},"lightgallery":true,"search":{"algoliaAppID":"","algoliaIndex":"","algoliaSearchKey":"","highlightTag":"em","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"algolia"},"twemoji":true,"typeit":{"cursorChar":"|","cursorSpeed":1000,"data":{"id-1":["id-1"]},"duration":-1,"speed":100}};</script><script type="text/javascript" src="/js/theme.min.bda2dab9892fe30fcc50442f1a5bf10cc3ac7cf033f10c6948d09b9fb3f6323296f75a30c63044dbb71ab54bbe18e5b6a7db3074c12aa00bf2122c6ceecdea60.js" integrity="sha512-vaLauYkv4w/MUEQvGlvxDMOsfPAz8QxpSNCbn7P2MjKW91owxjBE27catUu&#43;GOW2p9swdMEqoAvyEixs7s3qYA=="></script></body>
+        </div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/css/lightgallery-bundle.min.css"><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.38.1/dist/autocomplete.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lunr@2.3.9/lunr.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.1/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/twemoji@14.0.2/dist/twemoji.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/lightgallery.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/plugins/thumbnail/lg-thumbnail.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/plugins/zoom/lg-zoom.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.1/sharer.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/typeit@8.5.4/dist/index.umd.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":50},"data":{"id-1":"Network Engineer, general tinkerer and a lover ;)"},"lightgallery":true,"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"lunr"},"twemoji":true,"typeit":{"cursorChar":"|","cursorSpeed":1000,"data":{"id-1":["id-1"]},"duration":-1,"speed":100}};</script><script type="text/javascript" src="/js/theme.min.bda2dab9892fe30fcc50442f1a5bf10cc3ac7cf033f10c6948d09b9fb3f6323296f75a30c63044dbb71ab54bbe18e5b6a7db3074c12aa00bf2122c6ceecdea60.js" integrity="sha512-vaLauYkv4w/MUEQvGlvxDMOsfPAz8QxpSNCbn7P2MjKW91owxjBE27catUu&#43;GOW2p9swdMEqoAvyEixs7s3qYA=="></script></body>
 </html>

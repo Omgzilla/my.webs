@@ -1,0 +1,24 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>arch - Tag - Omgz</title>
+        <link>https://example.com/tags/arch/</link>
+        <description>arch - Tag - Omgz</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 06 Oct 2022 14:14:36 &#43;0200</lastBuildDate><atom:link href="https://example.com/tags/arch/" rel="self" type="application/rss+xml" /><item>
+    <title>Arch Install</title>
+    <link>https://example.com/arch-install/</link>
+    <pubDate>Thu, 06 Oct 2022 14:14:36 &#43;0200</pubDate>
+    <author>Ohmygodzilla</author>
+    <guid>https://example.com/arch-install/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/images/arch-linux.png" referrerpolicy="no-referrer">
+            </div>My guide on how to install Arch Linux
+Base Installation Load keyboard layout
+1 loadkeys sv-latin1 Format &amp; Partition disk/s
+1 lsblk #show disks 1 cgdisk /dev/sda #partition &#34;gui&#34; efi swap root Make file system EFI
+1 mkfs.fat -F32 /dev/sda1 BTRFS
+1 mkfs.btrfs /dev/sda2 Mount (btrfs)
+1 mount /dev/sda2 /mnt #mount root to /mnt 1 cd /mnt #change directory to /mnt Create subvolumes for btrfs
+1 2 3 btrfs subvolume create @ btrfs subvolume create @home btrfs subvolume create @var Go back and unmount]]></description>
+</item>
+</channel>
+</rss>

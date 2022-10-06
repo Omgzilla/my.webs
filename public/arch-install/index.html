@@ -1,0 +1,1213 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>Arch Install - Omgz</title><meta name="Description" content=""><meta property="og:title" content="Arch Install" />
+<meta property="og:description" content="My guide on how to install Arch Linux
+Base Installation Load keyboard layout
+1 loadkeys sv-latin1 Format &amp; Partition disk/s
+1 lsblk #show disks 1 cgdisk /dev/sda #partition &#34;gui&#34; efi swap root Make file system EFI
+1 mkfs.fat -F32 /dev/sda1 BTRFS
+1 mkfs.btrfs /dev/sda2 Mount (btrfs)
+1 mount /dev/sda2 /mnt #mount root to /mnt 1 cd /mnt #change directory to /mnt Create subvolumes for btrfs
+1 2 3 btrfs subvolume create @ btrfs subvolume create @home btrfs subvolume create @var Go back and unmount" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://example.com/arch-install/" /><meta property="og:image" content="https://example.com/logo.png"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-10-06T14:14:36+02:00" />
+<meta property="article:modified_time" content="2022-10-06T14:14:36+02:00" /><meta property="og:site_name" content="Omgz" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://example.com/logo.png"/>
+
+<meta name="twitter:title" content="Arch Install"/>
+<meta name="twitter:description" content="My guide on how to install Arch Linux
+Base Installation Load keyboard layout
+1 loadkeys sv-latin1 Format &amp; Partition disk/s
+1 lsblk #show disks 1 cgdisk /dev/sda #partition &#34;gui&#34; efi swap root Make file system EFI
+1 mkfs.fat -F32 /dev/sda1 BTRFS
+1 mkfs.btrfs /dev/sda2 Mount (btrfs)
+1 mount /dev/sda2 /mnt #mount root to /mnt 1 cd /mnt #change directory to /mnt Create subvolumes for btrfs
+1 2 3 btrfs subvolume create @ btrfs subvolume create @home btrfs subvolume create @var Go back and unmount"/>
+<meta name="application-name" content="Omgz">
+<meta name="apple-mobile-web-app-title" content="Omgz"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://example.com/arch-install/" /><link rel="prev" href="https://example.com/proxmox-cs/" /><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css"><link rel="stylesheet" href="/css/style.min.20174c6e52e001cbcdedf3a0ea8518ab431f69caab98c9c7a06e8c6dfde126988575f77eedc51fe200e25c1eb619e27e8f74e0d4079773a6e928321b9ff2b667.css" integrity="sha512-IBdMblLgAcvN7fOg6oUYq0MfacqrmMnHoG6Mbf3hJpiFdfd&#43;7cUf4gDiXB62GeJ&#43;j3Tg1AeXc6bpKDIbn/K2Zw=="><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Arch Install",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/example.com\/arch-install\/"
+        },"image": ["https:\/\/example.com\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "arch, linux, cheat-sheet","wordcount":  1408 ,
+        "url": "https:\/\/example.com\/arch-install\/","datePublished": "2022-10-06T14:14:36+02:00","dateModified": "2022-10-06T14:14:36+02:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "Ohmygodzilla"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Omgz"><span class="header-title-pre"><i class='far fa-kiss-wink-heart fa-fw' aria-hidden='true'></i></span>Omgz<span class="header-title-post">illa</span></a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> Posts </a><a class="menu-item" href="/tags/"> Tags </a><a class="menu-item" href="/categories/"> Categories </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Omgz"><span class="header-title-pre"><i class='far fa-kiss-wink-heart fa-fw' aria-hidden='true'></i></span>Omgz<span class="header-title-post">illa</span></a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">Posts</a><a class="menu-item" href="/tags/" title="">Tags</a><a class="menu-item" href="/categories/" title="">Categories</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Arch Install</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Ohmygodzilla</a>
+</span>&nbsp;<span class="post-category">included in <a href="/categories/documentation/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Documentation</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2022-10-06">2022-10-06</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;1408 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;7 minutes&nbsp;</div>
+        </div><div class="featured-image"><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/images/arch-linux.png"
+        data-srcset="/images/arch-linux.png, /images/arch-linux.png 1.5x, /images/arch-linux.png 2x"
+        data-sizes="auto"
+        alt="/images/arch-linux.png"
+        title="/images/arch-linux.png" width="1600" height="900" /></div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#base-installation">Base Installation</a></li>
+    <li><a href="#after-base-installation">After base installation</a></li>
+    <li><a href="#install-gnome">Install Gnome</a></li>
+    <li><a href="#install-kde">Install KDE</a></li>
+    <li><a href="#install-bspwm">Install BSPWM</a></li>
+    <li><a href="#install-dwm">Install DWM</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><blockquote>
+<p>My guide on how to install Arch Linux</p>
+</blockquote>
+<!-- more -->
+<h2 id="base-installation">Base Installation</h2>
+<p><strong>Load keyboard layout</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">loadkeys sv-latin1
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>Format &amp; Partition disk/s</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">lsblk <span class="c1">#show disks</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">cgdisk /dev/sda <span class="c1">#partition &#34;gui&#34;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>efi</li>
+<li>swap</li>
+<li>root</li>
+</ul>
+<p><strong>Make file system</strong>
+<em>EFI</em></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">mkfs.fat -F32 /dev/sda1
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><em>BTRFS</em></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">mkfs.btrfs /dev/sda2
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>Mount (btrfs)</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">mount /dev/sda2 /mnt <span class="c1">#mount root to /mnt</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">cd</span> /mnt <span class="c1">#change directory to /mnt</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><em>Create subvolumes for btrfs</em></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">btrfs subvolume create @ 
+</span></span><span class="line"><span class="cl">btrfs subvolume create @home
+</span></span><span class="line"><span class="cl">btrfs subvolume create @var
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><em>Go back and unmount</em></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">cd</span>
+</span></span><span class="line"><span class="cl">umount /mnt
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><em>Mount root with options</em></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">mount -o noatime,compress<span class="o">=</span>zstd,space_cache<span class="o">=</span>v2,discard<span class="o">=</span>async,subvol<span class="o">=</span>@ /dev/sda2 /mnt
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><em>Make directories</em></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">mkdir -p /mnt/<span class="o">{</span>boot,home,var<span class="o">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><em>Mount home and var</em></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">mount -o noatime,compress<span class="o">=</span>zstd,space_cache<span class="o">=</span>v2,discard<span class="o">=</span>async,subvol<span class="o">=</span>@home /dev/sda2 /mnt/home
+</span></span><span class="line"><span class="cl">mount -o noatime,compress<span class="o">=</span>zstd,space_cache<span class="o">=</span>v2,discard<span class="o">=</span>async,subvol<span class="o">=</span>@ /dev/sda2 /mnt/var
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><em>Mount boot</em></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">mount /dev/sda1 /mnt/boot
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>Install base</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">pacstrap /mnt base linux linux-firmware intel-ucode neovim git btrfs-progs
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>Generate file system boot table</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">genfstab -U /mnt &gt;&gt; /mnt/etc/fstab
+</span></span><span class="line"><span class="cl">cat /mnt/etc/fstab <span class="c1">#check</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>Enter Chroot</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">arch-chroot /mnt
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>Set time zone</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ln -sf /usr/share/zoneinfo/Europe/Stockholm /etc/localtime
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>Sync hardware clock</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">hwclock --systohc
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>Set system language</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sed -i <span class="s1">&#39;178s/.//&#39;</span> /etc/locale.gen
+</span></span><span class="line"><span class="cl">locale-gen
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><em>or</em></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">nvim /etc/locale.gen
+</span></span><span class="line"><span class="cl"><span class="c1">#Uncomment language of choice then save and exit</span>
+</span></span><span class="line"><span class="cl">locale-gen
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>Add system language in locale</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;LANG=en_US.UTF-8&#34;</span> &gt;&gt; /etc/locale.conf
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>Add keyboard language</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;KEYMAP=de_CH-latin1&#34;</span> &gt;&gt; /etc/vconsole.conf
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>Set hostname</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;arch&#34;</span> &gt;&gt; /etc/hostname
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>Add localhost to hosts</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;127.0.0.1 localhost&#34;</span> &gt;&gt; /etc/hosts
+</span></span><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;::1       localhost&#34;</span> &gt;&gt; /etc/hosts
+</span></span><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;127.0.1.1 arch.localdomain arch&#34;</span> &gt;&gt; /etc/hosts <span class="c1">#change &#34;arch&#34; according to hostname</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>Change password for root</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">passwd
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>Install essentials</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">pacman -S grub grub-btrfs os-prober efibootmgr networkmanager network-manager-applet dialog wpa_supplicant mtools dosfstools inetutils dnsutils base-devel linux-headers avahi xdg-utils gvfs gvfs-smb nfs-utils acpi acpid acpi_call ntfs-3g
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">#Audio</span>
+</span></span><span class="line"><span class="cl">pacman -S alsa-utils pipewire pipewire-alsa pipewire-pulse pipewire-jack sof-firmware
+</span></span><span class="line"><span class="cl"><span class="c1">#Battery management (laptop)</span>
+</span></span><span class="line"><span class="cl">pacman -S tlp
+</span></span><span class="line"><span class="cl"><span class="c1">#Bluetooth</span>
+</span></span><span class="line"><span class="cl">pacman -S bluez bluez-utils
+</span></span><span class="line"><span class="cl"><span class="c1">#Firewall</span>
+</span></span><span class="line"><span class="cl">pacman -S firewalld
+</span></span><span class="line"><span class="cl"><span class="c1">#Graphic</span>
+</span></span><span class="line"><span class="cl">pacman -S xf86-video-amdgpu <span class="c1">#amd</span>
+</span></span><span class="line"><span class="cl">pacman -S xf86-video-intel <span class="c1">#intel</span>
+</span></span><span class="line"><span class="cl">pacman -S nvidia nvidia-utils nvidia-settings <span class="c1">#nvidia</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#Printer</span>
+</span></span><span class="line"><span class="cl">pacman -S cups hplip
+</span></span><span class="line"><span class="cl"><span class="c1">#Others</span>
+</span></span><span class="line"><span class="cl">pacman -S bash-completion flatpak ipset iptables-nft openssh reflector rsync
+</span></span><span class="line"><span class="cl">xdg-user-dirs
+</span></span><span class="line"><span class="cl"><span class="c1">#Virtual Machine</span>
+</span></span><span class="line"><span class="cl">pacman -S virt-manager qemu qemu-arch-extra edk2-ovmf bridge-utils dnsmasq nss-mdns vde2 openbsd-netcat iptables-nft ipset
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>Configure grub</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">grub-install --target<span class="o">=</span>x86_64-efi --efi-directory<span class="o">=</span>/boot --bootloader-id<span class="o">=</span>GRUB <span class="c1">#change the directory to /boot/efi is you mounted the EFI partition at /boot/efi</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">grub-mkconfig -o /boot/grub/grub.cfg <span class="c1">#write changes to cfg</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>Enable services to boot on startup</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">systemctl <span class="nb">enable</span> acpid <span class="c1">#acpid</span>
+</span></span><span class="line"><span class="cl">systemctl <span class="nb">enable</span> avahi-daemon <span class="c1">#avahi</span>
+</span></span><span class="line"><span class="cl">systemctl <span class="nb">enable</span> bluetooth <span class="c1">#bluez</span>
+</span></span><span class="line"><span class="cl">systemctl <span class="nb">enable</span> cups.service <span class="c1">#cups</span>
+</span></span><span class="line"><span class="cl">systemctl <span class="nb">enable</span> firewalld <span class="c1">#firewalld</span>
+</span></span><span class="line"><span class="cl">systemctl <span class="nb">enable</span> fstrim.timer <span class="c1">#fstrim (for ssd)</span>
+</span></span><span class="line"><span class="cl">systemctl <span class="nb">enable</span> libvirtd <span class="c1">#virt-manager</span>
+</span></span><span class="line"><span class="cl">systemctl <span class="nb">enable</span> NetworkManager <span class="c1">#networkmanager</span>
+</span></span><span class="line"><span class="cl">systemctl <span class="nb">enable</span> reflector.timer <span class="c1">#reflector</span>
+</span></span><span class="line"><span class="cl">systemctl <span class="nb">enable</span> sshd <span class="c1">#openssh</span>
+</span></span><span class="line"><span class="cl">systemctl <span class="nb">enable</span> tlp <span class="c1">#tlp</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>Add a user</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">useradd -m administrator <span class="c1">#add user named administrator</span>
+</span></span><span class="line"><span class="cl">passwd administrator <span class="c1">#change password</span>
+</span></span><span class="line"><span class="cl">usermod -aG libvirt administrator <span class="c1">#add administrator to libvirt group (if installed)</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><em>Add user to sudo</em></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;administrator ALL=(ALL) ALL&#34;</span> &gt;&gt; /etc/sudoers.d/administrator <span class="c1">#change &#34;administrator&#34; to your username</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><em>or</em></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">useradd -mG wheel administrator
+</span></span><span class="line"><span class="cl">passwd administrator
+</span></span><span class="line"><span class="cl"><span class="nv">EDITOR</span><span class="o">=</span>nvim visudo
+</span></span><span class="line"><span class="cl">´add following at the end of line´
+</span></span><span class="line"><span class="cl">administrator <span class="nv">ALL</span><span class="o">=(</span>ALL<span class="o">)</span> ALL
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>Exit chroot, unmount and reboot</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">exit</span>
+</span></span><span class="line"><span class="cl">umount -a
+</span></span><span class="line"><span class="cl">reboot
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="after-base-installation">After base installation</h2>
+<p><strong>Sync clock</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo timedatectl set-ntp <span class="nb">true</span>
+</span></span><span class="line"><span class="cl">sudo hwclock --systohc
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>Setup reflector</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo reflector -c Sweden -a <span class="m">12</span> --sort rate --save /etc/pacman.d/mirrorlist
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>Install AUR helper</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1">#Paru</span>
+</span></span><span class="line"><span class="cl">git clone https://aur.archlinux.org/paru-bin
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> paru-bin
+</span></span><span class="line"><span class="cl">makepkg -si
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">#PikAUR</span>
+</span></span><span class="line"><span class="cl">git clone https://aur.archlinux.org/pikaur.git
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> pikaur/
+</span></span><span class="line"><span class="cl">makepkg -si
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>Install zram (if no swap)</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">paru -S zramd
+</span></span><span class="line"><span class="cl">sudo nvim /etc/default/zramd
+</span></span><span class="line"><span class="cl">sudo systemctl <span class="nb">enable</span> --now zramd.service
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>Install  timeshift</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">paru -S timeshift-bin timeshift-autosnap
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>Install auto-cpufreq (if using laptop to battery)</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">paru -S auto-cpufreq
+</span></span><span class="line"><span class="cl">sudo systemctl <span class="nb">enable</span> --now auto-cpufreq
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>Install pacman-contrib</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo pacman -S pacman-contrib
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>Install firewall</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1">#Firewalld</span>
+</span></span><span class="line"><span class="cl">sudo pacman -S firewalld
+</span></span><span class="line"><span class="cl"><span class="c1">#UFW</span>
+</span></span><span class="line"><span class="cl">sudo pacman -S ufw
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>Install browser</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">paru -S brave-bin <span class="c1">#brave browser</span>
+</span></span><span class="line"><span class="cl">sudo pacman -S firefox <span class="c1">#firefox</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>Install System76 hybrid graphic switcher (laptop with dual graphic card)</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">paru -S --noconfirm system76-power
+</span></span><span class="line"><span class="cl">sudo systemctl <span class="nb">enable</span> --now system76-power
+</span></span><span class="line"><span class="cl">sudo system76-power graphics integrated
+</span></span><span class="line"><span class="cl">paru -S --noconfirm gnome-shell-extension-system76-power-git
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>Install flatpak</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo pacman -S flatpak
+</span></span><span class="line"><span class="cl"><span class="c1">#Example</span>
+</span></span><span class="line"><span class="cl">sudo flatpak install spotify
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>Install wallpapers</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo pacman -S archlinux-wallpaper
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>Bridge XML file</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">nvim br10.xml
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><em>Copy &amp; paste following</em></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml"><span class="line"><span class="cl"><span class="nt">&lt;network&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&lt;name&gt;</span>br10<span class="nt">&lt;/name&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&lt;forward</span> <span class="na">mode=</span><span class="s">&#39;nat&#39;</span><span class="nt">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;nat&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&lt;port</span> <span class="na">start=</span><span class="s">&#39;1024&#39;</span> <span class="na">end=</span><span class="s">&#39;65535&#39;</span><span class="nt">/&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;/nat&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&lt;/forward&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&lt;bridge</span> <span class="na">name=</span><span class="s">&#39;br10&#39;</span> <span class="na">stp=</span><span class="s">&#39;on&#39;</span> <span class="na">delay=</span><span class="s">&#39;0&#39;</span><span class="nt">/&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&lt;ip</span> <span class="na">address=</span><span class="s">&#39;192.168.30.1&#39;</span> <span class="na">netmask=</span><span class="s">&#39;255.255.255.0&#39;</span><span class="nt">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;dhcp&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&lt;range</span> <span class="na">start=</span><span class="s">&#39;192.168.30.50&#39;</span> <span class="na">end=</span><span class="s">&#39;192.168.30.200&#39;</span><span class="nt">/&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;/dhcp&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&lt;/ip&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="nt">&lt;/network&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><em>Save and exit</em></p>
+<p><strong>Enable bridged network</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo virsh net-autostart default
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>Multiple monitors</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo pacman -S arandr
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>Fonts</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo pacman -S adobe-source-code-pro-fonts adobe-source-han-sans-otc-fonts adobe-source-han-serif-otc-fonts awesome-terminal-fonts bdf-unifont cantarell-fonts dina-font gentium-plus-font gnu-free-fonts inter-font noto-fonts noto-fonts-cjk noto-fonts-emoji tamsyn-font tex-gyre-fonts ttf-anonymous-pro ttf-bitstream-vera ttf-cascadia-code ttf-croscore ttf-dejavu ttf-droid ttf-fantasque-sans-mono ttf-fira-code ttf-fira-mono ttf-font-awesome ttf-hack ttf-ibm-plex ttf-inconsolata ttf-jetbrains-mono ttf-junicode ttf-liberation ttf-linux-libertine ttf-monofur ttf-opensans ttf-roboto ttf-ubuntu-font-family 
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="install-gnome">Install Gnome</h2>
+<p><strong>Minimal install</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo pacman -S --noconfirm xorg gdm gnome gnome-tweaks
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>Full install</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo pacman -S --noconfirm xorg gdm gnome gnome-extra gnome-tweaks
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><em>Arc theme #Optional</em></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo pacman -S arc-gtk-theme arc-icon-theme
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>Enable gdm</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo systemctl <span class="nb">enable</span> gdm
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>Reboot</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo reboot
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="install-kde">Install KDE</h2>
+<p><strong>Minimal install</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo pacman -S --noconfirm xorg sddm plasma
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>Full install</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo pacman -S --noconfirm xorg sddm plasma kde-applications
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><em>Materia theme #optional</em></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo pacman -S materia-kde papirus-icon-theme 
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>Enable ssdm</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo systemctl <span class="nb">enable</span> sddm
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>Reboot</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo reboot
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="install-bspwm">Install BSPWM</h2>
+<p><strong>Base</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo pacman -S bspwm sxhkd
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>Xorg minimal or full</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo pacman -S xorg-server xorg-xinit
+</span></span><span class="line"><span class="cl">OR
+</span></span><span class="line"><span class="cl">sudo pacman -S xorg
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>Ly DM</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">paru -S ly
+</span></span><span class="line"><span class="cl">sudo systemctl <span class="nb">enable</span> ly
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>LightDM</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo pacman -S lightdm light-locker
+</span></span><span class="line"><span class="cl">paru -S lightdm-slick-greeter 
+</span></span><span class="line"><span class="cl">paru -S lightdm-settings
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>Launcher</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo pacman -S dmenu
+</span></span><span class="line"><span class="cl">sudo pacman -S rofi
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>File manager</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo pacman -S nautilus
+</span></span><span class="line"><span class="cl">sudo pacman -S thunar
+</span></span><span class="line"><span class="cl">sudo pacman -S nnn
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>GTK preferences</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo pacman -S lxappearance
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>GTK theme and icons</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo pacman -S arc-gtk-theme arc-icon-theme
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>Notifications</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo pacman -S dunst
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>Media player controller</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo pacman -S playerctl
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>Screenshots</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo pacmna -S scrot
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>Statusbar</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">paru -S polybar
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>Terminals</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo pacman -S alacritty
+</span></span><span class="line"><span class="cl">sudo pacman -S kitty
+</span></span><span class="line"><span class="cl">sudo pacman -S rxvt-unicode
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>Wallpaper tools</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo pacman -S feh
+</span></span><span class="line"><span class="cl">sudo pacman -S nitrogen
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>X compositor</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo pacman -S picom
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="install-dwm">Install DWM</h2>
+<p><strong>Install through script</strong>
+<em>Create script</em></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">nvim install-dwm.sh
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><em>Copy and paste following</em></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span><span class="lnt">55
+</span><span class="lnt">56
+</span><span class="lnt">57
+</span><span class="lnt">58
+</span><span class="lnt">59
+</span><span class="lnt">60
+</span><span class="lnt">61
+</span><span class="lnt">62
+</span><span class="lnt">63
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="cp">#!/bin/bash
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="c1"># Variables</span>
+</span></span><span class="line"><span class="cl"><span class="nv">country</span><span class="o">=</span>Poland
+</span></span><span class="line"><span class="cl"><span class="nv">kbmap</span><span class="o">=</span>ch
+</span></span><span class="line"><span class="cl"><span class="nv">output</span><span class="o">=</span>Virtual-1
+</span></span><span class="line"><span class="cl"><span class="nv">resolution</span><span class="o">=</span>1920x1080
+</span></span><span class="line"><span class="cl"><span class="c1"># Options</span>
+</span></span><span class="line"><span class="cl"><span class="nv">aur_helper</span><span class="o">=</span><span class="nb">true</span>
+</span></span><span class="line"><span class="cl"><span class="nv">install_ly</span><span class="o">=</span><span class="nb">true</span>
+</span></span><span class="line"><span class="cl"><span class="nv">gen_xprofile</span><span class="o">=</span><span class="nb">false</span>
+</span></span><span class="line"><span class="cl">sudo timedatectl set-ntp <span class="nb">true</span>
+</span></span><span class="line"><span class="cl">sudo hwclock --systohc
+</span></span><span class="line"><span class="cl">sudo reflector -c <span class="nv">$country</span> -a <span class="m">12</span> --sort rate --save /etc/pacman.d/mirrorlist
+</span></span><span class="line"><span class="cl"><span class="c1"># sudo firewall-cmd --add-port=1025-65535/tcp --permanent</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># sudo firewall-cmd --add-port=1025-65535/udp --permanent</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># sudo firewall-cmd --reload</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># sudo virsh net-autostart default</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="o">[[</span> <span class="nv">$aur_helper</span> <span class="o">=</span> <span class="nb">true</span> <span class="o">]]</span><span class="p">;</span> <span class="k">then</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">cd</span> /tmp
+</span></span><span class="line"><span class="cl">    git clone https://aur.archlinux.org/paru.git
+</span></span><span class="line"><span class="cl">    <span class="nb">cd</span> paru/<span class="p">;</span>makepkg -si --noconfirm<span class="p">;</span><span class="nb">cd</span>
+</span></span><span class="line"><span class="cl"><span class="k">fi</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Install packages</span>
+</span></span><span class="line"><span class="cl">sudo pacman -S xorg firefox polkit-gnome nitrogen lxappearance thunar
+</span></span><span class="line"><span class="cl"><span class="c1"># Install fonts</span>
+</span></span><span class="line"><span class="cl">sudo pacman -S --noconfirm dina-font tamsyn-font bdf-unifont ttf-bitstream-vera ttf-croscore ttf-dejavu ttf-droid gnu-free-fonts ttf-ibm-plex ttf-liberation ttf-linux-libertine noto-fonts ttf-roboto tex-gyre-fonts ttf-ubuntu-font-family ttf-anonymous-pro ttf-cascadia-code ttf-fantasque-sans-mono ttf-fira-mono ttf-hack ttf-fira-code ttf-inconsolata ttf-jetbrains-mono ttf-monofur adobe-source-code-pro-fonts cantarell-fonts inter-font ttf-opensans gentium-plus-font ttf-junicode adobe-source-han-sans-otc-fonts adobe-source-han-serif-otc-fonts noto-fonts-cjk noto-fonts-emoji
+</span></span><span class="line"><span class="cl"><span class="c1"># Pull Git repositories and install</span>
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> /tmp
+</span></span><span class="line"><span class="cl"><span class="nv">repos</span><span class="o">=(</span> <span class="s2">&#34;dmenu&#34;</span> <span class="s2">&#34;dwm&#34;</span> <span class="s2">&#34;dwmstatus&#34;</span> <span class="s2">&#34;st&#34;</span> <span class="s2">&#34;slock&#34;</span> <span class="o">)</span>
+</span></span><span class="line"><span class="cl"><span class="k">for</span> repo in <span class="si">${</span><span class="nv">repos</span><span class="p">[@]</span><span class="si">}</span>
+</span></span><span class="line"><span class="cl"><span class="k">do</span>
+</span></span><span class="line"><span class="cl">    git clone git://git.suckless.org/<span class="nv">$repo</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">cd</span> <span class="nv">$repo</span><span class="p">;</span>make<span class="p">;</span>sudo make install<span class="p">;</span><span class="nb">cd</span> ..
+</span></span><span class="line"><span class="cl"><span class="k">done</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># XSessions and dwm.desktop</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="o">[[</span> ! -d /usr/share/xsessions <span class="o">]]</span><span class="p">;</span> <span class="k">then</span>
+</span></span><span class="line"><span class="cl">    sudo mkdir /usr/share/xsessions
+</span></span><span class="line"><span class="cl"><span class="k">fi</span>
+</span></span><span class="line"><span class="cl">cat &gt; ./temp &lt;&lt; <span class="s2">&#34;EOF&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>Desktop Entry<span class="o">]</span>
+</span></span><span class="line"><span class="cl"><span class="nv">Encoding</span><span class="o">=</span>UTF-8
+</span></span><span class="line"><span class="cl"><span class="nv">Name</span><span class="o">=</span>Dwm
+</span></span><span class="line"><span class="cl"><span class="nv">Comment</span><span class="o">=</span>Dynamic window manager
+</span></span><span class="line"><span class="cl"><span class="nv">Exec</span><span class="o">=</span>dwm
+</span></span><span class="line"><span class="cl"><span class="nv">Icon</span><span class="o">=</span>dwm
+</span></span><span class="line"><span class="cl"><span class="nv">Type</span><span class="o">=</span>XSession
+</span></span><span class="line"><span class="cl">EOF
+</span></span><span class="line"><span class="cl">sudo cp ./temp /usr/share/xsessions/dwm.desktop<span class="p">;</span>rm ./temp
+</span></span><span class="line"><span class="cl"><span class="c1"># Install ly</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="o">[[</span> <span class="nv">$install_ly</span> <span class="o">=</span> <span class="nb">true</span> <span class="o">]]</span><span class="p">;</span> <span class="k">then</span>
+</span></span><span class="line"><span class="cl">    git clone https://aur.archlinux.org/ly
+</span></span><span class="line"><span class="cl">    <span class="nb">cd</span> ly<span class="p">;</span>makepkg -si
+</span></span><span class="line"><span class="cl">    sudo systemctl <span class="nb">enable</span> ly
+</span></span><span class="line"><span class="cl"><span class="k">fi</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># .xprofile</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="o">[[</span> <span class="nv">$gen_xprofile</span> <span class="o">=</span> <span class="nb">true</span> <span class="o">]]</span><span class="p">;</span> <span class="k">then</span>
+</span></span><span class="line"><span class="cl">cat &gt; ~/.xprofile <span class="s">&lt;&lt; EOF
+</span></span></span><span class="line"><span class="cl"><span class="s">setxkbmap $kbmap
+</span></span></span><span class="line"><span class="cl"><span class="s">nitrogen --restore
+</span></span></span><span class="line"><span class="cl"><span class="s">xrandr --output $output --mode $resolution
+</span></span></span><span class="line"><span class="cl"><span class="s">EOF</span>
+</span></span><span class="line"><span class="cl"><span class="k">fi</span>
+</span></span><span class="line"><span class="cl"><span class="nb">printf</span> <span class="s2">&#34;\e[1;32mDone! you can now reboot.\e[0m\n&#34;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><em>Save, change privileges and run</em></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">chmod +x install-dwm.sh
+</span></span><span class="line"><span class="cl">./install-dwm.sh
+</span></span></code></pre></td></tr></table>
+</div>
+</div></div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2022-10-06</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/arch-install/index.md" target="_blank">Read Markdown</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="https://example.com/arch-install/" data-title="Arch Install" data-via="Omgzilla" data-hashtags="arch,linux,cheat-sheet"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on WhatsApp" data-sharer="whatsapp" data-url="https://example.com/arch-install/" data-title="Arch Install" data-web><i class="fab fa-whatsapp fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Reddit" data-sharer="reddit" data-url="https://example.com/arch-install/"><i class="fab fa-reddit fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/arch/">arch</a>,&nbsp;<a href="/tags/linux/">linux</a>,&nbsp;<a href="/tags/cheat-sheet/">cheat-sheet</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/proxmox-cs/" class="prev" rel="prev" title="Proxmox"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>Proxmox</a></div>
+</div>
+<div id="comments"><div id="telegram-comments" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://comments.app/">Telegram Comments</a>.
+            </noscript></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2022</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">Ohmygodzilla</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><script type="text/javascript" src="https://comments.app/js/widget.js?2" defer data-comments-app-website="RepNDYBi" data-limit="5" data-color="1" data-colorful="1" data-dislikes="1" data-outlined="1"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.38.1/dist/autocomplete.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lunr@2.3.9/lunr.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.1/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.1/sharer.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":50},"comment":{},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"lunr"}};</script><script type="text/javascript" src="/js/theme.min.bda2dab9892fe30fcc50442f1a5bf10cc3ac7cf033f10c6948d09b9fb3f6323296f75a30c63044dbb71ab54bbe18e5b6a7db3074c12aa00bf2122c6ceecdea60.js" integrity="sha512-vaLauYkv4w/MUEQvGlvxDMOsfPAz8QxpSNCbn7P2MjKW91owxjBE27catUu&#43;GOW2p9swdMEqoAvyEixs7s3qYA=="></script></body>
+</html>
