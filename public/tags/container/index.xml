@@ -1,0 +1,18 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>container - Tag - Omgz</title>
+        <link>https://example.com/tags/container/</link>
+        <description>container - Tag - Omgz</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 06 Oct 2022 02:25:34 &#43;0200</lastBuildDate><atom:link href="https://example.com/tags/container/" rel="self" type="application/rss+xml" /><item>
+    <title>Docker Cli</title>
+    <link>https://example.com/docker-cli/</link>
+    <pubDate>Thu, 06 Oct 2022 02:25:34 &#43;0200</pubDate>
+    <author>Ohmygodzilla</author>
+    <guid>https://example.com/docker-cli/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/images/docker-cli.png" referrerpolicy="no-referrer">
+            </div>Docker Cheat-Sheet Docker is a set of platform as a service products that use OS-Level virtualization to deliver software in packages called containers. Containers are isolated from one another and bundle their own software, libraries, and configuration files; they can communicate with each other through well-defined channels. Because all of the containers share the services of a single operating system kernel, they use fewer resources than virtual machines.
+The service has both free and premium tiers.]]></description>
+</item>
+</channel>
+</rss>
