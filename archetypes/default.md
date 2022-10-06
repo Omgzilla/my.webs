@@ -10,7 +10,9 @@ description: ""
 images: []
 
 tags: []
+# ubuntu, database, sql, cheat-sheet, docker, container
 categories: [documentation]
+# cheat-sheet, documentation
 
 featuredImage: "images/"
 featuredImagePreview: "images/"
@@ -19,7 +21,7 @@ hiddenFromHomePage: false
 hiddenFromSearch: false
 twemoji: false
 lightgallery: false
-ruby: false
+ruby: true
 fraction: true
 fontawesome: true
 linkToMarkdown: true

@@ -277,9 +277,9 @@ enableEmoji = true
     # whether to hide a page from search results
     hiddenFromSearch = false
     # whether to enable twemoji
-    twemoji = false
+    twemoji = true
     # whether to enable lightgallery
-    lightgallery = false
+    lightgallery = true
     # whether to enable the ruby extended syntax
     ruby = true
     # whether to enable the fraction extended syntax
