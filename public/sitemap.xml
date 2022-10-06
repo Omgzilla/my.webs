@@ -2,14 +2,14 @@
     xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
     xmlns:xhtml="http://www.w3.org/1999/xhtml"
     ><url>
-            <loc>https://example.com/tags/arch/</loc><lastmod>2022-10-06T15:11:41&#43;02:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://example.com/arch-install/</loc><lastmod>2022-10-06T15:11:41&#43;02:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://example.com/categories/</loc><lastmod>2022-10-06T15:11:41&#43;02:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://example.com/tags/cheat-sheet/</loc><lastmod>2022-10-06T15:11:41&#43;02:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://example.com/tags/linux/</loc><lastmod>2022-10-06T15:11:41&#43;02:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://example.com/</loc><lastmod>2022-10-06T15:11:41&#43;02:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://example.com/posts/</loc><lastmod>2022-10-06T15:11:41&#43;02:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://example.com/tags/</loc><lastmod>2022-10-06T15:11:41&#43;02:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://example.com/tags/arch/</loc><lastmod>2022-10-06T18:19:03&#43;02:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://example.com/arch-install/</loc><lastmod>2022-10-06T18:19:03&#43;02:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://example.com/categories/</loc><lastmod>2022-10-06T18:19:03&#43;02:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://example.com/tags/cheat-sheet/</loc><lastmod>2022-10-06T18:19:03&#43;02:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://example.com/tags/linux/</loc><lastmod>2022-10-06T18:19:03&#43;02:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://example.com/</loc><lastmod>2022-10-06T18:19:03&#43;02:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://example.com/posts/</loc><lastmod>2022-10-06T18:19:03&#43;02:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://example.com/tags/</loc><lastmod>2022-10-06T18:19:03&#43;02:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>https://example.com/tags/container/</loc><lastmod>2022-10-06T14:11:48&#43;02:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>https://example.com/proxmox-cs/</loc><lastmod>2022-10-06T14:11:48&#43;02:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>https://example.com/tags/virtual-machine/</loc><lastmod>2022-10-06T14:11:48&#43;02:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>

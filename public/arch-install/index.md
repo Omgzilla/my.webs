@@ -417,7 +417,7 @@ ufw enable
 ```
 <br>
 
-## Step 7. Install other useful stuff
+### Step 7. Install other useful stuff
 **7.1** *Install auto-cpufreq (if using laptop, for better battery)*
 ```bash
 paru -S auto-cpufreq
