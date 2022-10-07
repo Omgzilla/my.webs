@@ -364,7 +364,7 @@ sudo reflector -c Sweden -a 12 --sort rate --save /etc/pacman.d/mirrorlist
 ```
 <br><br>
 
-### Step 2. Install AUR helper**
+### Step 2. Install AUR helper
 **2.1 Paru** *Install paru*
 ```bash
 git clone https://aur.archlinux.org/paru-bin
