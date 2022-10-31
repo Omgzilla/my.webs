@@ -9,17 +9,17 @@ authorLink: ""
 description: ""
 images: []
 
-tags: []
+tags: [Linux, cheat-sheet]
 # Windows, Linux, MacOS
 # database, sql
 # cheat-sheet, documentation
 # virtual machine, docker, container 
 # web server, nginx, reverse-proxy, proxy
-categories: [documentation]
+categories: [cheat-sheet]
 # cheat-sheet, documentation
 
-featuredImage: "images/"
-featuredImagePreview: "images/"
+featuredImage: "images/arch-pacman.png"
+featuredImagePreview: "images/arch-pacman.png"
 
 hiddenFromHomePage: false
 hiddenFromSearch: false

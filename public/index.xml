@@ -12,7 +12,7 @@
     <author>Ohmygodzilla</author>
     <guid>https://example.com/arch-maintenance-commands/</guid>
     <description><![CDATA[<div class="featured-image">
-                <img src="/images/" referrerpolicy="no-referrer">
+                <img src="/images/arch-pacman.png" referrerpolicy="no-referrer">
             </div>Arch maintenance commands Check systemd failed services 1 systemctl --failed Log files check 1 sudo journalctl -p 3 -xb Clean the journal 1 sudo journalctl --vacuum-time=2weeks Pacman Update 1 sudo pacman -Syu Delete Pacman Cache 1 sudo pacman -Scc Check Orphan packages 1 pacman -Qtdq Remove Orphan packages 1 sudo pacman -Rns $(pacman -Qtdq) Paru Update 1 paru Delete Paru Cache 1 paru -Scc Delete unwanted dependencies 1 paru -Yc Yay Update 1 yay Delete Yay Cache 1 yay -Scc Delete unwanted dependencies 1 yay -Yc Clean the Cache 1 rm -rf .]]></description>
 </item>
 <item>
