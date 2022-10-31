@@ -4,6 +4,16 @@
         <link>https://example.com/categories/documentation/</link>
         <description>Documentation - Category - Omgz</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><atom:link href="https://example.com/categories/documentation/" rel="self" type="application/rss+xml" /><item>
+    <title>Arch Maintenance Commands</title>
+    <link>https://example.com/arch-maintenance-commands/</link>
+    <pubDate>Mon, 31 Oct 2022 13:55:33 &#43;0100</pubDate>
+    <author>Ohmygodzilla</author>
+    <guid>https://example.com/arch-maintenance-commands/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/images/" referrerpolicy="no-referrer">
+            </div>Arch maintenance commands Check systemd failed services 1 systemctl --failed Log files check 1 sudo journalctl -p 3 -xb Clean the journal 1 sudo journalctl --vacuum-time=2weeks Pacman Update 1 sudo pacman -Syu Delete Pacman Cache 1 sudo pacman -Scc Check Orphan packages 1 pacman -Qtdq Remove Orphan packages 1 sudo pacman -Rns $(pacman -Qtdq) Paru Update 1 paru Delete Paru Cache 1 paru -Scc Delete unwanted dependencies 1 paru -Yc Yay Update 1 yay Delete Yay Cache 1 yay -Scc Delete unwanted dependencies 1 yay -Yc Clean the Cache 1 rm -rf .]]></description>
+</item>
+<item>
     <title>Arch Install</title>
     <link>https://example.com/arch-install/</link>
     <pubDate>Thu, 06 Oct 2022 14:14:36 &#43;0200</pubDate>
@@ -32,18 +42,6 @@ Install nginx Arch
 1 2 sudo apt-get update #Update repository sudo apt-get install nginx #Install package Unlink defult configuration on ubuntu (optional)
 1 sudo unlink /etc/nginx/sites-enabled/default Edit default configuration file 1 sudo nvim /etc/nginx/sites-available/default Copy and paste
 1 2 3 4 5 6 7 8 9 server { listen 80; listen [::]:80; access_log /var/log/nginx/default-access.]]></description>
-</item>
-<item>
-    <title>Docker Compose</title>
-    <link>https://example.com/docker-compose/</link>
-    <pubDate>Thu, 06 Oct 2022 02:31:23 &#43;0200</pubDate>
-    <author>Ohmygodzilla</author>
-    <guid>https://example.com/docker-compose/</guid>
-    <description><![CDATA[<div class="featured-image">
-                <img src="/images/docker-compose.webp" referrerpolicy="no-referrer">
-            </div>Docker-Compose <i class="fab fa-docker" aria-hidden="true"></i>&nbsp;Networking By default Docker-Compose will create a new network for the given compose file. You can change the behavior by defining custom networks in your compose file.
-Create and assign custom network Example:
-1 2 3 4 5 6 7 networks: custom-network: services: app: networks: - custom-network Use existing networks If you want to use an existing Docker network for your compose files, you can add the external: true parameter in your compose file Example:]]></description>
 </item>
 <item>
     <title>Mariadb Setup</title>

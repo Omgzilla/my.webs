@@ -9,7 +9,7 @@ authorLink: ""
 description: ""
 images: []
 
-tags: [arch, linux, cheat-sheet]
+tags: [arch, linux, cheat-sheet, guide]
 # ubuntu, database, sql, cheat-sheet, docker, container, web server, reverse-proxy, proxy, nginx
 categories: [documentation]
 # cheat-sheet, documentation

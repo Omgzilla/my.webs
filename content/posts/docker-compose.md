@@ -9,9 +9,9 @@ authorLink: ""
 description: ""
 images: []
 
-tags: [docker]
+tags: [docker, cheat-sheet]
 # ubuntu, database, sql, cheat-sheet, docker, container
-categories: [documentation]
+categories: [cheat-sheet]
 # cheat-sheet, documentation
 
 featuredImage: "images/docker-compose.webp"
