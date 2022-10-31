@@ -9,10 +9,8 @@ authorLink: ""
 description: ""
 images: []
 
-tags: [cheat-sheet, virtual-machine, container]
-# ubuntu, database, sql, cheat-sheet, docker, container, web server, reverse-proxy, proxy, nginx
+tags: [Cheat-sheet, Virtual machine, Container]
 categories: [cheat-sheet]
-# cheat-sheet, documentation
 
 featuredImage: "images/proxmox.png"
 featuredImagePreview: "images/proxmox.png"

@@ -9,10 +9,8 @@ authorLink: ""
 description: ""
 images: []
 
-tags: [arch, linux, cheat-sheet, guide]
-# ubuntu, database, sql, cheat-sheet, docker, container, web server, reverse-proxy, proxy, nginx
+tags: [Linux, Cheat-sheet, Guide]
 categories: [documentation]
-# cheat-sheet, documentation
 
 featuredImage: "images/arch-linux.png"
 featuredImagePreview: "images/arch-linux.png"

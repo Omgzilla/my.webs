@@ -9,7 +9,7 @@ authorLink: ""
 description: "How to setup MariaDB basic"
 images: [images/mariadb-setup.jpg]
 
-tags: [ubuntu, database, sql]
+tags: [Linux, Database, SQL]
 categories: [documentation]
 
 featuredImage: "images/mariadb-setup.jpg"

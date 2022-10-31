@@ -1,8 +1,8 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>web server - Tag - Omgz</title>
+        <title>Web server - Tag - Omgz</title>
         <link>https://example.com/tags/web-server/</link>
-        <description>web server - Tag - Omgz</description>
+        <description>Web server - Tag - Omgz</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 06 Oct 2022 03:27:30 &#43;0200</lastBuildDate><atom:link href="https://example.com/tags/web-server/" rel="self" type="application/rss+xml" /><item>
     <title>Nginx Reverse Proxy</title>
     <link>https://example.com/nginx-reverse-proxy/</link>

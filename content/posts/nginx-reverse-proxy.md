@@ -9,10 +9,8 @@ authorLink: ""
 description: ""
 images: []
 
-tags: [web server, reverse-proxy, proxy, nginx]
-# ubuntu, database, sql, cheat-sheet, docker, container
+tags: [Web server, Reverse-proxy, Proxy, Nginx]
 categories: [documentation]
-# cheat-sheet, documentation
 
 featuredImage: "images/nginx-reverse-proxy.webp"
 featuredImagePreview: "images/nginx-reverse-proxy.webp"

@@ -11,10 +11,10 @@ images: []
 
 tags: []
 # Windows, Linux, MacOS
-# database, sql
-# cheat-sheet, documentation
-# virtual machine, docker, container 
-# web server, nginx, reverse-proxy, proxy
+# Database, SQL
+# Cheat-sheet, Documentation, Guide
+# Virtual machine, Docker, Container 
+# Web server, Nginx, Reverse-proxy, Proxy
 categories: [documentation]
 # cheat-sheet, documentation
 

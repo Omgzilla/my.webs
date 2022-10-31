@@ -9,7 +9,7 @@ authorLink: ""
 description: ""
 images: []
 
-tags: [cheat-sheet, docker, container]
+tags: [Cheat-sheet, Docker, Container]
 categories: [cheat-sheet]
 
 featuredImage: "images/docker-cli.png"

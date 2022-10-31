@@ -117,7 +117,7 @@
     </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Ohmygodzilla</a>
 </span>&nbsp;<span class="post-publish">published on <time datetime="2022-10-31">2022-10-31</time></span>&nbsp;<span class="post-category">included in <a href="/categories/cheat-sheet/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Cheat-sheets</a></span></div><div class="content">Arch maintenance commands Check systemd failed services 1 systemctl --failed Log files check 1 sudo journalctl -p 3 -xb Clean the journal 1 sudo journalctl --vacuum-time=2weeks Pacman Update 1 sudo pacman -Syu Delete Pacman Cache 1 sudo pacman -Scc Check Orphan packages 1 pacman -Qtdq Remove Orphan packages 1 sudo pacman -Rns $(pacman -Qtdq) Paru Update 1 paru Delete Paru Cache 1 paru -Scc Delete unwanted dependencies 1 paru -Yc Yay Update 1 yay Delete Yay Cache 1 yay -Scc Delete unwanted dependencies 1 yay -Yc Clean the Cache 1 rm -rf .</div><div class="post-footer">
         <a href="/arch-maintenance-commands/">Read More</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/linux/">linux</a>,&nbsp;<a href="/tags/cheat-sheet/">cheat-sheet</a></div></div>
+                <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/linux/">Linux</a>,&nbsp;<a href="/tags/cheat-sheet/">Cheat-sheet</a></div></div>
 </article><article class="single summary" itemscope itemtype="http://schema.org/Article"><div class="featured-image-preview">
             <a href="/arch-install/"><img
         class="lazyload"
@@ -137,7 +137,7 @@ Base Installation Step 1. Load/Update Start by load keyboard layout and update r
 1 2 ls /usr/share/kbd/keymaps/**/*.map.gz #list all layouts loadkeys sv-latin1 1.2 Update mirrorlist according to country
 1 reflector -c Sweden -a 12 --sort rate --save /etc/pacman.d/mirrorlist Step 2. Format &amp; Partion disk/s 2.1 List disks</div><div class="post-footer">
         <a href="/arch-install/">Read More</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/arch/">arch</a>,&nbsp;<a href="/tags/linux/">linux</a>,&nbsp;<a href="/tags/cheat-sheet/">cheat-sheet</a>,&nbsp;<a href="/tags/guide/">guide</a></div></div>
+                <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/linux/">Linux</a>,&nbsp;<a href="/tags/cheat-sheet/">Cheat-sheet</a>,&nbsp;<a href="/tags/guide/">Guide</a></div></div>
 </article><article class="single summary" itemscope itemtype="http://schema.org/Article"><div class="featured-image-preview">
             <a href="/proxmox-cs/"><img
         class="lazyload"
@@ -155,7 +155,7 @@ Resize Disk Increase disk size Increase disk size in the GUI or with the followi
 1 qm resize 100 virtio0 +5G Decrease disk size Before decreasing disk sizes in Proxmox, you should take a backup!
 Convert qcow2 to raw 1 qemu-img convert vm-100.qcow2 vm-100.raw Shrink the disk 1 qemu-img resize -f raw vm-100.raw 10G Convert back to qcow2# 1 qemu-img convert -p -O qcow2 vm-100.</div><div class="post-footer">
         <a href="/proxmox-cs/">Read More</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/cheat-sheet/">cheat-sheet</a>,&nbsp;<a href="/tags/virtual-machine/">virtual-machine</a>,&nbsp;<a href="/tags/container/">container</a></div></div>
+                <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/cheat-sheet/">Cheat-sheet</a>,&nbsp;<a href="/tags/virtual-machine/">Virtual machine</a>,&nbsp;<a href="/tags/container/">Container</a></div></div>
 </article><article class="single summary" itemscope itemtype="http://schema.org/Article"><div class="featured-image-preview">
             <a href="/nginx-reverse-proxy/"><img
         class="lazyload"
@@ -175,7 +175,7 @@ Install nginx Arch
 1 sudo unlink /etc/nginx/sites-enabled/default Edit default configuration file 1 sudo nvim /etc/nginx/sites-available/default Copy and paste
 1 2 3 4 5 6 7 8 9 server { listen 80; listen [::]:80; access_log /var/log/nginx/default-access.</div><div class="post-footer">
         <a href="/nginx-reverse-proxy/">Read More</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/web-server/">web server</a>,&nbsp;<a href="/tags/reverse-proxy/">reverse-proxy</a>,&nbsp;<a href="/tags/proxy/">proxy</a>,&nbsp;<a href="/tags/nginx/">nginx</a></div></div>
+                <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/web-server/">Web server</a>,&nbsp;<a href="/tags/reverse-proxy/">Reverse-proxy</a>,&nbsp;<a href="/tags/proxy/">Proxy</a>,&nbsp;<a href="/tags/nginx/">Nginx</a></div></div>
 </article><article class="single summary" itemscope itemtype="http://schema.org/Article"><div class="featured-image-preview">
             <a href="/docker-compose/"><img
         class="lazyload"
@@ -192,7 +192,7 @@ Install nginx Arch
 Create and assign custom network Example:
 1 2 3 4 5 6 7 networks: custom-network: services: app: networks: - custom-network Use existing networks If you want to use an existing Docker network for your compose files, you can add the external: true parameter in your compose file Example:</div><div class="post-footer">
         <a href="/docker-compose/">Read More</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/docker/">docker</a>,&nbsp;<a href="/tags/cheat-sheet/">cheat-sheet</a></div></div>
+                <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/docker/">Docker</a>,&nbsp;<a href="/tags/cheat-sheet/">Cheat-sheet</a></div></div>
 </article><article class="single summary" itemscope itemtype="http://schema.org/Article"><div class="featured-image-preview">
             <a href="/docker-cli/"><img
         class="lazyload"
@@ -207,7 +207,7 @@ Create and assign custom network Example:
     </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Ohmygodzilla</a>
 </span>&nbsp;<span class="post-publish">published on <time datetime="2022-10-06">2022-10-06</time></span>&nbsp;<span class="post-category">included in <a href="/categories/cheat-sheet/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Cheat-sheets</a></span></div><div class="content"><p>Docker is a set of platform as a service products that use OS-Level virtualization to deliver software in packages called containers. Containers are isolated from one another and bundle their own software, libraries, and configuration files; they can communicate with each other through well-defined channels. Because all of the containers share the services of a single operating system kernel, they use fewer resources than virtual machines.</p></div><div class="post-footer">
         <a href="/docker-cli/">Read More</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/cheat-sheet/">cheat-sheet</a>,&nbsp;<a href="/tags/docker/">docker</a>,&nbsp;<a href="/tags/container/">container</a></div></div>
+                <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/cheat-sheet/">Cheat-sheet</a>,&nbsp;<a href="/tags/docker/">Docker</a>,&nbsp;<a href="/tags/container/">Container</a></div></div>
 </article><ul class="pagination"><li class="page-item active">
                     <span class="page-link">
                         <a href="/">1</a>

@@ -9,14 +9,8 @@ authorLink: ""
 description: ""
 images: []
 
-tags: [Linux, cheat-sheet]
-# Windows, Linux, MacOS
-# database, sql
-# cheat-sheet, documentation
-# virtual machine, docker, container 
-# web server, nginx, reverse-proxy, proxy
+tags: [Linux, Cheat-sheet]
 categories: [cheat-sheet]
-# cheat-sheet, documentation
 
 featuredImage: "images/arch-pacman.png"
 featuredImagePreview: "images/arch-pacman.png"

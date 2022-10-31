@@ -23,3 +23,4 @@ qemu-img resize -f raw vm-100.raw 10G
 ```
 qemu-img convert -p -O qcow2 vm-100.raw vm-100.qcow2
 ```
+

@@ -1,8 +1,8 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>linux - Tag - Omgz</title>
+        <title>Linux - Tag - Omgz</title>
         <link>https://example.com/tags/linux/</link>
-        <description>linux - Tag - Omgz</description>
+        <description>Linux - Tag - Omgz</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Mon, 31 Oct 2022 13:55:33 &#43;0100</lastBuildDate><atom:link href="https://example.com/tags/linux/" rel="self" type="application/rss+xml" /><item>
     <title>Arch Maintenance Commands</title>
     <link>https://example.com/arch-maintenance-commands/</link>
@@ -27,6 +27,17 @@ Base Installation Step 1. Load/Update Start by load keyboard layout and update r
 1.1 Load keyboard layout
 1 2 ls /usr/share/kbd/keymaps/**/*.map.gz #list all layouts loadkeys sv-latin1 1.2 Update mirrorlist according to country
 1 reflector -c Sweden -a 12 --sort rate --save /etc/pacman.d/mirrorlist Step 2. Format &amp; Partion disk/s 2.1 List disks]]></description>
+</item>
+<item>
+    <title>Mariadb Setup</title>
+    <link>https://example.com/mariadb-setup/</link>
+    <pubDate>Thu, 06 Oct 2022 00:59:35 &#43;0200</pubDate>
+    <author>Ohmygodzilla</author>
+    <guid>https://example.com/mariadb-setup/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/images/mariadb-setup.jpg" referrerpolicy="no-referrer">
+            </div>MariaDB Cheat-Sheet Install MariaDB on Ubuntu 20.04 LTS 1 2 3 sudo apt update sudo apt install mariadb-server sudo mysql_secure_installation Access Database from outside Open /etc/mysql/mariadb.conf.d/50-server.cnf and change the bind-address to:
+1 bind-address = 0.0.0.0 Create Administrative User Create a new user newuser for the host localhost with a new password: 1 CREATE USER &#39;newuser&#39;@&#39;localhost&#39; IDENTIFIED BY &#39;password&#39;; Grant all permissions to the new user 1 GRANT ALL PRIVILEGES ON * .]]></description>
 </item>
 </channel>
 </rss>
