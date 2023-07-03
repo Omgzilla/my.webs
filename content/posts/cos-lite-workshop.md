@@ -45,8 +45,65 @@ comment:
   enable: true
 ---
 
-<!-- more -->
+*This is a summary of what we talked about on the workshop [Learn how to integrate your charm with COS-lite all the way](https://discourse.charmhub.io/t/community-workshop-learn-how-to-integrate-your-charm-with-cos-lite-all-the-way/10917)*
 
+Deployment of a COS-lite on microk8 (kubernetes).
+Using cross-model relations with the VM charm observed.
+How grafana-dashboards, prometheus (metrics), loki (logs), prometheus alert rules are added automatically by the observed charm.
+How to ship alarms/alerts to PagerDuty and/or Slack (webhooks).
 
+#### How to setup a COS-lite environment and start tinkering with it
 
+*Notice that this is an example setup to start tinkering with COS-lite*
+
+We started of by creating a bridge in netplan to separate the network for COS-lite.
+Edit `/etc/netplan/network-configuration-file.yaml`
+```yaml
+network:
+  version: 2
+  renderer: NetworkManager
+  ethernets:
+    wlp9s0:
+      dhcp4: true
+      dhcp6: true
+  bridges:
+    k8sbr0:
+      interfaces:
+        - wlp9s0
+      addresses:
+        - 10.10.88.1/24
+      routes:
+        - to: 0.0.0.0/0
+          via: 10.10.88.1
+      nameservers:
+        addresses:
+          - 10.10.88.1
+      dhcp4: false
+      dhcp6: false
+```
+
+After that we continued with installing microk8s from snap
+
+<!-- 2-install_microk8s -->
 <script async id="asciicast-UR7KSN2lwa6Q5yyyu0luBI6hh" src="https://asciinema.org/a/UR7KSN2lwa6Q5yyyu0luBI6hh.js"></script>
+
+<!-- 3-bootstrap_controller -->
+<script async id="asciicast-u6CSRmWH8FVmXikWNjG42IVhw" src="https://asciinema.org/a/u6CSRmWH8FVmXikWNjG42IVhw.js"></script>
+
+<!-- 4-deploy_coslite -->
+<script async id="asciicast-gTsEEVbS6kEcLuX57cO9VdAgs" src="https://asciinema.org/a/gTsEEVbS6kEcLuX57cO9VdAgs.js"></script>
+
+<!-- 4-deploy_coslite_with_overlays -->
+<script async id="asciicast-e1l0exQC2MMKAsyKi1L3mrxbH" src="https://asciinema.org/a/e1l0exQC2MMKAsyKi1L3mrxbH.js"></script>
+
+<!-- 5-coslite_offers -->
+<script async id="asciicast-WzWPbKkWE7KUTor4fvkugSWPu" src="https://asciinema.org/a/WzWPbKkWE7KUTor4fvkugSWPu.js"></script>
+
+<!-- 6-obeserved_charm -->
+<script async id="asciicast-7EfUTw4xlZsi00Oc7dS6lC2s7" src="https://asciinema.org/a/7EfUTw4xlZsi00Oc7dS6lC2s7.js"></script>
+
+<!-- 7-deploy_grafana-agent -->
+<script async id="asciicast-WVysjssItuezm1JaDhk8uJoGR" src="https://asciinema.org/a/WVysjssItuezm1JaDhk8uJoGR.js"></script>
+
+<!-- 8-consume_and_relate -->
+<script async id="asciicast-XHAxz5Blyo9W8ozqpfLmaw9CR" src="https://asciinema.org/a/XHAxz5Blyo9W8ozqpfLmaw9CR.js"></script>
