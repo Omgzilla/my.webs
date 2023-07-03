@@ -1,7 +1,7 @@
 {
 	"version": 3,
 	"file": "style.min.css",
-	"sourceRoot": "/Users/marcus/.dots/website/my.webs",
+	"sourceRoot": "/home/marcus/gits/marcus/my.webs",
 	"sources": [
 		"themes/LoveIt/assets/css/style.scss",
 		"themes/LoveIt/assets/css/_variables.scss",
