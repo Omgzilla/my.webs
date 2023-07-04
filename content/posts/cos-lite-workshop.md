@@ -103,7 +103,7 @@ $ microk8s.enable dns hostpath-storage metallb:10.10.88.2-10.10.88.10
 
 
 ### Bootstrap a controller on microk8s cloud
-Next we bootstrapped a juju controller on the microk8s cloud
+Next, we bootstrapp a juju controller on the microk8s cloud
 <!-- 3-bootstrap_controller -->
 <script async id="asciicast-u6CSRmWH8FVmXikWNjG42IVhw" src="https://asciinema.org/a/u6CSRmWH8FVmXikWNjG42IVhw.js"></script>
 
@@ -113,7 +113,7 @@ $ juju bootstrap microk8s <controller-name>
 ```
 <br>
 
-If you instead wants to add the microk8s cloud to an already deployed controller use this commnads:
+If you instead want to add the microk8s cloud to an already deployed controller use this commnads:
 ```bash
 $ microk8s.config | juju add-k8s <cloud-name> --controller <controller-name>
 ```
