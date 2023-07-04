@@ -51,11 +51,9 @@ comment:
 
 ---
 
-How to ship alarms/alerts to PagerDuty and/or Slack (webhooks).
-
 ## How to setup a COS-lite environment and start tinkering with it
-
 *Notice that this is an example setup to be able to start tinkering with COS-lite*
+<br>
 
 ### Creating a bridge for COS-lite
 We started of by creating a bridge in netplan to separate the network for COS-lite.
