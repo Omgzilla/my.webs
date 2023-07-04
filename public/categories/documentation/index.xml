@@ -11,8 +11,9 @@
     <guid>https://example.com/cos-lite-workshop/</guid>
     <description><![CDATA[<div class="featured-image">
                 <img src="/images/cos-lite-grafana.png" referrerpolicy="no-referrer">
-            </div>This is a summary of what we talked about on the workshop Learn how to integrate your charm with COS-lite all the way Deployment of a COS-lite on microk8 (kubernetes). Using cross-model relations with the VM charm observed. How grafana-dashboards, prometheus (metrics), loki (logs), prometheus alert rules are added automatically by the observed charm. How to ship alarms/alerts to PagerDuty and/or Slack (webhooks).
-How to setup a COS-lite environment and start tinkering with it Notice that this is an example setup to be able to start tinkering with COS-lite]]></description>
+            </div>This is a summary of what we talked about on the workshop Learn how to integrate your charm with COS-lite all the way How to ship alarms/alerts to PagerDuty and/or Slack (webhooks).
+How to setup a COS-lite environment and start tinkering with it Notice that this is an example setup to be able to start tinkering with COS-lite
+Creating a bridge for COS-lite We started of by creating a bridge in netplan to separate the network for COS-lite.]]></description>
 </item>
 <item>
     <title>Arch Install</title>
