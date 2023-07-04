@@ -84,7 +84,7 @@ network:
       dhcp4: false
       dhcp6: false
 ```
-<br>
+<br><br>
 
 
 ### Install microk8s cloud
@@ -99,7 +99,7 @@ After that we continued with installing microk8s from snap
 $ sudo snap install microk8s --classic
 $ microk8s.enable dns hostpath-storage metallb:10.10.88.2-10.10.88.10
 ```
-<br>
+<br><br>
 
 
 ### Bootstrap a controller on microk8s cloud
@@ -117,7 +117,7 @@ If you instead wants to add the microk8s cloud to an already deployed controller
 ```bash
 $ microk8s.config | juju add-k8s <cloud-name> --controller <controller-name>
 ```
-
+<br><br>
 
 ### Deploy COS-lite
 After bootstrapping a new controller, we add a new model for COS-lite and then deploying COS stack inside that.
@@ -144,11 +144,12 @@ $ juju deploy cos-lite --trust --channel edge --overlay ./path-to-overlay-file.y
 
 #### Connect to COS-lite services
 Traefik is a reverse proxy, it get a gateway address from the metallb, which we can use to connect to grafana, prometheus and alertmanager. We can connect to the services by using the IP-address followed by model-name and application-name like this `https://10.10.88.2/cos-grafana`. I've noticed that some applications require adding unit number as well (ex. `cos-prometheus-0`).
+<br>
 
 #### Login to grafana
 We can use actions to get the admin password to be able to login to grafana.
 `juju run-action grafana/0 get-admin-password --wait`
-
+<br><br>
 
 ### Make offers needed for grafana-agent
 After having COS-lite deployed and ready, we can make offers of the endpoints needed for grafana-agent. Grafana-agent needs to be related to 3 endpoints to get out of it's blocked state.
@@ -162,7 +163,7 @@ $ juju offer loki:logging [<offer-name>]
 $ juju offer prometheus:receive-remote-write [<offer-name>]
 $ juju status
 ```
-<br>
+<br><br>
 
 
 ### Build and deploy Observed charm
@@ -175,11 +176,11 @@ Observed is built by @eriklonroth as a reference charm to learn what COS-lite ca
 $ juju add-model observed
 $ juju deploy ./observed.charm
 ```
-<br>
+<br><br>
 
 
 ### Deploy and integrate grafana-agent
-For observed to be able to send data to the COS-lite, we need to deploy are "bridge" between COS-lite and the charms. Grafana-agent is a subordinate charm that scrapes metrics, logs and dashboards and sends it to COS stack. Charms need to support grafana-agent integrations for it to work, which observed does, so lets deploy and relate grafana-agent right now.
+For observed to be able to send data to the COS-lite, we need to deploy are "bridge" between COS-lite and the charms. [Grafana-agent](https://charmhub.io/grafana-agent) is a subordinate charm that scrapes metrics, logs and dashboards and sends it to COS stack. [Charms need to support](https://discourse.charmhub.io/t/using-the-grafana-agent-machine-charm/8896) grafana-agent integrations for it to work, which observed does, so lets deploy and relate grafana-agent right now.
 <!-- 7-deploy_grafana-agent -->
 <script async id="asciicast-WVysjssItuezm1JaDhk8uJoGR" src="https://asciinema.org/a/WVysjssItuezm1JaDhk8uJoGR.js"></script>
 
@@ -189,7 +190,7 @@ $ juju deploy grafana-agent --channel edge
 $ juju relate grafana-agent observed
 $ juju status --relations
 ```
-<br>
+<br><br>
 
 
 ### Consuming and relating offers
@@ -208,6 +209,28 @@ $ juju relate grafana-agent grafana-dashboard
 $ juju relate grafana-agent loki-logging
 $ juju relate grafana-agent prometheus-rrw
 ```
-<br>
+<br><br>
 
 
+### Try out your new setup
+After previous section it should now be possible to find new dashboards and alert rules in grafana. There should also be a dashboard called *Observed Microsample*. To trigger alert rules we can start to call observed charms api.
+
+Curl Observed
+```bash
+$ curl http://<IP-ADDRESS-FOR-OBSERVED>:8080 # to return online
+$ curl http://<IP-ADDRESS_FOR_OBSERVED>:8080/whatever # to return 404
+# Example to trigger alerts for invalid api calls
+$ while 1>0; do curl http://10.10.99.213:8080/fire; sleep 0.5; done
+```
+<br><br>
+
+### Integrate alertmanager with other services
+In the observed [repo](https://github.com/erik78se/juju-operators-examples/tree/main/observed) you can find [examples](https://github.com/erik78se/juju-operators-examples/tree/main/observed/src/alertmanager_configs) configurations for alertmanager that can enable integration with other services like slack and pagerduty to receive notifications. Use following command to push a configuration file to alertmanager.
+```bash
+$ juju config alertmanager config_file=@/path/to/file.yaml
+```
+To show or check current configuration:
+```bash
+$ juju run-action alertmanager/0 show-config
+$ juju run-action alertmanager/0 check-config
+```
