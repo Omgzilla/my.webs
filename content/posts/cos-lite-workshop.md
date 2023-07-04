@@ -47,7 +47,7 @@ comment:
 
 ---
 
-*This is a summary of what we talked about on the workshop [Learn how to integrate your charm with COS-lite all the way](https://discourse.charmhub.io/t/community-workshop-learn-how-to-integrate-your-charm-with-cos-lite-all-the-way/10917)*
+# *This is a summary of what we talked about on the workshop [Learn how to integrate your charm with COS-lite all the way](https://discourse.charmhub.io/t/community-workshop-learn-how-to-integrate-your-charm-with-cos-lite-all-the-way/10917)*
 
 ---
 
