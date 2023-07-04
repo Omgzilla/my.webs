@@ -165,7 +165,7 @@ $ juju status
 
 
 ### Build and deploy Observed charm
-Observed is built by @eriklonroth as a reference charm to learn what COS-lite can do. It ships with a dashboard, prometheus & loki alert rule. To be able to build it you need a clone of the [repo](https://github.com/erik78se/juju-operators-examples/tree/main/observed) and [charmcraft](https://juju.is/docs/sdk/install-charmcraft). After building it we can deploy observed to a new model.
+Observed is built by @[eriklonroth](https://discourse.charmhub.io/u/erik-lonroth) as a reference charm to learn what COS-lite can do. It ships with a dashboard, prometheus & loki alert rule. To be able to build it you need a clone of the [repo](https://github.com/erik78se/juju-operators-examples/tree/main/observed) and [charmcraft](https://juju.is/docs/sdk/install-charmcraft). After building it we can deploy observed to a new model.
 <!-- 6-obeserved_charm -->
 <script async id="asciicast-7EfUTw4xlZsi00Oc7dS6lC2s7" src="https://asciinema.org/a/7EfUTw4xlZsi00Oc7dS6lC2s7.js"></script>
 
