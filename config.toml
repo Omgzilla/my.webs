@@ -151,24 +151,35 @@ enableEmoji = true
   # Search config
   [params.search]
     enable = true
-    # type of search engine ["lunr", "algolia"]
-    type = "lunr"
+    # type of search engine ("algolia", "fuse")
+    type = "fuse"
     # max index length of the chunked content
     contentLength = 4000
     # placeholder of the search bar
     placeholder = ""
-    # max number of results length
+    #  max number of results length
     maxResultLength = 10
-    # snippet length of the result
+    #  snippet length of the result
     snippetLength = 30
-    # HTML tag name of the highlight part in results
+    #  HTML tag name of the highlight part in results
     highlightTag = "em"
-    # whether to use the absolute URL based on the baseURL in search index
+    #  whether to use the absolute URL based on the baseURL in search index
     absoluteURL = false
     [params.search.algolia]
       index = ""
       appID = ""
       searchKey = ""
+    [params.search.fuse]
+      #  https://fusejs.io/api/options.html
+      isCaseSensitive = false
+      minMatchCharLength = 2
+      findAllMatches = false
+      location = 0
+      threshold = 0.3
+      distance = 100
+      ignoreLocation = false
+      useExtendedSearch = false
+      ignoreFieldNorm = false
 
   # Home page config
   [params.home]
