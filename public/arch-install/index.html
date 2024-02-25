@@ -1,34 +1,41 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="robots" content="noodp" />
-        <title>Arch Install - Omgz</title><meta name="Description" content=""><meta property="og:title" content="Arch Install" />
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noodp" />
+    <title>Arch Install - Omgz</title><meta name="Description" content=""><meta property="og:title" content="Arch Install" />
 <meta property="og:description" content="This is my guide on how to install Arch Linux!
 Something&rsquo;s missing? here is Arch Linux Wiki installation guide.
 Base Installation Step 1. Load/Update Start by load keyboard layout and update repo mirrors
 1.1 Load keyboard layout
 1 2 ls /usr/share/kbd/keymaps/**/*.map.gz #list all layouts loadkeys sv-latin1 1.2 Update mirrorlist according to country
-1 reflector -c Sweden -a 12 --sort rate --save /etc/pacman.d/mirrorlist Step 2. Format &amp; Partion disk/s 2.1 List disks" />
+1 reflector -c Sweden -a 12 --sort rate --save /etc/pacman.d/mirrorlist Step 2. Format &amp; Partion disk/s2.1 List disks" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://example.com/arch-install/" /><meta property="og:image" content="https://example.com/logo.png"/><meta property="article:section" content="posts" />
+<meta property="og:url" content="http://localhost:1313/arch-install/" /><meta property="og:image" content="http://localhost:1313/images/ohmygodzilla-logo.png" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2022-10-06T14:14:36+02:00" />
 <meta property="article:modified_time" content="2022-10-31T14:06:29+01:00" /><meta property="og:site_name" content="Omgz" />
-<meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:image" content="https://example.com/logo.png"/>
 
-<meta name="twitter:title" content="Arch Install"/>
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="http://localhost:1313/images/ohmygodzilla-logo.png" /><meta name="twitter:title" content="Arch Install"/>
 <meta name="twitter:description" content="This is my guide on how to install Arch Linux!
 Something&rsquo;s missing? here is Arch Linux Wiki installation guide.
 Base Installation Step 1. Load/Update Start by load keyboard layout and update repo mirrors
 1.1 Load keyboard layout
 1 2 ls /usr/share/kbd/keymaps/**/*.map.gz #list all layouts loadkeys sv-latin1 1.2 Update mirrorlist according to country
-1 reflector -c Sweden -a 12 --sort rate --save /etc/pacman.d/mirrorlist Step 2. Format &amp; Partion disk/s 2.1 List disks"/>
+1 reflector -c Sweden -a 12 --sort rate --save /etc/pacman.d/mirrorlist Step 2. Format &amp; Partion disk/s2.1 List disks"/>
+<meta name="twitter:site" content="@Omgzilla"/>
 <meta name="application-name" content="Omgz">
-<meta name="apple-mobile-web-app-title" content="Omgz"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+<meta name="apple-mobile-web-app-title" content="Omgz">
+
+<meta name="theme-color" content="#f8f8f8"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://example.com/arch-install/" /><link rel="prev" href="https://example.com/proxmox-cs/" /><link rel="next" href="https://example.com/arch-maintenance-commands/" /><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css"><link rel="stylesheet" href="/css/style.min.20174c6e52e001cbcdedf3a0ea8518ab431f69caab98c9c7a06e8c6dfde126988575f77eedc51fe200e25c1eb619e27e8f74e0d4079773a6e928321b9ff2b667.css" integrity="sha512-IBdMblLgAcvN7fOg6oUYq0MfacqrmMnHoG6Mbf3hJpiFdfd&#43;7cUf4gDiXB62GeJ&#43;j3Tg1AeXc6bpKDIbn/K2Zw=="><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"><script type="application/ld+json">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="canonical" href="http://localhost:1313/arch-install/" /><link rel="prev" href="http://localhost:1313/proxmox-cs/" /><link rel="next" href="http://localhost:1313/arch-maintenance-commands/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/color.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/fontawesome-free/all.min.css">
+        <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/animate/animate.min.css">
+        <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
@@ -36,46 +43,68 @@ Base Installation Step 1. Load/Update Start by load keyboard layout and update r
         "inLanguage": "en",
         "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "https:\/\/example.com\/arch-install\/"
-        },"image": ["https:\/\/example.com\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "Linux, Cheat-sheet, Guide","wordcount":  1833 ,
-        "url": "https:\/\/example.com\/arch-install\/","datePublished": "2022-10-06T14:14:36+02:00","dateModified": "2022-10-31T14:06:29+01:00","publisher": {
+            "@id": "http:\/\/localhost:1313\/arch-install\/"
+        },"image": ["http:\/\/localhost:1313\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "Linux, Cheat-sheet, Guide","wordcount":  1816 ,
+        "url": "http:\/\/localhost:1313\/arch-install\/","datePublished": "2022-10-06T14:14:36+02:00","dateModified": "2022-10-31T14:06:29+01:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
                 "@type": "Person",
                 "name": "Ohmygodzilla"
             },"description": ""
     }
-    </script></head>
-    <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+    </script><script src="//instant.page/5.1.1" defer type="module" integrity="sha384-MWfCL6g1OTGsbSwfuMHc8+8J2u71/LA8dzlIN3ycajckxuZZmF+DNjdm7O6H3PSq"></script>
+</head>
 
-        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+<body header-desktop="normal" header-mobile="auto"><script type="text/javascript">
+        function setTheme(theme) {document.body.setAttribute('theme', theme); document.documentElement.style.setProperty('color-scheme', theme === 'light' ? 'light' : 'dark'); window.theme = theme; }
+        function saveTheme(theme) {window.localStorage && localStorage.setItem('theme', theme);}
+        function getMeta(metaName) {const metas = document.getElementsByTagName('meta'); for (let i = 0; i < metas.length; i++) if (metas[i].getAttribute('name') === metaName) return metas[i]; return '';}
+        if (window.localStorage && localStorage.getItem('theme')) {let theme = localStorage.getItem('theme');theme === 'light' || theme === 'dark' || theme === 'black' ? setTheme(theme) : (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? setTheme('dark') : setTheme('light')); } else { if ('auto' === 'light' || 'auto' === 'dark' || 'auto' === 'black') setTheme('auto'), saveTheme('auto'); else saveTheme('auto'), window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? setTheme('dark') : setTheme('light');}
+        let metaColors = {'light': '#f8f8f8','dark': '#252627','black': '#000000'}
+        getMeta('theme-color').content = metaColors[document.body.getAttribute('theme')];
+    </script>
+    <div id="back-to-top"></div>
+    <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
     <div class="header-wrapper">
         <div class="header-title">
-            <a href="/" title="Omgz"><span class="header-title-pre"><i class='far fa-kiss-wink-heart fa-fw' aria-hidden='true'></i></span>Omgz<span class="header-title-post">illa</span></a>
+            <a href="/" title="Omgz"><img
+        class="logo"
+        loading="lazy"
+        src="/images/ohmygodzilla-logo.png"
+        srcset="/images/ohmygodzilla-logo.png, /images/ohmygodzilla-logo.png 1.5x, /images/ohmygodzilla-logo.png 2x"
+        sizes="auto"
+        alt="/images/ohmygodzilla-logo.png"
+        title="/images/ohmygodzilla-logo.png" height="797"   width="752" ><span class="header-title-pre"><i class='far fa-kiss-wink-heart fa-fw' aria-hidden='true'></i></span>Ohmygodzilla</a>
         </div>
         <div class="menu">
             <div class="menu-inner"><a class="menu-item" href="/posts/"> Posts </a><a class="menu-item" href="/tags/"> Tags </a><a class="menu-item" href="/categories/"> Categories </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
                         <input type="text" placeholder="Search titles or contents..." id="search-input-desktop">
-                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
-                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        <a href="#" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw"></i>
                         </a>
-                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
-                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        <a href="#" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw"></i>
                         </a>
                         <span class="search-button search-loading" id="search-loading-desktop">
-                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
                         </span>
-                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
-                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
-                </a>
-            </div>
+                    </span><a href="#" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a></div>
         </div>
     </div>
 </header><header class="mobile" id="header-mobile">
     <div class="header-container">
         <div class="header-wrapper">
             <div class="header-title">
-                <a href="/" title="Omgz"><span class="header-title-pre"><i class='far fa-kiss-wink-heart fa-fw' aria-hidden='true'></i></span>Omgz<span class="header-title-post">illa</span></a>
+                <a href="/" title="Omgz"><img
+        class="logo"
+        loading="lazy"
+        src="/images/ohmygodzilla-logo.png"
+        srcset="/images/ohmygodzilla-logo.png, /images/ohmygodzilla-logo.png 1.5x, /images/ohmygodzilla-logo.png 2x"
+        sizes="auto"
+        alt="/images/ohmygodzilla-logo.png"
+        title="/images/ohmygodzilla-logo.png" height="797"   width="752" ><span class="header-title-pre"><i class='far fa-kiss-wink-heart fa-fw' aria-hidden='true'></i></span>Ohmygodzilla</a>
             </div>
             <div class="menu-toggle" id="menu-toggle-mobile">
                 <span></span><span></span><span></span>
@@ -84,48 +113,95 @@ Base Installation Step 1. Load/Update Start by load keyboard layout and update r
         <div class="menu" id="menu-mobile"><div class="search-wrapper">
                     <div class="search mobile" id="search-mobile">
                         <input type="text" placeholder="Search titles or contents..." id="search-input-mobile">
-                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
-                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        <a href="#" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw"></i>
                         </a>
-                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
-                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        <a href="#" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw"></i>
                         </a>
                         <span class="search-button search-loading" id="search-loading-mobile">
-                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
                         </span>
                     </div>
-                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                    <a href="#" class="search-cancel" id="search-cancel-mobile">
                         Cancel
                     </a>
-                </div><a class="menu-item" href="/posts/" title="">Posts</a><a class="menu-item" href="/tags/" title="">Tags</a><a class="menu-item" href="/categories/" title="">Categories</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
-                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </div><a class="menu-item" href="/posts/" title="">Posts</a><a class="menu-item" href="/tags/" title="">Tags</a><a class="menu-item" href="/categories/" title="">Categories</a><a href="#" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw"></i>
             </a></div>
     </div>
-</header><div class="search-dropdown desktop">
-        <div id="search-dropdown-desktop"></div>
-    </div>
-    <div class="search-dropdown mobile">
-        <div id="search-dropdown-mobile"></div>
-    </div><main class="main">
-                <div class="container"><div class="toc" id="toc-auto">
-            <h2 class="toc-title">Contents</h2>
-            <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Arch Install</h1><div class="post-meta">
-            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Ohmygodzilla</a>
-</span>&nbsp;<span class="post-category">included in <a href="/categories/documentation/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Documentation</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2022-10-06">2022-10-06</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;1833 words&nbsp;
-                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;9 minutes&nbsp;</div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+            <div class="container"><div class="toc" id="toc-auto">
+        <h2 class="toc-title">Contents</h2>
+        <div class="toc-content" id="toc-content-auto"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#base-installation">Base Installation</a>
+      <ul>
+        <li><a href="#step-1-loadupdate">Step 1. Load/Update</a></li>
+        <li><a href="#step-2-format--partion-disks">Step 2. Format &amp; Partion disk/s</a>
+          <ul>
+            <li><a href="#make-efi"><em>Make EFI</em></a></li>
+            <li><a href="#make-swap"><em>Make SWAP</em></a></li>
+            <li><a href="#make-ext4"><em>Make EXT4</em></a></li>
+            <li><a href="#make-btrfs"><em>Make BTRFS</em></a></li>
+          </ul>
+        </li>
+        <li><a href="#step-3-install-base-system">Step 3. Install base system</a></li>
+        <li><a href="#step-4-generate-file-system-boot-table">Step 4. Generate file system boot table</a></li>
+        <li><a href="#step-5-enter-chroot">Step 5. Enter Chroot</a></li>
+        <li><a href="#step-6-install-essentials">Step 6. Install essentials</a></li>
+        <li><a href="#step-7-installconfigure-grub">Step 7. Install/Configure GRUB</a></li>
+        <li><a href="#step-8-enable-services">Step 8. Enable services</a></li>
+        <li><a href="#step-9-add-user">Step 9. Add User</a></li>
+        <li><a href="#step-10-finish-installation">Step 10. Finish installation</a></li>
+      </ul>
+    </li>
+    <li><a href="#after-base-installation">After base installation</a>
+      <ul>
+        <li><a href="#step-1-basic-configuration">Step 1. Basic configuration</a></li>
+        <li><a href="#step-2-install-aur-helper">Step 2. Install AUR helper</a></li>
+        <li><a href="#step-3-install-zram-optional">Step 3. Install zram (optional)</a></li>
+        <li><a href="#step-4-install-timeshift-optional">Step 4. Install timeshift (optional)</a></li>
+        <li><a href="#step-5-install-browser">Step 5. Install browser</a></li>
+        <li><a href="#step-6-install-firewall-optional">Step 6. Install firewall (optional)</a></li>
+        <li><a href="#step-7-install-other-useful-stuff">Step 7. Install other useful stuff</a></li>
+        <li><a href="#step-8-create-bridge-network-for-vm-optional">Step 8. Create bridge network for vm (optional)</a></li>
+        <li><a href="#step-9-install-desktop-environment">Step 9. Install Desktop Environment</a>
+          <ul>
+            <li><a href="#91-install-gnome">9.1 Install Gnome</a></li>
+            <li><a href="#92-install-kde">9.2 Install KDE</a></li>
+            <li><a href="#93-install-bspwm">9.3 Install BSPWM</a></li>
+            <li><a href="#94-install-dwm">9.4 Install DWM</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+    </div><script>document.getElementsByTagName("main")[0].setAttribute("autoTOC", "true")</script><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Arch Install</h1><div class="post-meta">
+            <div class="post-meta-line">
+                <span class="post-author"><i class="author fas fa-user-circle fa-fw"></i><a href="/" title="Author" rel=" author" class="author">Ohmygodzilla</a>
+                </span>&nbsp;<span class="post-category">included in </span>&nbsp;<span class="post-category">category <a href="/categories/documentation/"><i class="far fa-folder fa-fw"></i>Documentation</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-10-06">2022-10-06</time>&nbsp;<i class="far fa-edit fa-fw"></i>&nbsp;<time datetime="2022-10-31">2022-10-31</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;1816 words&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;9 minutes&nbsp;</div>
         </div><div class="featured-image"><img
-        class="lazyload"
-        src="/svg/loading.min.svg"
-        data-src="/images/arch-linux.png"
-        data-srcset="/images/arch-linux.png, /images/arch-linux.png 1.5x, /images/arch-linux.png 2x"
-        data-sizes="auto"
+        
+        loading="eager"
+        src="/images/arch-linux.png"
+        srcset="/images/arch-linux.png, /images/arch-linux.png 1.5x, /images/arch-linux.png 2x"
+        sizes="auto"
         alt="/images/arch-linux.png"
-        title="/images/arch-linux.png" width="1600" height="900" /></div><div class="details toc" id="toc-static"  data-kept="">
+        title="/images/arch-linux.png" height="auto"   width="auto" ></div><div class="details toc" id="toc-static"  kept="">
                 <div class="details-summary toc-title">
                     <span>Contents</span>
-                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
                 </div>
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
@@ -174,13 +250,12 @@ Base Installation Step 1. Load/Update Start by load keyboard layout and update r
 </nav></div>
             </div><div class="content" id="content"><hr>
 <p><em>This is my guide on how to install Arch Linux!</em><br>
-<em>Something&rsquo;s missing? here is <a href="https://wiki.archlinux.org/title/Installation_guide" target="_blank" rel="noopener noreffer">Arch Linux Wiki</a>
- installation guide.</em></p>
+<em>Something&rsquo;s missing? here is <a href="https://wiki.archlinux.org/title/Installation_guide" target="_blank" rel="noopener noreferrer">Arch Linux Wiki</a> installation guide.</em></p>
 <hr>
 <!-- more -->
-<h2 id="base-installation">Base Installation</h2>
-<h3 id="step-1-loadupdate">Step 1. Load/Update</h3>
-<blockquote>
+<h2 id="base-installation" class="headerLink">
+    <a href="#base-installation" class="header-mark"></a>Base Installation</h2><h3 id="step-1-loadupdate" class="headerLink">
+    <a href="#step-1-loadupdate" class="header-mark"></a>Step 1. Load/Update</h3><blockquote>
 <p>Start by load keyboard layout and update repo mirrors</p>
 </blockquote>
 <p><strong>1.1</strong> <em>Load keyboard layout</em></p>
@@ -205,8 +280,8 @@ Base Installation Step 1. Load/Update Start by load keyboard layout and update r
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p><br><br></p>
-<h3 id="step-2-format--partion-disks">Step 2. Format &amp; Partion disk/s</h3>
-<p><strong>2.1</strong> <em>List disks</em></p>
+<h3 id="step-2-format--partion-disks" class="headerLink">
+    <a href="#step-2-format--partion-disks" class="header-mark"></a>Step 2. Format &amp; Partion disk/s</h3><p><strong>2.1</strong> <em>List disks</em></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -234,8 +309,8 @@ Base Installation Step 1. Load/Update Start by load keyboard layout and update r
 <br></li>
 </ul>
 <p><strong>2.3</strong> <em>Make/Mount file system</em></p>
-<h4 id="make-efi"><em>Make EFI</em></h4>
-<div class="highlight"><div class="chroma">
+<h4 id="make-efi" class="headerLink">
+    <a href="#make-efi" class="header-mark"></a><em>Make EFI</em></h4><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
@@ -253,8 +328,8 @@ Base Installation Step 1. Load/Update Start by load keyboard layout and update r
 </span></span></code></pre></td></tr></table>
 </div>
 </div><br>
-<h4 id="make-swap"><em>Make SWAP</em></h4>
-<details>
+<h4 id="make-swap" class="headerLink">
+    <a href="#make-swap" class="header-mark"></a><em>Make SWAP</em></h4><details>
   <summary>Click if using SWAP</summary>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -268,8 +343,8 @@ Base Installation Step 1. Load/Update Start by load keyboard layout and update r
 </div>
 </div></details>
 <br>
-<h4 id="make-ext4"><em>Make EXT4</em></h4>
-<details>
+<h4 id="make-ext4" class="headerLink">
+    <a href="#make-ext4" class="header-mark"></a><em>Make EXT4</em></h4><details>
   <summary>Click if using EXT4</summary>
 <p><strong>Make EXT4 file system</strong></p>
 <div class="highlight"><div class="chroma">
@@ -301,8 +376,8 @@ Base Installation Step 1. Load/Update Start by load keyboard layout and update r
 </div>
 </div></details>
 <br>
-<h4 id="make-btrfs"><em>Make BTRFS</em></h4>
-<details>
+<h4 id="make-btrfs" class="headerLink">
+    <a href="#make-btrfs" class="header-mark"></a><em>Make BTRFS</em></h4><details>
   <summary>Click if using BTRFS</summary>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -395,8 +470,8 @@ Base Installation Step 1. Load/Update Start by load keyboard layout and update r
 </div>
 </div></details>
 <p><br><br></p>
-<h3 id="step-3-install-base-system">Step 3. Install base system</h3>
-<p><strong>3.1</strong> <em>Install base system files and linux kernel</em></p>
+<h3 id="step-3-install-base-system" class="headerLink">
+    <a href="#step-3-install-base-system" class="header-mark"></a>Step 3. Install base system</h3><p><strong>3.1</strong> <em>Install base system files and linux kernel</em></p>
 <p><strong>Only Base</strong></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -441,8 +516,8 @@ Base Installation Step 1. Load/Update Start by load keyboard layout and update r
 </ul>
 </blockquote>
 <p><br><br></p>
-<h3 id="step-4-generate-file-system-boot-table">Step 4. Generate file system boot table</h3>
-<p><strong>4.1</strong> <em>Generate file system boot table with UUID</em></p>
+<h3 id="step-4-generate-file-system-boot-table" class="headerLink">
+    <a href="#step-4-generate-file-system-boot-table" class="header-mark"></a>Step 4. Generate file system boot table</h3><p><strong>4.1</strong> <em>Generate file system boot table with UUID</em></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -454,8 +529,8 @@ Base Installation Step 1. Load/Update Start by load keyboard layout and update r
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p><br><br></p>
-<h3 id="step-5-enter-chroot">Step 5. Enter Chroot</h3>
-<p><strong>5.1</strong> <em>Enter your base install</em></p>
+<h3 id="step-5-enter-chroot" class="headerLink">
+    <a href="#step-5-enter-chroot" class="header-mark"></a>Step 5. Enter Chroot</h3><p><strong>5.1</strong> <em>Enter your base install</em></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -564,8 +639,8 @@ Base Installation Step 1. Load/Update Start by load keyboard layout and update r
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p><br><br></p>
-<h3 id="step-6-install-essentials">Step 6. Install essentials</h3>
-<p><strong>6.1</strong> <em>Necessary packages (bootloader, network)</em></p>
+<h3 id="step-6-install-essentials" class="headerLink">
+    <a href="#step-6-install-essentials" class="header-mark"></a>Step 6. Install essentials</h3><p><strong>6.1</strong> <em>Necessary packages (bootloader, network)</em></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -655,8 +730,8 @@ Base Installation Step 1. Load/Update Start by load keyboard layout and update r
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p><br><br></p>
-<h3 id="step-7-installconfigure-grub">Step 7. Install/Configure GRUB</h3>
-<p><strong>7.1</strong> <em>Configure grub</em></p>
+<h3 id="step-7-installconfigure-grub" class="headerLink">
+    <a href="#step-7-installconfigure-grub" class="header-mark"></a>Step 7. Install/Configure GRUB</h3><p><strong>7.1</strong> <em>Configure grub</em></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -676,8 +751,8 @@ Base Installation Step 1. Load/Update Start by load keyboard layout and update r
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p><br><br></p>
-<h3 id="step-8-enable-services">Step 8. Enable services</h3>
-<p><strong>8.1</strong> <em>Enable services to boot on startup</em></p>
+<h3 id="step-8-enable-services" class="headerLink">
+    <a href="#step-8-enable-services" class="header-mark"></a>Step 8. Enable services</h3><p><strong>8.1</strong> <em>Enable services to boot on startup</em></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -707,8 +782,8 @@ Base Installation Step 1. Load/Update Start by load keyboard layout and update r
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p><br><br></p>
-<h3 id="step-9-add-user">Step 9. Add User</h3>
-<p><strong>9.1 Method 1</strong> <em>Add a user</em></p>
+<h3 id="step-9-add-user" class="headerLink">
+    <a href="#step-9-add-user" class="header-mark"></a>Step 9. Add User</h3><p><strong>9.1 Method 1</strong> <em>Add a user</em></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -751,8 +826,8 @@ Base Installation Step 1. Load/Update Start by load keyboard layout and update r
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p><br><br></p>
-<h3 id="step-10-finish-installation">Step 10. Finish installation</h3>
-<p><strong>10.1</strong> <em>Exit chroot, unmount and reboot</em></p>
+<h3 id="step-10-finish-installation" class="headerLink">
+    <a href="#step-10-finish-installation" class="header-mark"></a>Step 10. Finish installation</h3><p><strong>10.1</strong> <em>Exit chroot, unmount and reboot</em></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -766,9 +841,9 @@ Base Installation Step 1. Load/Update Start by load keyboard layout and update r
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p><br><br><br></p>
-<h2 id="after-base-installation">After base installation</h2>
-<h3 id="step-1-basic-configuration">Step 1. Basic configuration</h3>
-<p><strong>1.1</strong> <em>Sync clock</em></p>
+<h2 id="after-base-installation" class="headerLink">
+    <a href="#after-base-installation" class="header-mark"></a>After base installation</h2><h3 id="step-1-basic-configuration" class="headerLink">
+    <a href="#step-1-basic-configuration" class="header-mark"></a>Step 1. Basic configuration</h3><p><strong>1.1</strong> <em>Sync clock</em></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -790,8 +865,8 @@ Base Installation Step 1. Load/Update Start by load keyboard layout and update r
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p><br><br></p>
-<h3 id="step-2-install-aur-helper">Step 2. Install AUR helper</h3>
-<p><strong>2.1 Paru</strong> <em>Install paru</em></p>
+<h3 id="step-2-install-aur-helper" class="headerLink">
+    <a href="#step-2-install-aur-helper" class="header-mark"></a>Step 2. Install AUR helper</h3><p><strong>2.1 Paru</strong> <em>Install paru</em></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -819,8 +894,8 @@ Base Installation Step 1. Load/Update Start by load keyboard layout and update r
 </span></span></code></pre></td></tr></table>
 </div>
 </div><br>
-<h3 id="step-3-install-zram-optional">Step 3. Install zram (optional)</h3>
-<p><strong>3.1</strong> <em>Install zram (if no swap)</em></p>
+<h3 id="step-3-install-zram-optional" class="headerLink">
+    <a href="#step-3-install-zram-optional" class="header-mark"></a>Step 3. Install zram (optional)</h3><p><strong>3.1</strong> <em>Install zram (if no swap)</em></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -834,8 +909,8 @@ Base Installation Step 1. Load/Update Start by load keyboard layout and update r
 </span></span></code></pre></td></tr></table>
 </div>
 </div><br>
-<h3 id="step-4-install-timeshift-optional">Step 4. Install timeshift (optional)</h3>
-<p><strong>4.1</strong> <em>Install timeshift</em></p>
+<h3 id="step-4-install-timeshift-optional" class="headerLink">
+    <a href="#step-4-install-timeshift-optional" class="header-mark"></a>Step 4. Install timeshift (optional)</h3><p><strong>4.1</strong> <em>Install timeshift</em></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -845,8 +920,8 @@ Base Installation Step 1. Load/Update Start by load keyboard layout and update r
 </span></span></code></pre></td></tr></table>
 </div>
 </div><br>
-<h3 id="step-5-install-browser">Step 5. Install browser</h3>
-<p><strong>5.1</strong> <em>Install a browser</em></p>
+<h3 id="step-5-install-browser" class="headerLink">
+    <a href="#step-5-install-browser" class="header-mark"></a>Step 5. Install browser</h3><p><strong>5.1</strong> <em>Install a browser</em></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -858,8 +933,8 @@ Base Installation Step 1. Load/Update Start by load keyboard layout and update r
 </span></span></code></pre></td></tr></table>
 </div>
 </div><br>
-<h3 id="step-6-install-firewall-optional">Step 6. Install firewall (optional)</h3>
-<p><strong>6.1</strong> *Install a firewall</p>
+<h3 id="step-6-install-firewall-optional" class="headerLink">
+    <a href="#step-6-install-firewall-optional" class="header-mark"></a>Step 6. Install firewall (optional)</h3><p><strong>6.1</strong> *Install a firewall</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -879,8 +954,8 @@ Base Installation Step 1. Load/Update Start by load keyboard layout and update r
 </span></span></code></pre></td></tr></table>
 </div>
 </div><br>
-<h3 id="step-7-install-other-useful-stuff">Step 7. Install other useful stuff</h3>
-<p><strong>7.1</strong> <em>Install auto-cpufreq (if using laptop, for better battery)</em></p>
+<h3 id="step-7-install-other-useful-stuff" class="headerLink">
+    <a href="#step-7-install-other-useful-stuff" class="header-mark"></a>Step 7. Install other useful stuff</h3><p><strong>7.1</strong> <em>Install auto-cpufreq (if using laptop, for better battery)</em></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -962,8 +1037,8 @@ Base Installation Step 1. Load/Update Start by load keyboard layout and update r
 </span></span></code></pre></td></tr></table>
 </div>
 </div><br>
-<h3 id="step-8-create-bridge-network-for-vm-optional">Step 8. Create bridge network for vm (optional)</h3>
-<p><strong>8.1</strong> <em>Create Bridge XML file</em></p>
+<h3 id="step-8-create-bridge-network-for-vm-optional" class="headerLink">
+    <a href="#step-8-create-bridge-network-for-vm-optional" class="header-mark"></a>Step 8. Create bridge network for vm (optional)</h3><p><strong>8.1</strong> <em>Create Bridge XML file</em></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -1019,12 +1094,12 @@ Base Installation Step 1. Load/Update Start by load keyboard layout and update r
 </span></span></code></pre></td></tr></table>
 </div>
 </div><br>
-<h3 id="step-9-install-desktop-environment">Step 9. Install Desktop Environment</h3>
-<blockquote>
+<h3 id="step-9-install-desktop-environment" class="headerLink">
+    <a href="#step-9-install-desktop-environment" class="header-mark"></a>Step 9. Install Desktop Environment</h3><blockquote>
 <p>Pick a Desktop Environment below</p>
 </blockquote>
-<h4 id="91-install-gnome">9.1 Install Gnome</h4>
-<details>
+<h4 id="91-install-gnome" class="headerLink">
+    <a href="#91-install-gnome" class="header-mark"></a>9.1 Install Gnome</h4><details>
   <summary>I want to install Gnome</summary>
 <p><strong>9.1.1 Method 1</strong> <em>Minimal install</em></p>
 <div class="highlight"><div class="chroma">
@@ -1072,8 +1147,8 @@ Base Installation Step 1. Load/Update Start by load keyboard layout and update r
 </span></span></code></pre></td></tr></table>
 </div>
 </div></details>
-<h4 id="92-install-kde">9.2 Install KDE</h4>
-<details>
+<h4 id="92-install-kde" class="headerLink">
+    <a href="#92-install-kde" class="header-mark"></a>9.2 Install KDE</h4><details>
   <summary>I want to install KDE</summary>
 <p><strong>9.2.1 Method 1</strong> <em>Minimal install</em></p>
 <div class="highlight"><div class="chroma">
@@ -1121,8 +1196,8 @@ Base Installation Step 1. Load/Update Start by load keyboard layout and update r
 </span></span></code></pre></td></tr></table>
 </div>
 </div></details>
-<h4 id="93-install-bspwm">9.3 Install BSPWM</h4>
-<details>
+<h4 id="93-install-bspwm" class="headerLink">
+    <a href="#93-install-bspwm" class="header-mark"></a>9.3 Install BSPWM</h4><details>
   <summary>I want to install BSPWM</summary>
 <p><strong>9.3.1</strong> <em>Install Base</em></p>
 <div class="highlight"><div class="chroma">
@@ -1291,8 +1366,8 @@ Base Installation Step 1. Load/Update Start by load keyboard layout and update r
 </span></span></code></pre></td></tr></table>
 </div>
 </div></details>
-<h4 id="94-install-dwm">9.4 Install DWM</h4>
-<details>
+<h4 id="94-install-dwm" class="headerLink">
+    <a href="#94-install-dwm" class="header-mark"></a>9.4 Install DWM</h4><details>
   <summary>I want to install DWM</summary>
 <p><strong>9.4.1 Method 1</strong> <em>Install through script</em><br>
 <strong>Step 1.</strong> <em>Create script</em></p>
@@ -1449,44 +1524,49 @@ Base Installation Step 1. Load/Update Start by load keyboard layout and update r
 </span></span></code></pre></td></tr></table>
 </div>
 </div></details>
-</div><div class="post-footer" id="post-footer">
+</div>
+
+        <div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
                 <span>Updated on 2022-10-31</span>
-            </div></div>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
         <div class="post-info-line">
-            <div class="post-info-md"><span>
-                            <a class="link-to-markdown" href="/arch-install/index.md" target="_blank">Read Markdown</a>
-                        </span></div>
+            <div class="post-info-md"><span><a class="link-to-mardown" href=/arch-install/index.md target="_blank" rel="noopener noreferrer">Read markdown</a>
+                    </span></div>
             <div class="post-info-share">
-                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="https://example.com/arch-install/" data-title="Arch Install" data-via="Omgzilla" data-hashtags="Linux,Cheat-sheet,Guide"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on WhatsApp" data-sharer="whatsapp" data-url="https://example.com/arch-install/" data-title="Arch Install" data-web><i class="fab fa-whatsapp fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Reddit" data-sharer="reddit" data-url="https://example.com/arch-install/"><i class="fab fa-reddit fa-fw" aria-hidden="true"></i></a></span>
+                <span><a href="#" title="Share on Twitter" data-sharer="twitter" data-url="http://localhost:1313/arch-install/" data-title="Arch Install" data-via="Omgzilla" data-hashtags="Linux,Cheat-sheet,Guide"><i class="fab fa-twitter fa-fw"></i></a><a href="#" title="Share on WhatsApp" data-sharer="whatsapp" data-url="http://localhost:1313/arch-install/" data-title="Arch Install" data-web><i class="fab fa-whatsapp fa-fw"></i></a><a href="#" title="Share on Reddit" data-sharer="reddit" data-url="http://localhost:1313/arch-install/"><i class="fab fa-reddit fa-fw"></i></a></span>
             </div>
         </div>
     </div>
 
     <div class="post-info-more">
-        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/linux/">Linux</a>,&nbsp;<a href="/tags/cheat-sheet/">Cheat-sheet</a>,&nbsp;<a href="/tags/guide/">Guide</a></section>
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/linux/">Linux</a>,&nbsp;<a href="/tags/cheat-sheet/">Cheat-Sheet</a>,&nbsp;<a href="/tags/guide/">Guide</a></section>
         <section>
             <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
         </section>
     </div>
 
-    <div class="post-nav"><a href="/proxmox-cs/" class="prev" rel="prev" title="Proxmox"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>Proxmox</a>
-            <a href="/arch-maintenance-commands/" class="next" rel="next" title="Arch Maintenance Commands">Arch Maintenance Commands<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+    <div class="post-nav"><a href="/proxmox-cs/" class="prev" rel="prev" title="Proxmox"><i class="fas fa-angle-left fa-fw"></i>Proxmox</a>
+            <a href="/arch-maintenance-commands/" class="next" rel="next" title="Arch Maintenance Commands">Arch Maintenance Commands<i class="fas fa-angle-right fa-fw"></i></a></div>
 </div>
-<div id="comments"><div id="telegram-comments" class="comment"></div><noscript>
-                Please enable JavaScript to view the comments powered by <a href="https://comments.app/">Telegram Comments</a>.
-            </noscript></div></article></div>
-            </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2022 - 2023</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">Ohmygodzilla</a></span></div>
-        </div>
-    </footer></div>
+</article></div>
+        </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2022 - 2024</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank" rel="noopener noreferrer">Ohmygodzilla</a></span></div>
+            <div class="footer-line"></div>
+            <div class="footer-line">
+            </div>
+        </div></footer></div>
 
-        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
-                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
-            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
-                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
-            </a>
-        </div><script type="text/javascript" src="https://comments.app/js/widget.js?2" defer data-comments-app-website="RepNDYBi" data-limit="5" data-color="1" data-colorful="1" data-dislikes="1" data-outlined="1"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.38.1/dist/autocomplete.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lunr@2.3.9/lunr.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.1/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.1/sharer.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":50},"comment":{},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"lunr"}};</script><script type="text/javascript" src="/js/theme.min.bda2dab9892fe30fcc50442f1a5bf10cc3ac7cf033f10c6948d09b9fb3f6323296f75a30c63044dbb71ab54bbe18e5b6a7db3074c12aa00bf2122c6ceecdea60.js" integrity="sha512-vaLauYkv4w/MUEQvGlvxDMOsfPAz8QxpSNCbn7P2MjKW91owxjBE27catUu&#43;GOW2p9swdMEqoAvyEixs7s3qYA=="></script></body>
+    <div id="fixed-buttons"><a href="#back-to-top" id="back-to-top-button" class="fixed-button" title="Back to Top">
+            <i class="fas fa-arrow-up fa-fw"></i>
+        </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+            <i class="fas fa-comment fa-fw"></i>
+        </a>
+    </div><div class="assets"><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":50},"comment":{},"search":{"distance":null,"findAllMatches":null,"fuseIndexURL":"/index.json","highlightTag":"em","ignoreFieldNorm":null,"ignoreLocation":null,"isCaseSensitive":null,"location":null,"maxResultLength":10,"minMatchCharLength":null,"noResultsFound":"No results found","snippetLength":30,"threshold":null,"type":"fuse","useExtendedSearch":null},"sharerjs":true};</script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/sharer/sharer.min.js"></script><script type="text/javascript" src="/js/theme.min.js" defer></script></div>
+</body>
+
 </html>

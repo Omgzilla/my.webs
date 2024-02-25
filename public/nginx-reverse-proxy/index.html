@@ -1,34 +1,41 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="robots" content="noodp" />
-        <title>Nginx Reverse Proxy - Omgz</title><meta name="Description" content=""><meta property="og:title" content="Nginx Reverse Proxy" />
-<meta property="og:description" content="Nginx Reverse Proxy This is a guide on how to install nginx as a reverse proxy.
-Install nginx Arch
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noodp" />
+    <title>Nginx Reverse Proxy - Omgz</title><meta name="Description" content=""><meta property="og:title" content="Nginx Reverse Proxy" />
+<meta property="og:description" content="Nginx Reverse ProxyThis is a guide on how to install nginx as a reverse proxy.
+Install nginxArch
 1 2 sudo pacman -Sy #Update repository sudo pacman -S nginx #Install package Ubuntu
 1 2 sudo apt-get update #Update repository sudo apt-get install nginx #Install package Unlink defult configuration on ubuntu (optional)
 1 sudo unlink /etc/nginx/sites-enabled/default Edit default configuration file 1 sudo nvim /etc/nginx/sites-available/default Copy and paste
 1 2 3 4 5 6 7 8 9 server { listen 80; listen [::]:80; access_log /var/log/nginx/default-access." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://example.com/nginx-reverse-proxy/" /><meta property="og:image" content="https://example.com/logo.png"/><meta property="article:section" content="posts" />
+<meta property="og:url" content="http://localhost:1313/nginx-reverse-proxy/" /><meta property="og:image" content="http://localhost:1313/images/ohmygodzilla-logo.png" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2022-10-06T03:27:30+02:00" />
 <meta property="article:modified_time" content="2022-10-31T14:06:29+01:00" /><meta property="og:site_name" content="Omgz" />
-<meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:image" content="https://example.com/logo.png"/>
 
-<meta name="twitter:title" content="Nginx Reverse Proxy"/>
-<meta name="twitter:description" content="Nginx Reverse Proxy This is a guide on how to install nginx as a reverse proxy.
-Install nginx Arch
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="http://localhost:1313/images/ohmygodzilla-logo.png" /><meta name="twitter:title" content="Nginx Reverse Proxy"/>
+<meta name="twitter:description" content="Nginx Reverse ProxyThis is a guide on how to install nginx as a reverse proxy.
+Install nginxArch
 1 2 sudo pacman -Sy #Update repository sudo pacman -S nginx #Install package Ubuntu
 1 2 sudo apt-get update #Update repository sudo apt-get install nginx #Install package Unlink defult configuration on ubuntu (optional)
 1 sudo unlink /etc/nginx/sites-enabled/default Edit default configuration file 1 sudo nvim /etc/nginx/sites-available/default Copy and paste
 1 2 3 4 5 6 7 8 9 server { listen 80; listen [::]:80; access_log /var/log/nginx/default-access."/>
+<meta name="twitter:site" content="@Omgzilla"/>
 <meta name="application-name" content="Omgz">
-<meta name="apple-mobile-web-app-title" content="Omgz"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+<meta name="apple-mobile-web-app-title" content="Omgz">
+
+<meta name="theme-color" content="#f8f8f8"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://example.com/nginx-reverse-proxy/" /><link rel="prev" href="https://example.com/docker-compose/" /><link rel="next" href="https://example.com/proxmox-cs/" /><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css"><link rel="stylesheet" href="/css/style.min.20174c6e52e001cbcdedf3a0ea8518ab431f69caab98c9c7a06e8c6dfde126988575f77eedc51fe200e25c1eb619e27e8f74e0d4079773a6e928321b9ff2b667.css" integrity="sha512-IBdMblLgAcvN7fOg6oUYq0MfacqrmMnHoG6Mbf3hJpiFdfd&#43;7cUf4gDiXB62GeJ&#43;j3Tg1AeXc6bpKDIbn/K2Zw=="><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"><script type="application/ld+json">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="canonical" href="http://localhost:1313/nginx-reverse-proxy/" /><link rel="prev" href="http://localhost:1313/docker-compose/" /><link rel="next" href="http://localhost:1313/proxmox-cs/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/color.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/fontawesome-free/all.min.css">
+        <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/animate/animate.min.css">
+        <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
@@ -36,46 +43,68 @@ Install nginx Arch
         "inLanguage": "en",
         "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "https:\/\/example.com\/nginx-reverse-proxy\/"
-        },"image": ["https:\/\/example.com\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "Web server, Reverse-proxy, Proxy, Nginx","wordcount":  2428 ,
-        "url": "https:\/\/example.com\/nginx-reverse-proxy\/","datePublished": "2022-10-06T03:27:30+02:00","dateModified": "2022-10-31T14:06:29+01:00","publisher": {
+            "@id": "http:\/\/localhost:1313\/nginx-reverse-proxy\/"
+        },"image": ["http:\/\/localhost:1313\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "Web server, Reverse-proxy, Proxy, Nginx","wordcount":  2398 ,
+        "url": "http:\/\/localhost:1313\/nginx-reverse-proxy\/","datePublished": "2022-10-06T03:27:30+02:00","dateModified": "2022-10-31T14:06:29+01:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
                 "@type": "Person",
                 "name": "Ohmygodzilla"
             },"description": ""
     }
-    </script></head>
-    <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+    </script><script src="//instant.page/5.1.1" defer type="module" integrity="sha384-MWfCL6g1OTGsbSwfuMHc8+8J2u71/LA8dzlIN3ycajckxuZZmF+DNjdm7O6H3PSq"></script>
+</head>
 
-        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+<body header-desktop="normal" header-mobile="auto"><script type="text/javascript">
+        function setTheme(theme) {document.body.setAttribute('theme', theme); document.documentElement.style.setProperty('color-scheme', theme === 'light' ? 'light' : 'dark'); window.theme = theme; }
+        function saveTheme(theme) {window.localStorage && localStorage.setItem('theme', theme);}
+        function getMeta(metaName) {const metas = document.getElementsByTagName('meta'); for (let i = 0; i < metas.length; i++) if (metas[i].getAttribute('name') === metaName) return metas[i]; return '';}
+        if (window.localStorage && localStorage.getItem('theme')) {let theme = localStorage.getItem('theme');theme === 'light' || theme === 'dark' || theme === 'black' ? setTheme(theme) : (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? setTheme('dark') : setTheme('light')); } else { if ('auto' === 'light' || 'auto' === 'dark' || 'auto' === 'black') setTheme('auto'), saveTheme('auto'); else saveTheme('auto'), window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? setTheme('dark') : setTheme('light');}
+        let metaColors = {'light': '#f8f8f8','dark': '#252627','black': '#000000'}
+        getMeta('theme-color').content = metaColors[document.body.getAttribute('theme')];
+    </script>
+    <div id="back-to-top"></div>
+    <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
     <div class="header-wrapper">
         <div class="header-title">
-            <a href="/" title="Omgz"><span class="header-title-pre"><i class='far fa-kiss-wink-heart fa-fw' aria-hidden='true'></i></span>Omgz<span class="header-title-post">illa</span></a>
+            <a href="/" title="Omgz"><img
+        class="logo"
+        loading="lazy"
+        src="/images/ohmygodzilla-logo.png"
+        srcset="/images/ohmygodzilla-logo.png, /images/ohmygodzilla-logo.png 1.5x, /images/ohmygodzilla-logo.png 2x"
+        sizes="auto"
+        alt="/images/ohmygodzilla-logo.png"
+        title="/images/ohmygodzilla-logo.png" height="797"   width="752" ><span class="header-title-pre"><i class='far fa-kiss-wink-heart fa-fw' aria-hidden='true'></i></span>Ohmygodzilla</a>
         </div>
         <div class="menu">
             <div class="menu-inner"><a class="menu-item" href="/posts/"> Posts </a><a class="menu-item" href="/tags/"> Tags </a><a class="menu-item" href="/categories/"> Categories </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
                         <input type="text" placeholder="Search titles or contents..." id="search-input-desktop">
-                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
-                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        <a href="#" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw"></i>
                         </a>
-                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
-                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        <a href="#" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw"></i>
                         </a>
                         <span class="search-button search-loading" id="search-loading-desktop">
-                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
                         </span>
-                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
-                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
-                </a>
-            </div>
+                    </span><a href="#" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a></div>
         </div>
     </div>
 </header><header class="mobile" id="header-mobile">
     <div class="header-container">
         <div class="header-wrapper">
             <div class="header-title">
-                <a href="/" title="Omgz"><span class="header-title-pre"><i class='far fa-kiss-wink-heart fa-fw' aria-hidden='true'></i></span>Omgz<span class="header-title-post">illa</span></a>
+                <a href="/" title="Omgz"><img
+        class="logo"
+        loading="lazy"
+        src="/images/ohmygodzilla-logo.png"
+        srcset="/images/ohmygodzilla-logo.png, /images/ohmygodzilla-logo.png 1.5x, /images/ohmygodzilla-logo.png 2x"
+        sizes="auto"
+        alt="/images/ohmygodzilla-logo.png"
+        title="/images/ohmygodzilla-logo.png" height="797"   width="752" ><span class="header-title-pre"><i class='far fa-kiss-wink-heart fa-fw' aria-hidden='true'></i></span>Ohmygodzilla</a>
             </div>
             <div class="menu-toggle" id="menu-toggle-mobile">
                 <span></span><span></span><span></span>
@@ -84,48 +113,85 @@ Install nginx Arch
         <div class="menu" id="menu-mobile"><div class="search-wrapper">
                     <div class="search mobile" id="search-mobile">
                         <input type="text" placeholder="Search titles or contents..." id="search-input-mobile">
-                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
-                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        <a href="#" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw"></i>
                         </a>
-                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
-                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        <a href="#" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw"></i>
                         </a>
                         <span class="search-button search-loading" id="search-loading-mobile">
-                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
                         </span>
                     </div>
-                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                    <a href="#" class="search-cancel" id="search-cancel-mobile">
                         Cancel
                     </a>
-                </div><a class="menu-item" href="/posts/" title="">Posts</a><a class="menu-item" href="/tags/" title="">Tags</a><a class="menu-item" href="/categories/" title="">Categories</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
-                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </div><a class="menu-item" href="/posts/" title="">Posts</a><a class="menu-item" href="/tags/" title="">Tags</a><a class="menu-item" href="/categories/" title="">Categories</a><a href="#" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw"></i>
             </a></div>
     </div>
-</header><div class="search-dropdown desktop">
-        <div id="search-dropdown-desktop"></div>
-    </div>
-    <div class="search-dropdown mobile">
-        <div id="search-dropdown-mobile"></div>
-    </div><main class="main">
-                <div class="container"><div class="toc" id="toc-auto">
-            <h2 class="toc-title">Contents</h2>
-            <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Nginx Reverse Proxy</h1><div class="post-meta">
-            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Ohmygodzilla</a>
-</span>&nbsp;<span class="post-category">included in <a href="/categories/documentation/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Documentation</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2022-10-06">2022-10-06</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;2428 words&nbsp;
-                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;12 minutes&nbsp;</div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+            <div class="container"><div class="toc" id="toc-auto">
+        <h2 class="toc-title">Contents</h2>
+        <div class="toc-content" id="toc-content-auto"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#install-nginx">Install nginx</a></li>
+    <li><a href="#edit-default-configuration-file">Edit default configuration file</a>
+      <ul>
+        <li><a href="#copy-default">Copy default</a></li>
+      </ul>
+    </li>
+    <li><a href="#enable-your-site">Enable your site</a></li>
+    <li><a href="#check-configuration-file-for-errors">Check configuration file for errors</a></li>
+    <li><a href="#adding-tls-to-your-nginx-reverse-proxy-using-lets-encrypthttpswwwscalewaycomendocstutorialsnginx-reverse-proxyadding-tls-to-your-nginx-reverse-proxy-using-lets-encrypt"><a href="https://www.scaleway.com/en/docs/tutorials/nginx-reverse-proxy/#adding-tls-to-your-nginx-reverse-proxy-using-let's-encrypt">Adding TLS to your Nginx Reverse Proxy using Let’s Encrypt</a></a></li>
+    <li><a href="#nginx-reverse-proxy-example-configurationhttpswwwacunetixcomblogweb-security-zonehardening-nginx"><a href="https://www.acunetix.com/blog/web-security-zone/hardening-nginx/">Nginx reverse proxy example configuration</a></a></li>
+    <li><a href="#how-to-harden-your-server-configuration">How to harden your server configuration</a>
+      <ul>
+        <li><a href="#step-1-disable-any-unwanted-nginx-modules">Step 1. Disable any unwanted nginx modules</a></li>
+        <li><a href="#step-2-disable-nginx-server_tokens">Step 2. Disable nginx server_tokens</a></li>
+        <li><a href="#step-3-control-resources-and-limits">Step 3. Control Resources and limits</a></li>
+        <li><a href="#step-4-disable-any-unwanted-http-methods">Step 4. Disable any unwanted HTTP methods</a></li>
+        <li><a href="#step-5-install-modsecurity-for-your-nginx-web-server">Step 5. Install ModSecurity for your nginx web server</a></li>
+        <li><a href="#step-6-set-up-and-configure-nginx-access-and-error-logs">Step 6. Set up and configure nginx access and error logs</a></li>
+        <li><a href="#step-7-configure-nginx-to-include-security-headers">Step 7. Configure nginx to include security headers</a>
+          <ul>
+            <li><a href="#x-frame-options">X-Frame-Options</a></li>
+            <li><a href="#strict-transport-security">Strict-Transport-Security</a></li>
+            <li><a href="#csp-and-x-xss-protection">CSP and X-XSS-Protection</a></li>
+          </ul>
+        </li>
+        <li><a href="#step-8-configure-ssl-and-cipher-suites">Step 8. Configure SSL and Cipher suites</a></li>
+        <li><a href="#step-9-update-your-server-regularly">Step 9. Update your server regularly</a></li>
+        <li><a href="#step-10-check-your-configuration-with-gixy">Step 10. Check your configuration with Gixy</a></li>
+        <li><a href="#step-11-you-dont-have-to-do-it-manually">Step 11. You don&rsquo;t have to do it manually</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+    </div><script>document.getElementsByTagName("main")[0].setAttribute("autoTOC", "true")</script><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Nginx Reverse Proxy</h1><div class="post-meta">
+            <div class="post-meta-line">
+                <span class="post-author"><i class="author fas fa-user-circle fa-fw"></i><a href="/" title="Author" rel=" author" class="author">Ohmygodzilla</a>
+                </span>&nbsp;<span class="post-category">included in </span>&nbsp;<span class="post-category">category <a href="/categories/documentation/"><i class="far fa-folder fa-fw"></i>Documentation</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-10-06">2022-10-06</time>&nbsp;<i class="far fa-edit fa-fw"></i>&nbsp;<time datetime="2022-10-31">2022-10-31</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;2398 words&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;12 minutes&nbsp;</div>
         </div><div class="featured-image"><img
-        class="lazyload"
-        src="/svg/loading.min.svg"
-        data-src="/images/nginx-reverse-proxy.webp"
-        data-srcset="/images/nginx-reverse-proxy.webp, /images/nginx-reverse-proxy.webp 1.5x, /images/nginx-reverse-proxy.webp 2x"
-        data-sizes="auto"
+        
+        loading="eager"
+        src="/images/nginx-reverse-proxy.webp"
+        srcset="/images/nginx-reverse-proxy.webp, /images/nginx-reverse-proxy.webp 1.5x, /images/nginx-reverse-proxy.webp 2x"
+        sizes="auto"
         alt="/images/nginx-reverse-proxy.webp"
-        title="/images/nginx-reverse-proxy.webp" width="920" height="460" /></div><div class="details toc" id="toc-static"  data-kept="">
+        title="/images/nginx-reverse-proxy.webp" height="auto"   width="auto" ></div><div class="details toc" id="toc-static"  kept="">
                 <div class="details-summary toc-title">
                     <span>Contents</span>
-                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
                 </div>
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
@@ -162,10 +228,10 @@ Install nginx Arch
     </li>
   </ul>
 </nav></div>
-            </div><div class="content" id="content"><h1 id="nginx-reverse-proxy">Nginx Reverse Proxy</h1>
-<p>This is a guide on how to install nginx as a reverse proxy.</p>
-<h2 id="install-nginx">Install nginx</h2>
-<p><strong>Arch</strong></p>
+            </div><div class="content" id="content"><h1 id="nginx-reverse-proxy" class="headerLink">
+    <a href="#nginx-reverse-proxy" class="header-mark"></a>Nginx Reverse Proxy</h1><p>This is a guide on how to install nginx as a reverse proxy.</p>
+<h2 id="install-nginx" class="headerLink">
+    <a href="#install-nginx" class="header-mark"></a>Install nginx</h2><p><strong>Arch</strong></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -196,8 +262,8 @@ Install nginx Arch
 <pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo unlink /etc/nginx/sites-enabled/default
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h2 id="edit-default-configuration-file">Edit default configuration file</h2>
-<div class="highlight"><div class="chroma">
+</div><h2 id="edit-default-configuration-file" class="headerLink">
+    <a href="#edit-default-configuration-file" class="header-mark"></a>Edit default configuration file</h2><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
@@ -231,8 +297,8 @@ Install nginx Arch
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p><em>Save and exit</em></p>
-<h3 id="copy-default">Copy default</h3>
-<div class="highlight"><div class="chroma">
+<h3 id="copy-default" class="headerLink">
+    <a href="#copy-default" class="header-mark"></a>Copy default</h3><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
@@ -249,8 +315,8 @@ Install nginx Arch
 <pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo nvim /etc/nginx/sites-available/example.com.conf
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h2 id="enable-your-site">Enable your site</h2>
-<p><strong>Symlink configuration file</strong></p>
+</div><h2 id="enable-your-site" class="headerLink">
+    <a href="#enable-your-site" class="header-mark"></a>Enable your site</h2><p><strong>Symlink configuration file</strong></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -259,8 +325,8 @@ Install nginx Arch
 <pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo ln -s /etc/nginx/sites-available/example.com.conf /etc/nginx/sites-enabled/example.com.conf
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h2 id="check-configuration-file-for-errors">Check configuration file for errors</h2>
-<div class="highlight"><div class="chroma">
+</div><h2 id="check-configuration-file-for-errors" class="headerLink">
+    <a href="#check-configuration-file-for-errors" class="header-mark"></a>Check configuration file for errors</h2><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
@@ -278,16 +344,12 @@ Install nginx Arch
 </span></span><span class="line"><span class="cl">nginx: configuration file /etc/nginx/nginx.conf test is successful
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h2 id="adding-tls-to-your-nginx-reverse-proxy-using-lets-encrypthttpswwwscalewaycomendocstutorialsnginx-reverse-proxyadding-tls-to-your-nginx-reverse-proxy-using-lets-encrypt"><a href="https://www.scaleway.com/en/docs/tutorials/nginx-reverse-proxy/#adding-tls-to-your-nginx-reverse-proxy-using-let%27s-encrypt" target="_blank" rel="noopener noreffer">Adding TLS to your Nginx Reverse Proxy using Let’s Encrypt</a>
-</h2>
-<blockquote>
+</div><h2 id="adding-tls-to-your-nginx-reverse-proxy-using-lets-encrypthttpswwwscalewaycomendocstutorialsnginx-reverse-proxyadding-tls-to-your-nginx-reverse-proxy-using-lets-encrypt" class="headerLink">
+    <a href="#adding-tls-to-your-nginx-reverse-proxy-using-lets-encrypthttpswwwscalewaycomendocstutorialsnginx-reverse-proxyadding-tls-to-your-nginx-reverse-proxy-using-lets-encrypt" class="header-mark"></a><a href="https://www.scaleway.com/en/docs/tutorials/nginx-reverse-proxy/#adding-tls-to-your-nginx-reverse-proxy-using-let%27s-encrypt" target="_blank" rel="noopener noreferrer">Adding TLS to your Nginx Reverse Proxy using Let’s Encrypt</a></h2><blockquote>
 <p><strong>Important:</strong> Make sure your domain name points towards your server ip (A or AAAA record).</p>
 </blockquote>
 <p>With the current setup, all incoming traffic on the standard, non-securized, HTTP port is anserwered by Nginx, which passes it to the web application on the Instance.</p>
-<p>For security reasons, it is recommended to add an encryption layer with TLS/SSL and to use HTTPS. Whilst it is technically possible to use self-signed certificates, it may cause inconveniences as a warning is displayed by default in a user’s web browser when a self-signed certificate is used. A certificate authenticity (CA) can issue trusted certificates which are recognized by most modern web browsers. The CA <a href="https://letsencrypt.org/" target="_blank" rel="noopener noreffer">Let’s Encrypt</a>
- provides TLS certificates for free and the configuration of Nginx can be done easily with <a href="https://certbot.eff.org/" target="_blank" rel="noopener noreffer">Certbot</a>
-, a tool provided by the <a href="https://www.eff.org/" target="_blank" rel="noopener noreffer">EFF</a>
-.</p>
+<p>For security reasons, it is recommended to add an encryption layer with TLS/SSL and to use HTTPS. Whilst it is technically possible to use self-signed certificates, it may cause inconveniences as a warning is displayed by default in a user’s web browser when a self-signed certificate is used. A certificate authenticity (CA) can issue trusted certificates which are recognized by most modern web browsers. The CA <a href="https://letsencrypt.org/" target="_blank" rel="noopener noreferrer">Let’s Encrypt</a> provides TLS certificates for free and the configuration of Nginx can be done easily with <a href="https://certbot.eff.org/" target="_blank" rel="noopener noreferrer">Certbot</a>, a tool provided by the <a href="https://www.eff.org/" target="_blank" rel="noopener noreferrer">EFF</a>.</p>
 <ol>
 <li>Install Certbot on your Instance by using the APT packet manager:</li>
 </ol>
@@ -351,39 +413,38 @@ Install nginx Arch
 </span><span class="lnt">26
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">Saving debug log to /var/log/letsencrypt/letsencrypt.log
-</span></span><span class="line"><span class="cl">Plugins selected: Authenticator nginx, Installer nginx
-</span></span><span class="line"><span class="cl">Which names would you like to activate HTTPS for?
-</span></span><span class="line"><span class="cl">- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-</span></span><span class="line"><span class="cl">1: your.domain.com
-</span></span><span class="line"><span class="cl">- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-</span></span><span class="line"><span class="cl">Select the appropriate numbers separated by commas and/
-</span></span><span class="line"><span class="cl">or spaces, or leave input blank to select all options shown 
-</span></span><span class="line"><span class="cl">(Enter &#39;c&#39; to cancel): 1
-</span></span><span class="line"><span class="cl">Obtaining a new certificate
-</span></span><span class="line"><span class="cl">Performing the following challenges:http-01 challenge for your.domain.com
-</span></span><span class="line"><span class="cl">Waiting for verification...Cleaning up challenges
-</span></span><span class="line"><span class="cl">Deploying Certificate to VirtualHost /etc/nginx/sites-enabled/reverse-proxy.conf
-</span></span><span class="line"><span class="cl">Please choose whether or not to redirect HTTP traffic to HTTPS, removing HTTP access.
-</span></span><span class="line"><span class="cl">- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-</span></span><span class="line"><span class="cl">1: No redirect - Make no further changes to the webserver configuration.
-</span></span><span class="line"><span class="cl">2: Redirect - Make all requests redirect to secure HTTPS access. Choose this for
-</span></span><span class="line"><span class="cl">snew sites, or if you&#39;re confident your site works on HTTPS. You can undo this
-</span></span><span class="line"><span class="cl">change by editing your web server&#39;s configuration.
-</span></span><span class="line"><span class="cl">- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-</span></span><span class="line"><span class="cl">Select the appropriate number [1-2] then [enter] (press &#39;c&#39; to cancel): 2
-</span></span><span class="line"><span class="cl">Redirecting all traffic on port 80 to ssl in /etc/nginx/sites-enabled/reverse-proxy.conf
-</span></span><span class="line"><span class="cl">- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-</span></span><span class="line"><span class="cl">-Congratulations! You have successfully enabled https://your.domain.com
-</span></span><span class="line"><span class="cl">You should test your configuration at: https://www.ssllabs.com/ssltest/analyze.html?d=your.domain.com
-</span></span><span class="line"><span class="cl">- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+<pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="n">Saving</span> <span class="n">debug</span> <span class="nb">log</span> <span class="n">to</span> <span class="o">/</span><span class="k">var</span><span class="o">/</span><span class="nb">log</span><span class="o">/</span><span class="n">letsencrypt</span><span class="o">/</span><span class="n">letsencrypt</span><span class="o">.</span><span class="n">log</span>
+</span></span><span class="line"><span class="cl"><span class="n">Plugins</span> <span class="n">selected</span><span class="p">:</span> <span class="n">Authenticator</span> <span class="n">nginx</span><span class="p">,</span> <span class="n">Installer</span> <span class="n">nginx</span>
+</span></span><span class="line"><span class="cl"><span class="n">Which</span> <span class="n">names</span> <span class="n">would</span> <span class="n">you</span> <span class="n">like</span> <span class="n">to</span> <span class="n">activate</span> <span class="n">HTTPS</span> <span class="k">for</span><span class="err">?</span>
+</span></span><span class="line"><span class="cl"><span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span>
+</span></span><span class="line"><span class="cl"><span class="mi">1</span><span class="p">:</span> <span class="n">your</span><span class="o">.</span><span class="n">domain</span><span class="o">.</span><span class="n">com</span>
+</span></span><span class="line"><span class="cl"><span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span>
+</span></span><span class="line"><span class="cl"><span class="n">Select</span> <span class="n">the</span> <span class="n">appropriate</span> <span class="n">numbers</span> <span class="n">separated</span> <span class="n">by</span> <span class="n">commas</span> <span class="ow">and</span><span class="o">/</span>
+</span></span><span class="line"><span class="cl"><span class="ow">or</span> <span class="n">spaces</span><span class="p">,</span> <span class="ow">or</span> <span class="n">leave</span> <span class="n">input</span> <span class="n">blank</span> <span class="n">to</span> <span class="n">select</span> <span class="n">all</span> <span class="n">options</span> <span class="n">shown</span> 
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="n">Enter</span> <span class="s1">&#39;c&#39;</span> <span class="n">to</span> <span class="n">cancel</span><span class="p">):</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl"><span class="n">Obtaining</span> <span class="n">a</span> <span class="n">new</span> <span class="n">certificate</span>
+</span></span><span class="line"><span class="cl"><span class="n">Performing</span> <span class="n">the</span> <span class="n">following</span> <span class="n">challenges</span><span class="p">:</span><span class="n">http</span><span class="o">-</span><span class="mi">01</span> <span class="n">challenge</span> <span class="k">for</span> <span class="n">your</span><span class="o">.</span><span class="n">domain</span><span class="o">.</span><span class="n">com</span>
+</span></span><span class="line"><span class="cl"><span class="n">Waiting</span> <span class="k">for</span> <span class="n">verification</span><span class="o">...</span><span class="n">Cleaning</span> <span class="n">up</span> <span class="n">challenges</span>
+</span></span><span class="line"><span class="cl"><span class="n">Deploying</span> <span class="n">Certificate</span> <span class="n">to</span> <span class="n">VirtualHost</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">nginx</span><span class="o">/</span><span class="n">sites</span><span class="o">-</span><span class="n">enabled</span><span class="o">/</span><span class="n">reverse</span><span class="o">-</span><span class="n">proxy</span><span class="o">.</span><span class="n">conf</span>
+</span></span><span class="line"><span class="cl"><span class="n">Please</span> <span class="n">choose</span> <span class="n">whether</span> <span class="ow">or</span> <span class="ow">not</span> <span class="n">to</span> <span class="n">redirect</span> <span class="n">HTTP</span> <span class="n">traffic</span> <span class="n">to</span> <span class="n">HTTPS</span><span class="p">,</span> <span class="n">removing</span> <span class="n">HTTP</span> <span class="n">access</span><span class="o">.</span>
+</span></span><span class="line"><span class="cl"><span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span>
+</span></span><span class="line"><span class="cl"><span class="mi">1</span><span class="p">:</span> <span class="n">No</span> <span class="n">redirect</span> <span class="o">-</span> <span class="n">Make</span> <span class="n">no</span> <span class="n">further</span> <span class="n">changes</span> <span class="n">to</span> <span class="n">the</span> <span class="n">webserver</span> <span class="n">configuration</span><span class="o">.</span>
+</span></span><span class="line"><span class="cl"><span class="mi">2</span><span class="p">:</span> <span class="n">Redirect</span> <span class="o">-</span> <span class="n">Make</span> <span class="n">all</span> <span class="n">requests</span> <span class="n">redirect</span> <span class="n">to</span> <span class="n">secure</span> <span class="n">HTTPS</span> <span class="n">access</span><span class="o">.</span> <span class="n">Choose</span> <span class="n">this</span> <span class="k">for</span>
+</span></span><span class="line"><span class="cl"><span class="n">snew</span> <span class="n">sites</span><span class="p">,</span> <span class="ow">or</span> <span class="k">if</span> <span class="n">you</span><span class="s1">&#39;re confident your site works on HTTPS. You can undo this</span>
+</span></span><span class="line"><span class="cl"><span class="n">change</span> <span class="n">by</span> <span class="n">editing</span> <span class="n">your</span> <span class="n">web</span> <span class="n">server</span><span class="s1">&#39;s configuration.</span>
+</span></span><span class="line"><span class="cl"><span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span>
+</span></span><span class="line"><span class="cl"><span class="n">Select</span> <span class="n">the</span> <span class="n">appropriate</span> <span class="n">number</span> <span class="p">[</span><span class="mi">1</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span> <span class="n">then</span> <span class="p">[</span><span class="n">enter</span><span class="p">]</span> <span class="p">(</span><span class="n">press</span> <span class="s1">&#39;c&#39;</span> <span class="n">to</span> <span class="n">cancel</span><span class="p">):</span> <span class="mi">2</span>
+</span></span><span class="line"><span class="cl"><span class="n">Redirecting</span> <span class="n">all</span> <span class="n">traffic</span> <span class="n">on</span> <span class="n">port</span> <span class="mi">80</span> <span class="n">to</span> <span class="n">ssl</span> <span class="ow">in</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">nginx</span><span class="o">/</span><span class="n">sites</span><span class="o">-</span><span class="n">enabled</span><span class="o">/</span><span class="n">reverse</span><span class="o">-</span><span class="n">proxy</span><span class="o">.</span><span class="n">conf</span>
+</span></span><span class="line"><span class="cl"><span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span>
+</span></span><span class="line"><span class="cl"><span class="o">-</span><span class="n">Congratulations</span><span class="o">!</span> <span class="n">You</span> <span class="n">have</span> <span class="n">successfully</span> <span class="n">enabled</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">your</span><span class="o">.</span><span class="n">domain</span><span class="o">.</span><span class="n">com</span>
+</span></span><span class="line"><span class="cl"><span class="n">You</span> <span class="n">should</span> <span class="n">test</span> <span class="n">your</span> <span class="n">configuration</span> <span class="n">at</span><span class="p">:</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="o">.</span><span class="n">ssllabs</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">ssltest</span><span class="o">/</span><span class="n">analyze</span><span class="o">.</span><span class="n">html</span><span class="err">?</span><span class="n">d</span><span class="o">=</span><span class="n">your</span><span class="o">.</span><span class="n">domain</span><span class="o">.</span><span class="n">com</span>
+</span></span><span class="line"><span class="cl"><span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span>
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p><strong>Note:</strong> 
 When asked if you want to redirect HTTP traffic automatically to HTTPS, choose the option <strong>2</strong>. This enables the automatic redirection of all incoming requests via an unencrypted HTTP connection to a secure HTTPS connection. Providing an additional layer of security for the Web application running behind the Nginx reverse proxy.</p>
-<h2 id="nginx-reverse-proxy-example-configurationhttpswwwacunetixcomblogweb-security-zonehardening-nginx"><a href="https://www.acunetix.com/blog/web-security-zone/hardening-nginx/" target="_blank" rel="noopener noreffer">Nginx reverse proxy example configuration</a>
-</h2>
-<p>You can set up your Nginx configuration file using different parameters and headers.</p>
+<h2 id="nginx-reverse-proxy-example-configurationhttpswwwacunetixcomblogweb-security-zonehardening-nginx" class="headerLink">
+    <a href="#nginx-reverse-proxy-example-configurationhttpswwwacunetixcomblogweb-security-zonehardening-nginx" class="header-mark"></a><a href="https://www.acunetix.com/blog/web-security-zone/hardening-nginx/" target="_blank" rel="noopener noreferrer">Nginx reverse proxy example configuration</a></h2><p>You can set up your Nginx configuration file using different parameters and headers.</p>
 <p>The following example shows common parameters used in <code>nginx.conf</code> with a reverse proxy configuration:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -422,9 +483,9 @@ When asked if you want to redirect HTTP traffic automatically to HTTPS, choose t
 <li><code>X-Forwarded-Proto $scheme</code> - If defined in an HTTPS server block, the HTTP responses from the proxied server are rewritten to HTTPS.</li>
 <li><code>X-Forwarded-Port $server_port</code> - Defines the original port requested by the client.</li>
 </ul>
-<h2 id="how-to-harden-your-server-configuration">How to harden your server configuration</h2>
-<h3 id="step-1-disable-any-unwanted-nginx-modules">Step 1. Disable any unwanted nginx modules</h3>
-<p>When you install nginx, it automatically includes many modules. Currently, you cannot choose modules at runtime. To disable certain modules, you need to recompile nginx. We recommend that you disable any modules that are not required as this will minimize the risk of potential attacks by limiting allowed operations. </p>
+<h2 id="how-to-harden-your-server-configuration" class="headerLink">
+    <a href="#how-to-harden-your-server-configuration" class="header-mark"></a>How to harden your server configuration</h2><h3 id="step-1-disable-any-unwanted-nginx-modules" class="headerLink">
+    <a href="#step-1-disable-any-unwanted-nginx-modules" class="header-mark"></a>Step 1. Disable any unwanted nginx modules</h3><p>When you install nginx, it automatically includes many modules. Currently, you cannot choose modules at runtime. To disable certain modules, you need to recompile nginx. We recommend that you disable any modules that are not required as this will minimize the risk of potential attacks by limiting allowed operations. </p>
 <p>To do this, use the <em>configure</em> option during installation. In the example below, we disable the <em>autoindex</em> module, which generates automatic directory listings, and then recompile nginx.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -438,21 +499,20 @@ When asked if you want to redirect HTTP traffic automatically to HTTPS, choose t
 </span></span><span class="line"><span class="cl"># make install
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h3 id="step-2-disable-nginx-server_tokens">Step 2. Disable nginx server_tokens</h3>
-<p>By default, the <em>server_tokens</em> directive in nginx displays the nginx version number. It is directly visible in all automatically generated error pages but also present in all HTTP responses in the <em>Server</em> header.</p>
+</div><h3 id="step-2-disable-nginx-server_tokens" class="headerLink">
+    <a href="#step-2-disable-nginx-server_tokens" class="header-mark"></a>Step 2. Disable nginx server_tokens</h3><p>By default, the <em>server_tokens</em> directive in nginx displays the nginx version number. It is directly visible in all automatically generated error pages but also present in all HTTP responses in the <em>Server</em> header.</p>
 <p>This could lead to information disclosure – an unauthorized user could gain knowledge about the version of nginx that you use. You should disable the <em>server_tokens</em> directive in the nginx configuration file by setting <code>server_tokens off</code>.</p>
-<h3 id="step-3-control-resources-and-limits">Step 3. Control Resources and limits</h3>
-<p>To prevent potential DoS attacks on nginx, you can set buffer size limitations for all clients. You can do this in the nginx configuration file using the following directives:</p>
+<h3 id="step-3-control-resources-and-limits" class="headerLink">
+    <a href="#step-3-control-resources-and-limits" class="header-mark"></a>Step 3. Control Resources and limits</h3><p>To prevent potential DoS attacks on nginx, you can set buffer size limitations for all clients. You can do this in the nginx configuration file using the following directives:</p>
 <ul>
 <li><em>client_body_buffer_size</em> – use this directive to specify the client request body buffer size. The default value is 8k or 16k but it is recommended to set this as low as 1k: <code>client_body_buffer_size 1k</code>.</li>
 <li><em>client_header_buffer_size</em> – use this directive to specify the header buffer size for the client request header. A buffer size of 1k is adequate for most requests.</li>
 <li><em>client_max_body_size</em> – use this directive to specify the maximum accepted body size for a client request. A 1k directive should be sufficient but you need to increase it if you are receiving file uploads via the POST method.</li>
 <li><em>large_client_header_buffers</em> – use this directive to specify the maximum number and size of buffers to be used to read large client request headers. A <code>large_client_header_buffers 2 1k</code> directive sets the maximum number of buffers to 2, each with a maximum size of 1k. This directive will accept 2 kB data URI.</li>
 </ul>
-<p><strong>Note</strong>: Some sources suggest that setting such limits may prevent potential <a href="https://www.acunetix.com/blog/web-security-zone/what-is-buffer-overflow/" target="_blank" rel="noopener noreffer">buffer overflow attacks</a>
- if such vulnerabilities are found in nginx.</p>
-<h3 id="step-4-disable-any-unwanted-http-methods">Step 4. Disable any unwanted HTTP methods</h3>
-<p>We suggest that you disable any HTTP methods, which are not going to be utilized and which are not required to be implemented on the web server. If you add the following condition in the location block of the nginx virtual host configuration file, the server will only allow GET, HEAD, and POST methods and will filter out methods such as DELETE and TRACE.</p>
+<p><strong>Note</strong>: Some sources suggest that setting such limits may prevent potential <a href="https://www.acunetix.com/blog/web-security-zone/what-is-buffer-overflow/" target="_blank" rel="noopener noreferrer">buffer overflow attacks</a> if such vulnerabilities are found in nginx.</p>
+<h3 id="step-4-disable-any-unwanted-http-methods" class="headerLink">
+    <a href="#step-4-disable-any-unwanted-http-methods" class="header-mark"></a>Step 4. Disable any unwanted HTTP methods</h3><p>We suggest that you disable any HTTP methods, which are not going to be utilized and which are not required to be implemented on the web server. If you add the following condition in the location block of the nginx virtual host configuration file, the server will only allow GET, HEAD, and POST methods and will filter out methods such as DELETE and TRACE.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -465,8 +525,7 @@ When asked if you want to redirect HTTP traffic automatically to HTTPS, choose t
 </span></span><span class="line"><span class="cl">}
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>Another approach is to add the following condition to the <em>server</em> section (or server block). It can be regarded as more universal but <a href="https://www.nginx.com/resources/wiki/start/topics/depth/ifisevil/" target="_blank" rel="noopener noreffer">you should be careful with <code>if</code> statements in the location context</a>
-.</p>
+</div><p>Another approach is to add the following condition to the <em>server</em> section (or server block). It can be regarded as more universal but <a href="https://www.nginx.com/resources/wiki/start/topics/depth/ifisevil/" target="_blank" rel="noopener noreferrer">you should be careful with <code>if</code> statements in the location context</a>.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -477,13 +536,11 @@ When asked if you want to redirect HTTP traffic automatically to HTTPS, choose t
 </span></span><span class="line"><span class="cl">    return 444; }
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h3 id="step-5-install-modsecurity-for-your-nginx-web-server">Step 5. Install ModSecurity for your nginx web server</h3>
-<p>ModSecurity is an open-source module that works as a web application firewall. Its functionalities include filtering, server identity masking, and null-byte attack prevention. The module also lets you perform real-time traffic monitoring. We recommend that you follow the <a href="https://github.com/SpiderLabs/ModSecurity/wiki/Reference-Manual" target="_blank" rel="noopener noreffer">ModSecurity manual</a>
- to install the <em>mod_security</em> module in order to strengthen your security options.</p>
-<p>Note that if ModSecurity does not meet your needs, you can also use <a href="https://github.com/wallarm/awesome-nginx-security#waf-for-nginx-protect-apis-websites-web-applicatons" target="_blank" rel="noopener noreffer">other free WAF solutions</a>
-.</p>
-<h3 id="step-6-set-up-and-configure-nginx-access-and-error-logs">Step 6. Set up and configure nginx access and error logs</h3>
-<p>The nginx access and error logs are enabled by default and are located in <em>logs/error.log</em> and <em>logs/access.log</em> respectively. If you want to change the location, you can use the <em>error_log</em> directive in the nginx configuration file. You can also use this directive to specify the logs that will be recorded according to their severity level. For example, a <em>crit</em> severity level will cause nginx to log critical issues and all issues that have a higher severity level than <em>crit</em>. To set the severity level to <em>crit</em>, set the <em>error_log</em> directive as follows:</p>
+</div><h3 id="step-5-install-modsecurity-for-your-nginx-web-server" class="headerLink">
+    <a href="#step-5-install-modsecurity-for-your-nginx-web-server" class="header-mark"></a>Step 5. Install ModSecurity for your nginx web server</h3><p>ModSecurity is an open-source module that works as a web application firewall. Its functionalities include filtering, server identity masking, and null-byte attack prevention. The module also lets you perform real-time traffic monitoring. We recommend that you follow the <a href="https://github.com/SpiderLabs/ModSecurity/wiki/Reference-Manual" target="_blank" rel="noopener noreferrer">ModSecurity manual</a> to install the <em>mod_security</em> module in order to strengthen your security options.</p>
+<p>Note that if ModSecurity does not meet your needs, you can also use <a href="https://github.com/wallarm/awesome-nginx-security#waf-for-nginx-protect-apis-websites-web-applicatons" target="_blank" rel="noopener noreferrer">other free WAF solutions</a>.</p>
+<h3 id="step-6-set-up-and-configure-nginx-access-and-error-logs" class="headerLink">
+    <a href="#step-6-set-up-and-configure-nginx-access-and-error-logs" class="header-mark"></a>Step 6. Set up and configure nginx access and error logs</h3><p>The nginx access and error logs are enabled by default and are located in <em>logs/error.log</em> and <em>logs/access.log</em> respectively. If you want to change the location, you can use the <em>error_log</em> directive in the nginx configuration file. You can also use this directive to specify the logs that will be recorded according to their severity level. For example, a <em>crit</em> severity level will cause nginx to log critical issues and all issues that have a higher severity level than <em>crit</em>. To set the severity level to <em>crit</em>, set the <em>error_log</em> directive as follows:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -492,14 +549,12 @@ When asked if you want to redirect HTTP traffic automatically to HTTPS, choose t
 <pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">error_log logs/error.log crit;
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>You can find a complete list of <em>error_log</em> severity levels in <a href="http://nginx.org/en/docs/ngx_core_module.html#error_log" target="_blank" rel="noopener noreffer">official nginx documentation</a>
-.</p>
-<p>You can also modify the <em>access_log</em> directive in the nginx configuration file to specify a non-default location for access logs. Finally, you can use the <em>log_format</em> directive to configure the format of the logged messages as explained <a href="http://nginx.org/en/docs/http/ngx_http_log_module.html#log_format" target="_blank" rel="noopener noreffer">in nginx documentation</a>
-.</p>
-<h3 id="step-7-configure-nginx-to-include-security-headers">Step 7. Configure nginx to include security headers</h3>
-<p>To additionally harden your nginx web server, you can add several different HTTP headers. Here are some of the options that we recommend.</p>
-<h4 id="x-frame-options">X-Frame-Options</h4>
-<p>You use the <em>X-Frame-Options</em> HTTP response header to indicate if a browser should be allowed to render a page in a <em><code>&lt;frame&gt;</code></em> or an <em><code>&lt;iframe&gt;</code></em>. This could prevent clickjacking attacks. Therefore, we recommend that you enable this option for your nginx server. </p>
+</div><p>You can find a complete list of <em>error_log</em> severity levels in <a href="http://nginx.org/en/docs/ngx_core_module.html#error_log" target="_blank" rel="noopener noreferrer">official nginx documentation</a>.</p>
+<p>You can also modify the <em>access_log</em> directive in the nginx configuration file to specify a non-default location for access logs. Finally, you can use the <em>log_format</em> directive to configure the format of the logged messages as explained <a href="http://nginx.org/en/docs/http/ngx_http_log_module.html#log_format" target="_blank" rel="noopener noreferrer">in nginx documentation</a>.</p>
+<h3 id="step-7-configure-nginx-to-include-security-headers" class="headerLink">
+    <a href="#step-7-configure-nginx-to-include-security-headers" class="header-mark"></a>Step 7. Configure nginx to include security headers</h3><p>To additionally harden your nginx web server, you can add several different HTTP headers. Here are some of the options that we recommend.</p>
+<h4 id="x-frame-options" class="headerLink">
+    <a href="#x-frame-options" class="header-mark"></a>X-Frame-Options</h4><p>You use the <em>X-Frame-Options</em> HTTP response header to indicate if a browser should be allowed to render a page in a <em><code>&lt;frame&gt;</code></em> or an <em><code>&lt;iframe&gt;</code></em>. This could prevent clickjacking attacks. Therefore, we recommend that you enable this option for your nginx server. </p>
 <p>To do this, add the following parameter to the nginx configuration file in the <em>server</em> section:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -509,20 +564,18 @@ When asked if you want to redirect HTTP traffic automatically to HTTPS, choose t
 <pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">add_header X-Frame-Options &#34;SAMEORIGIN&#34;;
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h4 id="strict-transport-security">Strict-Transport-Security</h4>
-<p><a href="https://www.acunetix.com/blog/articles/what-is-hsts-why-use-it/" target="_blank" rel="noopener noreffer">HTTP Strict Transport Security (HSTS)</a>
- is a method used by websites to declare that they should only be accessed using a secure connection (HTTPS). If a website declares an HSTS policy, the browser must refuse all HTTP connections and prevent users from accepting insecure SSL certificates. To add an HSTS header to your nginx server, you can add the following directive to your server section:</p>
+</div><h4 id="strict-transport-security" class="headerLink">
+    <a href="#strict-transport-security" class="header-mark"></a>Strict-Transport-Security</h4><p><a href="https://www.acunetix.com/blog/articles/what-is-hsts-why-use-it/" target="_blank" rel="noopener noreferrer">HTTP Strict Transport Security (HSTS)</a> is a method used by websites to declare that they should only be accessed using a secure connection (HTTPS). If a website declares an HSTS policy, the browser must refuse all HTTP connections and prevent users from accepting insecure SSL certificates. To add an HSTS header to your nginx server, you can add the following directive to your server section:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">add_header Strict-Transport-Security &#34;max-age=31536000; includeSubdomains; preload&#34;;
+<pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="n">add_header</span> <span class="n">Strict</span><span class="o">-</span><span class="n">Transport</span><span class="o">-</span><span class="n">Security</span> <span class="s2">&#34;max-age=31536000; includeSubdomains; preload&#34;</span><span class="p">;</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h4 id="csp-and-x-xss-protection">CSP and X-XSS-Protection</h4>
-<p>Content Security Policy (CSP) protects your web server against certain types of attacks, including <a href="https://www.acunetix.com/websitesecurity/cross-site-scripting/" target="_blank" rel="noopener noreffer">Cross-site Scripting attacks</a>
- (XSS) and data injection attacks. You can implement CSP by adding the following example <em>Content-Security-Policy</em> header (note that the actual header should be configured to match your unique requirements):</p>
+</div><h4 id="csp-and-x-xss-protection" class="headerLink">
+    <a href="#csp-and-x-xss-protection" class="header-mark"></a>CSP and X-XSS-Protection</h4><p>Content Security Policy (CSP) protects your web server against certain types of attacks, including <a href="https://www.acunetix.com/websitesecurity/cross-site-scripting/" target="_blank" rel="noopener noreferrer">Cross-site Scripting attacks</a> (XSS) and data injection attacks. You can implement CSP by adding the following example <em>Content-Security-Policy</em> header (note that the actual header should be configured to match your unique requirements):</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -540,10 +593,8 @@ When asked if you want to redirect HTTP traffic automatically to HTTPS, choose t
 <pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">add_header X-XSS-Protection &#34;1; mode=block&#34;;
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h3 id="step-8-configure-ssl-and-cipher-suites">Step 8. Configure SSL and Cipher suites</h3>
-<p>The default configuration of nginx allows you to use insecure old versions of the TLS protocol (according to the <a href="http://nginx.org/en/docs/http/configuring_https_servers.html" target="_blank" rel="noopener noreffer">official documentation</a>
-: ssl_protocols TLSv1 TLSv1.1 TLSv1.2). This may lead to attacks such as the <a href="https://www.acunetix.com/blog/web-security-zone/what-is-beast-attack/" target="_blank" rel="noopener noreffer">BEAST attack</a>
-. Therefore, we recommend that you do not use old TLS protocols and change your configuration to support only newer, secure TLS versions.</p>
+</div><h3 id="step-8-configure-ssl-and-cipher-suites" class="headerLink">
+    <a href="#step-8-configure-ssl-and-cipher-suites" class="header-mark"></a>Step 8. Configure SSL and Cipher suites</h3><p>The default configuration of nginx allows you to use insecure old versions of the TLS protocol (according to the <a href="http://nginx.org/en/docs/http/configuring_https_servers.html" target="_blank" rel="noopener noreferrer">official documentation</a>: ssl_protocols TLSv1 TLSv1.1 TLSv1.2). This may lead to attacks such as the <a href="https://www.acunetix.com/blog/web-security-zone/what-is-beast-attack/" target="_blank" rel="noopener noreferrer">BEAST attack</a>. Therefore, we recommend that you do not use old TLS protocols and change your configuration to support only newer, secure TLS versions.</p>
 <p>To do this, add the following directive in the <em>server</em> section of the nginx configuration file:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -553,9 +604,7 @@ When asked if you want to redirect HTTP traffic automatically to HTTPS, choose t
 <pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">ssl_protocols TLSv1.2 TLSv1.3;
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>Additionally, you should specify cipher suites to make sure that no vulnerable suites are supported. To select the best cipher suites, <a href="https://www.acunetix.com/blog/articles/tls-ssl-cipher-hardening/" target="_blank" rel="noopener noreffer">read our article on TLS cipher hardening</a>
- and add a <em>ssl_ciphers</em> directive to the <em>server</em> section to select the ciphers (as suggested in the <a href="https://www.acunetix.com/blog/articles/tls-ssl-cipher-hardening/" target="_blank" rel="noopener noreffer">article on cipher hardening</a>
-). We also recommend that you add the following directive to the <em>server</em> section:</p>
+</div><p>Additionally, you should specify cipher suites to make sure that no vulnerable suites are supported. To select the best cipher suites, <a href="https://www.acunetix.com/blog/articles/tls-ssl-cipher-hardening/" target="_blank" rel="noopener noreferrer">read our article on TLS cipher hardening</a> and add a <em>ssl_ciphers</em> directive to the <em>server</em> section to select the ciphers (as suggested in the <a href="https://www.acunetix.com/blog/articles/tls-ssl-cipher-hardening/" target="_blank" rel="noopener noreferrer">article on cipher hardening</a>). We also recommend that you add the following directive to the <em>server</em> section:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -565,55 +614,55 @@ When asked if you want to redirect HTTP traffic automatically to HTTPS, choose t
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>This directive will let the decision on which ciphers to use be made server-side not client-side.</p>
-<h3 id="step-9-update-your-server-regularly">Step 9. Update your server regularly</h3>
-<p>As with any other software, we recommend that you always update your nginx server to the latest stable version. New updates often contain fixes for vulnerabilities identified in previous versions, such as the <a href="https://www.acunetix.com/websitesecurity/directory-traversal/" target="_blank" rel="noopener noreffer">directory traversal vulnerability</a>
- (<a href="https://www.cvedetails.com/cve/CVE-2009-3898/" target="_blank" rel="noopener noreffer">CVE-2009-3898</a>
-) that existed in nginx versions prior to 0.7.63, and 0.8.x before 0.8.17. Updates also frequently include new security features and improvements. On the nginx.org site, you can <a href="http://nginx.org/en/security_advisories.html" target="_blank" rel="noopener noreffer">find security advisories in a dedicated section</a>
- and news about the latest updates on the main page.</p>
-<h3 id="step-10-check-your-configuration-with-gixy">Step 10. Check your configuration with Gixy</h3>
-<p>Gixy is an open-source tool that lets you check your nginx web server for typical misconfigurations. After you prepare your nginx configuration, it is always a good idea to check it with Gixy. <a href="https://github.com/yandex/gixy" target="_blank" rel="noopener noreffer">You can find Gixy here</a>
-.</p>
-<h3 id="step-11-you-dont-have-to-do-it-manually">Step 11. You don&rsquo;t have to do it manually</h3>
-<p>If you don’t want to configure nginx manually, you can use a free online visual configuration tool made available by DigitalOcean. <a href="https://www.digitalocean.com/community/tools/nginx" target="_blank" rel="noopener noreffer">You can find this tool here</a>
-.</p>
-</div><div class="post-footer" id="post-footer">
+<h3 id="step-9-update-your-server-regularly" class="headerLink">
+    <a href="#step-9-update-your-server-regularly" class="header-mark"></a>Step 9. Update your server regularly</h3><p>As with any other software, we recommend that you always update your nginx server to the latest stable version. New updates often contain fixes for vulnerabilities identified in previous versions, such as the <a href="https://www.acunetix.com/websitesecurity/directory-traversal/" target="_blank" rel="noopener noreferrer">directory traversal vulnerability</a> (<a href="https://www.cvedetails.com/cve/CVE-2009-3898/" target="_blank" rel="noopener noreferrer">CVE-2009-3898</a>) that existed in nginx versions prior to 0.7.63, and 0.8.x before 0.8.17. Updates also frequently include new security features and improvements. On the nginx.org site, you can <a href="http://nginx.org/en/security_advisories.html" target="_blank" rel="noopener noreferrer">find security advisories in a dedicated section</a> and news about the latest updates on the main page.</p>
+<h3 id="step-10-check-your-configuration-with-gixy" class="headerLink">
+    <a href="#step-10-check-your-configuration-with-gixy" class="header-mark"></a>Step 10. Check your configuration with Gixy</h3><p>Gixy is an open-source tool that lets you check your nginx web server for typical misconfigurations. After you prepare your nginx configuration, it is always a good idea to check it with Gixy. <a href="https://github.com/yandex/gixy" target="_blank" rel="noopener noreferrer">You can find Gixy here</a>.</p>
+<h3 id="step-11-you-dont-have-to-do-it-manually" class="headerLink">
+    <a href="#step-11-you-dont-have-to-do-it-manually" class="header-mark"></a>Step 11. You don&rsquo;t have to do it manually</h3><p>If you don’t want to configure nginx manually, you can use a free online visual configuration tool made available by DigitalOcean. <a href="https://www.digitalocean.com/community/tools/nginx" target="_blank" rel="noopener noreferrer">You can find this tool here</a>.</p>
+</div>
+
+        <div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
                 <span>Updated on 2022-10-31</span>
-            </div></div>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
         <div class="post-info-line">
-            <div class="post-info-md"><span>
-                            <a class="link-to-markdown" href="/nginx-reverse-proxy/index.md" target="_blank">Read Markdown</a>
-                        </span></div>
+            <div class="post-info-md"><span><a class="link-to-mardown" href=/nginx-reverse-proxy/index.md target="_blank" rel="noopener noreferrer">Read markdown</a>
+                    </span></div>
             <div class="post-info-share">
-                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="https://example.com/nginx-reverse-proxy/" data-title="Nginx Reverse Proxy" data-via="Omgzilla" data-hashtags="Web server,Reverse-proxy,Proxy,Nginx"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on WhatsApp" data-sharer="whatsapp" data-url="https://example.com/nginx-reverse-proxy/" data-title="Nginx Reverse Proxy" data-web><i class="fab fa-whatsapp fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Reddit" data-sharer="reddit" data-url="https://example.com/nginx-reverse-proxy/"><i class="fab fa-reddit fa-fw" aria-hidden="true"></i></a></span>
+                <span><a href="#" title="Share on Twitter" data-sharer="twitter" data-url="http://localhost:1313/nginx-reverse-proxy/" data-title="Nginx Reverse Proxy" data-via="Omgzilla" data-hashtags="Web server,Reverse-proxy,Proxy,Nginx"><i class="fab fa-twitter fa-fw"></i></a><a href="#" title="Share on WhatsApp" data-sharer="whatsapp" data-url="http://localhost:1313/nginx-reverse-proxy/" data-title="Nginx Reverse Proxy" data-web><i class="fab fa-whatsapp fa-fw"></i></a><a href="#" title="Share on Reddit" data-sharer="reddit" data-url="http://localhost:1313/nginx-reverse-proxy/"><i class="fab fa-reddit fa-fw"></i></a></span>
             </div>
         </div>
     </div>
 
     <div class="post-info-more">
-        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/web-server/">Web server</a>,&nbsp;<a href="/tags/reverse-proxy/">Reverse-proxy</a>,&nbsp;<a href="/tags/proxy/">Proxy</a>,&nbsp;<a href="/tags/nginx/">Nginx</a></section>
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/web-server/">Web Server</a>,&nbsp;<a href="/tags/reverse-proxy/">Reverse-Proxy</a>,&nbsp;<a href="/tags/proxy/">Proxy</a>,&nbsp;<a href="/tags/nginx/">Nginx</a></section>
         <section>
             <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
         </section>
     </div>
 
-    <div class="post-nav"><a href="/docker-compose/" class="prev" rel="prev" title="Docker Compose"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>Docker Compose</a>
-            <a href="/proxmox-cs/" class="next" rel="next" title="Proxmox">Proxmox<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+    <div class="post-nav"><a href="/docker-compose/" class="prev" rel="prev" title="Docker Compose"><i class="fas fa-angle-left fa-fw"></i>Docker Compose</a>
+            <a href="/proxmox-cs/" class="next" rel="next" title="Proxmox">Proxmox<i class="fas fa-angle-right fa-fw"></i></a></div>
 </div>
-<div id="comments"><div id="telegram-comments" class="comment"></div><noscript>
-                Please enable JavaScript to view the comments powered by <a href="https://comments.app/">Telegram Comments</a>.
-            </noscript></div></article></div>
-            </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2022 - 2023</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">Ohmygodzilla</a></span></div>
-        </div>
-    </footer></div>
+</article></div>
+        </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2022 - 2024</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank" rel="noopener noreferrer">Ohmygodzilla</a></span></div>
+            <div class="footer-line"></div>
+            <div class="footer-line">
+            </div>
+        </div></footer></div>
 
-        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
-                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
-            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
-                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
-            </a>
-        </div><script type="text/javascript" src="https://comments.app/js/widget.js?2" defer data-comments-app-website="RepNDYBi" data-limit="5" data-color="1" data-colorful="1" data-dislikes="1" data-outlined="1"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.38.1/dist/autocomplete.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lunr@2.3.9/lunr.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.1/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.1/sharer.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":50},"comment":{},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"lunr"}};</script><script type="text/javascript" src="/js/theme.min.bda2dab9892fe30fcc50442f1a5bf10cc3ac7cf033f10c6948d09b9fb3f6323296f75a30c63044dbb71ab54bbe18e5b6a7db3074c12aa00bf2122c6ceecdea60.js" integrity="sha512-vaLauYkv4w/MUEQvGlvxDMOsfPAz8QxpSNCbn7P2MjKW91owxjBE27catUu&#43;GOW2p9swdMEqoAvyEixs7s3qYA=="></script></body>
+    <div id="fixed-buttons"><a href="#back-to-top" id="back-to-top-button" class="fixed-button" title="Back to Top">
+            <i class="fas fa-arrow-up fa-fw"></i>
+        </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+            <i class="fas fa-comment fa-fw"></i>
+        </a>
+    </div><div class="assets"><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":50},"comment":{},"search":{"distance":null,"findAllMatches":null,"fuseIndexURL":"/index.json","highlightTag":"em","ignoreFieldNorm":null,"ignoreLocation":null,"isCaseSensitive":null,"location":null,"maxResultLength":10,"minMatchCharLength":null,"noResultsFound":"No results found","snippetLength":30,"threshold":null,"type":"fuse","useExtendedSearch":null},"sharerjs":true};</script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/sharer/sharer.min.js"></script><script type="text/javascript" src="/js/theme.min.js" defer></script></div>
+</body>
+
 </html>

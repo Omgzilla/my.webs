@@ -1,67 +1,62 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>Cheat-sheet - Tag - Omgz</title>
-        <link>https://example.com/tags/cheat-sheet/</link>
-        <description>Cheat-sheet - Tag - Omgz</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Mon, 31 Oct 2022 13:55:33 &#43;0100</lastBuildDate><atom:link href="https://example.com/tags/cheat-sheet/" rel="self" type="application/rss+xml" /><item>
+        <title>Cheat-Sheet - Tag - Omgz</title>
+        <link>http://localhost:1313/tags/cheat-sheet/</link>
+        <description>Cheat-Sheet - Tag - Omgz</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Mon, 31 Oct 2022 13:55:33 &#43;0100</lastBuildDate><atom:link href="http://localhost:1313/tags/cheat-sheet/" rel="self" type="application/rss+xml" /><item>
     <title>Arch Maintenance Commands</title>
-    <link>https://example.com/arch-maintenance-commands/</link>
-    <pubDate>Mon, 31 Oct 2022 13:55:33 &#43;0100</pubDate>
-    <author>Ohmygodzilla</author>
-    <guid>https://example.com/arch-maintenance-commands/</guid>
+    <link>http://localhost:1313/arch-maintenance-commands/</link>
+    <pubDate>Mon, 31 Oct 2022 13:55:33 &#43;0100</pubDate><author>
+        <name>Ohmygodzilla</name>
+    </author><guid>http://localhost:1313/arch-maintenance-commands/</guid>
     <description><![CDATA[<div class="featured-image">
-                <img src="/images/arch-pacman.png" referrerpolicy="no-referrer">
+                <img src="images/arch-pacman.png" referrerpolicy="no-referrer">
             </div>Arch maintenance commands Check systemd failed services 1 systemctl --failed Log files check 1 sudo journalctl -p 3 -xb Clean the journal 1 sudo journalctl --vacuum-time=2weeks Pacman Update 1 sudo pacman -Syu Delete Pacman Cache 1 sudo pacman -Scc Check Orphan packages 1 pacman -Qtdq Remove Orphan packages 1 sudo pacman -Rns $(pacman -Qtdq) Paru Update 1 paru Delete Paru Cache 1 paru -Scc Delete unwanted dependencies 1 paru -Yc Yay Update 1 yay Delete Yay Cache 1 yay -Scc Delete unwanted dependencies 1 yay -Yc Clean the Cache 1 rm -rf .]]></description>
-</item>
-<item>
+</item><item>
     <title>Arch Install</title>
-    <link>https://example.com/arch-install/</link>
-    <pubDate>Thu, 06 Oct 2022 14:14:36 &#43;0200</pubDate>
-    <author>Ohmygodzilla</author>
-    <guid>https://example.com/arch-install/</guid>
+    <link>http://localhost:1313/arch-install/</link>
+    <pubDate>Thu, 06 Oct 2022 14:14:36 &#43;0200</pubDate><author>
+        <name>Ohmygodzilla</name>
+    </author><guid>http://localhost:1313/arch-install/</guid>
     <description><![CDATA[<div class="featured-image">
-                <img src="/images/arch-linux.png" referrerpolicy="no-referrer">
+                <img src="images/arch-linux.png" referrerpolicy="no-referrer">
             </div>This is my guide on how to install Arch Linux!
 Something&rsquo;s missing? here is Arch Linux Wiki installation guide.
 Base Installation Step 1. Load/Update Start by load keyboard layout and update repo mirrors
 1.1 Load keyboard layout
 1 2 ls /usr/share/kbd/keymaps/**/*.map.gz #list all layouts loadkeys sv-latin1 1.2 Update mirrorlist according to country
-1 reflector -c Sweden -a 12 --sort rate --save /etc/pacman.d/mirrorlist Step 2. Format &amp; Partion disk/s 2.1 List disks]]></description>
-</item>
-<item>
+1 reflector -c Sweden -a 12 --sort rate --save /etc/pacman.d/mirrorlist Step 2. Format &amp; Partion disk/s2.1 List disks]]></description>
+</item><item>
     <title>Proxmox</title>
-    <link>https://example.com/proxmox-cs/</link>
-    <pubDate>Thu, 06 Oct 2022 13:39:59 &#43;0200</pubDate>
-    <author>Ohmygodzilla</author>
-    <guid>https://example.com/proxmox-cs/</guid>
+    <link>http://localhost:1313/proxmox-cs/</link>
+    <pubDate>Thu, 06 Oct 2022 13:39:59 &#43;0200</pubDate><author>
+        <name>Ohmygodzilla</name>
+    </author><guid>http://localhost:1313/proxmox-cs/</guid>
     <description><![CDATA[<div class="featured-image">
-                <img src="/images/proxmox.png" referrerpolicy="no-referrer">
+                <img src="images/proxmox.png" referrerpolicy="no-referrer">
             </div>Increase disk size in the GUI or with the following command
-Resize Disk Increase disk size Increase disk size in the GUI or with the following command
+Resize Disk Increase disk sizeIncrease disk size in the GUI or with the following command
 1 qm resize 100 virtio0 +5G Decrease disk size Before decreasing disk sizes in Proxmox, you should take a backup!
 Convert qcow2 to raw 1 qemu-img convert vm-100.qcow2 vm-100.raw Shrink the disk 1 qemu-img resize -f raw vm-100.raw 10G Convert back to qcow2# 1 qemu-img convert -p -O qcow2 vm-100.]]></description>
-</item>
-<item>
+</item><item>
     <title>Docker Compose</title>
-    <link>https://example.com/docker-compose/</link>
-    <pubDate>Thu, 06 Oct 2022 02:31:23 &#43;0200</pubDate>
-    <author>Ohmygodzilla</author>
-    <guid>https://example.com/docker-compose/</guid>
+    <link>http://localhost:1313/docker-compose/</link>
+    <pubDate>Thu, 06 Oct 2022 02:31:23 &#43;0200</pubDate><author>
+        <name>Ohmygodzilla</name>
+    </author><guid>http://localhost:1313/docker-compose/</guid>
     <description><![CDATA[<div class="featured-image">
-                <img src="/images/docker-compose.webp" referrerpolicy="no-referrer">
-            </div>Docker-Compose <i class="fab fa-docker" aria-hidden="true"></i>&nbsp;Networking By default Docker-Compose will create a new network for the given compose file. You can change the behavior by defining custom networks in your compose file.
-Create and assign custom network Example:
-1 2 3 4 5 6 7 networks: custom-network: services: app: networks: - custom-network Use existing networks If you want to use an existing Docker network for your compose files, you can add the external: true parameter in your compose file Example:]]></description>
-</item>
-<item>
+                <img src="images/docker-compose.webp" referrerpolicy="no-referrer">
+            </div>Docker-Compose <i class="fab fa-docker"></i>&nbsp;NetworkingBy default Docker-Compose will create a new network for the given compose file. You can change the behavior by defining custom networks in your compose file.
+Create and assign custom networkExample:
+1 2 3 4 5 6 7 networks: custom-network: services: app: networks: - custom-network Use existing networksIf you want to use an existing Docker network for your compose files, you can add the external: true parameter in your compose file Example:]]></description>
+</item><item>
     <title>Docker Cli</title>
-    <link>https://example.com/docker-cli/</link>
-    <pubDate>Thu, 06 Oct 2022 02:25:34 &#43;0200</pubDate>
-    <author>Ohmygodzilla</author>
-    <guid>https://example.com/docker-cli/</guid>
+    <link>http://localhost:1313/docker-cli/</link>
+    <pubDate>Thu, 06 Oct 2022 02:25:34 &#43;0200</pubDate><author>
+        <name>Ohmygodzilla</name>
+    </author><guid>http://localhost:1313/docker-cli/</guid>
     <description><![CDATA[<div class="featured-image">
-                <img src="/images/docker-cli.png" referrerpolicy="no-referrer">
+                <img src="images/docker-cli.png" referrerpolicy="no-referrer">
             </div><p>Docker is a set of platform as a service products that use OS-Level virtualization to deliver software in packages called containers. Containers are isolated from one another and bundle their own software, libraries, and configuration files; they can communicate with each other through well-defined channels. Because all of the containers share the services of a single operating system kernel, they use fewer resources than virtual machines.</p>]]></description>
-</item>
-</channel>
+</item></channel>
 </rss>

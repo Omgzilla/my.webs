@@ -1,20 +1,14 @@
 baseURL = "https://omgz.me"
 
 # theme
-theme = "LoveIt"
-# themes directory
-#themesDir = "themes/LoveIt"
+theme = "DoIt"
 
 # website title
 title = "Omgz"
 
-# determines default content language ["en", "zh-cn", "fr", "pl", ...]
 defaultContentLanguage = "en"
-# language code ["en", "zh-CN", "fr", "pl", ...]
 languageCode = "en"
-# language name ["English", "简体中文", "Français", "Polski", ...]
 languageName = "English"
-# whether to include Chinese/Japanese/Korean
 hasCJKLanguage = false
 
 # default amount of posts in each pages
