@@ -5,20 +5,20 @@
         <description>Documentation - Category - Omgz</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><atom:link href="http://localhost:1313/categories/documentation/" rel="self" type="application/rss+xml" /><item>
     <title>[Workshop] Learn how to integrate your charm with COS-Lite all the way</title>
-    <link>http://localhost:1313/cos-lite-workshop/</link>
+    <link>http://localhost:1313/2023/07/cos-lite-workshop/</link>
     <pubDate>Mon, 03 Jul 2023 13:05:02 &#43;0200</pubDate><author>
         <name>Ohmygodzilla</name>
-    </author><guid>http://localhost:1313/cos-lite-workshop/</guid>
+    </author><guid>http://localhost:1313/2023/07/cos-lite-workshop/</guid>
     <description><![CDATA[<div class="featured-image">
                 <img src="images/cos-lite-grafana.png" referrerpolicy="no-referrer">
             </div>This is a summary of what we talked about on the workshop Learn how to integrate your charm with COS-lite all the way How to setup a COS-lite environment and start tinkering with itNotice that this is an example setup to be able to start tinkering with COS-lite Creating a bridge for COS-liteWe started of by creating a bridge in netplan to separate the network for COS-lite.
 Edit /etc/netplan/network-configuration-file.yaml]]></description>
 </item><item>
     <title>Arch Install</title>
-    <link>http://localhost:1313/arch-install/</link>
+    <link>http://localhost:1313/2022/10/arch-install/</link>
     <pubDate>Thu, 06 Oct 2022 14:14:36 &#43;0200</pubDate><author>
         <name>Ohmygodzilla</name>
-    </author><guid>http://localhost:1313/arch-install/</guid>
+    </author><guid>http://localhost:1313/2022/10/arch-install/</guid>
     <description><![CDATA[<div class="featured-image">
                 <img src="images/arch-linux.png" referrerpolicy="no-referrer">
             </div>This is my guide on how to install Arch Linux!
@@ -29,10 +29,10 @@ Base Installation Step 1. Load/Update Start by load keyboard layout and update r
 1 reflector -c Sweden -a 12 --sort rate --save /etc/pacman.d/mirrorlist Step 2. Format &amp; Partion disk/s2.1 List disks]]></description>
 </item><item>
     <title>Nginx Reverse Proxy</title>
-    <link>http://localhost:1313/nginx-reverse-proxy/</link>
+    <link>http://localhost:1313/2022/10/nginx-reverse-proxy/</link>
     <pubDate>Thu, 06 Oct 2022 03:27:30 &#43;0200</pubDate><author>
         <name>Ohmygodzilla</name>
-    </author><guid>http://localhost:1313/nginx-reverse-proxy/</guid>
+    </author><guid>http://localhost:1313/2022/10/nginx-reverse-proxy/</guid>
     <description><![CDATA[<div class="featured-image">
                 <img src="images/nginx-reverse-proxy.webp" referrerpolicy="no-referrer">
             </div>Nginx Reverse ProxyThis is a guide on how to install nginx as a reverse proxy.
@@ -43,10 +43,10 @@ Install nginxArch
 1 2 3 4 5 6 7 8 9 server { listen 80; listen [::]:80; access_log /var/log/nginx/default-access.]]></description>
 </item><item>
     <title>Mariadb Setup</title>
-    <link>http://localhost:1313/mariadb-setup/</link>
+    <link>http://localhost:1313/2022/10/mariadb-setup/</link>
     <pubDate>Thu, 06 Oct 2022 00:59:35 &#43;0200</pubDate><author>
         <name>Ohmygodzilla</name>
-    </author><guid>http://localhost:1313/mariadb-setup/</guid>
+    </author><guid>http://localhost:1313/2022/10/mariadb-setup/</guid>
     <description><![CDATA[<div class="featured-image">
                 <img src="images/mariadb-setup.jpg" referrerpolicy="no-referrer">
             </div>MariaDB Cheat-Sheet Install MariaDB on Ubuntu 20.04 LTS 1 2 3 sudo apt update sudo apt install mariadb-server sudo mysql_secure_installation Access Database from outsideOpen /etc/mysql/mariadb.conf.d/50-server.cnf and change the bind-address to:

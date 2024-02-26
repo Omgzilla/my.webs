@@ -5,10 +5,10 @@
         <description>Proxy - Tag - Omgz</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 06 Oct 2022 03:27:30 &#43;0200</lastBuildDate><atom:link href="http://localhost:1313/tags/proxy/" rel="self" type="application/rss+xml" /><item>
     <title>Nginx Reverse Proxy</title>
-    <link>http://localhost:1313/nginx-reverse-proxy/</link>
+    <link>http://localhost:1313/2022/10/nginx-reverse-proxy/</link>
     <pubDate>Thu, 06 Oct 2022 03:27:30 &#43;0200</pubDate><author>
         <name>Ohmygodzilla</name>
-    </author><guid>http://localhost:1313/nginx-reverse-proxy/</guid>
+    </author><guid>http://localhost:1313/2022/10/nginx-reverse-proxy/</guid>
     <description><![CDATA[<div class="featured-image">
                 <img src="images/nginx-reverse-proxy.webp" referrerpolicy="no-referrer">
             </div>Nginx Reverse ProxyThis is a guide on how to install nginx as a reverse proxy.

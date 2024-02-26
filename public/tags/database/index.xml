@@ -5,10 +5,10 @@
         <description>Database - Tag - Omgz</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 06 Oct 2022 00:59:35 &#43;0200</lastBuildDate><atom:link href="http://localhost:1313/tags/database/" rel="self" type="application/rss+xml" /><item>
     <title>Mariadb Setup</title>
-    <link>http://localhost:1313/mariadb-setup/</link>
+    <link>http://localhost:1313/2022/10/mariadb-setup/</link>
     <pubDate>Thu, 06 Oct 2022 00:59:35 &#43;0200</pubDate><author>
         <name>Ohmygodzilla</name>
-    </author><guid>http://localhost:1313/mariadb-setup/</guid>
+    </author><guid>http://localhost:1313/2022/10/mariadb-setup/</guid>
     <description><![CDATA[<div class="featured-image">
                 <img src="images/mariadb-setup.jpg" referrerpolicy="no-referrer">
             </div>MariaDB Cheat-Sheet Install MariaDB on Ubuntu 20.04 LTS 1 2 3 sudo apt update sudo apt install mariadb-server sudo mysql_secure_installation Access Database from outsideOpen /etc/mysql/mariadb.conf.d/50-server.cnf and change the bind-address to:

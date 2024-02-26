@@ -5,10 +5,10 @@
         <description>Virtual Machine - Tag - Omgz</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 06 Oct 2022 13:39:59 &#43;0200</lastBuildDate><atom:link href="http://localhost:1313/tags/virtual-machine/" rel="self" type="application/rss+xml" /><item>
     <title>Proxmox</title>
-    <link>http://localhost:1313/proxmox-cs/</link>
+    <link>http://localhost:1313/2022/10/proxmox-cs/</link>
     <pubDate>Thu, 06 Oct 2022 13:39:59 &#43;0200</pubDate><author>
         <name>Ohmygodzilla</name>
-    </author><guid>http://localhost:1313/proxmox-cs/</guid>
+    </author><guid>http://localhost:1313/2022/10/proxmox-cs/</guid>
     <description><![CDATA[<div class="featured-image">
                 <img src="images/proxmox.png" referrerpolicy="no-referrer">
             </div>Increase disk size in the GUI or with the following command

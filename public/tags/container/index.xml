@@ -5,10 +5,10 @@
         <description>Container - Tag - Omgz</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 06 Oct 2022 13:39:59 &#43;0200</lastBuildDate><atom:link href="http://localhost:1313/tags/container/" rel="self" type="application/rss+xml" /><item>
     <title>Proxmox</title>
-    <link>http://localhost:1313/proxmox-cs/</link>
+    <link>http://localhost:1313/2022/10/proxmox-cs/</link>
     <pubDate>Thu, 06 Oct 2022 13:39:59 &#43;0200</pubDate><author>
         <name>Ohmygodzilla</name>
-    </author><guid>http://localhost:1313/proxmox-cs/</guid>
+    </author><guid>http://localhost:1313/2022/10/proxmox-cs/</guid>
     <description><![CDATA[<div class="featured-image">
                 <img src="images/proxmox.png" referrerpolicy="no-referrer">
             </div>Increase disk size in the GUI or with the following command
@@ -17,10 +17,10 @@ Resize Disk Increase disk sizeIncrease disk size in the GUI or with the followin
 Convert qcow2 to raw 1 qemu-img convert vm-100.qcow2 vm-100.raw Shrink the disk 1 qemu-img resize -f raw vm-100.raw 10G Convert back to qcow2# 1 qemu-img convert -p -O qcow2 vm-100.]]></description>
 </item><item>
     <title>Docker Cli</title>
-    <link>http://localhost:1313/docker-cli/</link>
+    <link>http://localhost:1313/2022/10/docker-cli/</link>
     <pubDate>Thu, 06 Oct 2022 02:25:34 &#43;0200</pubDate><author>
         <name>Ohmygodzilla</name>
-    </author><guid>http://localhost:1313/docker-cli/</guid>
+    </author><guid>http://localhost:1313/2022/10/docker-cli/</guid>
     <description><![CDATA[<div class="featured-image">
                 <img src="images/docker-cli.png" referrerpolicy="no-referrer">
             </div><p>Docker is a set of platform as a service products that use OS-Level virtualization to deliver software in packages called containers. Containers are isolated from one another and bundle their own software, libraries, and configuration files; they can communicate with each other through well-defined channels. Because all of the containers share the services of a single operating system kernel, they use fewer resources than virtual machines.</p>]]></description>

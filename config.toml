@@ -76,7 +76,7 @@ enableEmoji = true
   # website description for RSS, SEO, Open Graph and Twitter Cards
   description = ""
   # website images for Open Graph and Twitter Cards
-  images = ["/images/omgz.me-logo.png"]
+  images = ["/images/ohmygodzilla-logo.png"]
   # progressive web apps feature enable/disbale
   enablePWA = true
 
@@ -89,11 +89,11 @@ enableEmoji = true
     # Header title config
     [params.header.title]
       # URL of the LOGO
-      logo = "/images/ohmygodzilla-logo.png"
+      logo = "/images/omgz-me-logo.png"
       # title name
       name = "Ohmygodzilla"
       # you can add extra information before the name (HTML format is supported), such as icons
-      pre = "<i class='far fa-kiss-wink-heart fa-fw' aria-hidden='true'></i>"
+      #pre = "<i class='far fa-kiss-wink-heart fa-fw' aria-hidden='true'></i>"
       # you can add extra information after the name (HTML format is supported), such as icons
       #post = "illa"
       # whether to use typeit animation for title name

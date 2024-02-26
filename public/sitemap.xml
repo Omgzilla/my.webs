@@ -2,31 +2,32 @@
     xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
     xmlns:xhtml="http://www.w3.org/1999/xhtml"
     ><url>
-            <loc>http://localhost:1313/cos-lite-workshop/</loc><lastmod>2023-07-04T13:01:34&#43;02:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>http://localhost:1313/2023/07/cos-lite-workshop/</loc><lastmod>2023-07-04T13:01:34&#43;02:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>http://localhost:1313/categories/</loc><lastmod>2023-07-04T13:01:34&#43;02:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>http://localhost:1313/tags/cos-lite/</loc><lastmod>2023-07-04T13:01:34&#43;02:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>http://localhost:1313/tags/documentation/</loc><lastmod>2023-07-04T13:01:34&#43;02:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>http://localhost:1313/tags/guide/</loc><lastmod>2023-07-04T13:01:34&#43;02:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>http://localhost:1313/</loc><lastmod>2023-07-04T13:01:34&#43;02:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>http://localhost:1313/</loc><lastmod>2024-02-26T13:22:32&#43;01:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>http://localhost:1313/posts/</loc><lastmod>2023-07-04T13:01:34&#43;02:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>http://localhost:1313/tags/</loc><lastmod>2023-07-04T13:01:34&#43;02:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>http://localhost:1313/arch-maintenance-commands/</loc><lastmod>2022-10-31T14:06:29&#43;01:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>http://localhost:1313/2022/10/arch-maintenance-commands/</loc><lastmod>2022-10-31T14:06:29&#43;01:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>http://localhost:1313/tags/cheat-sheet/</loc><lastmod>2022-10-31T14:06:29&#43;01:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>http://localhost:1313/tags/linux/</loc><lastmod>2022-10-31T14:06:29&#43;01:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>http://localhost:1313/arch-install/</loc><lastmod>2022-10-31T14:06:29&#43;01:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>http://localhost:1313/2022/10/arch-install/</loc><lastmod>2022-10-31T14:06:29&#43;01:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>http://localhost:1313/tags/container/</loc><lastmod>2022-10-31T14:06:29&#43;01:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>http://localhost:1313/proxmox-cs/</loc><lastmod>2022-10-31T14:06:29&#43;01:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>http://localhost:1313/2022/10/proxmox-cs/</loc><lastmod>2022-10-31T14:06:29&#43;01:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>http://localhost:1313/tags/virtual-machine/</loc><lastmod>2022-10-31T14:06:29&#43;01:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>http://localhost:1313/tags/nginx/</loc><lastmod>2022-10-31T14:06:29&#43;01:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>http://localhost:1313/nginx-reverse-proxy/</loc><lastmod>2022-10-31T14:06:29&#43;01:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>http://localhost:1313/2022/10/nginx-reverse-proxy/</loc><lastmod>2022-10-31T14:06:29&#43;01:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>http://localhost:1313/tags/proxy/</loc><lastmod>2022-10-31T14:06:29&#43;01:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>http://localhost:1313/tags/reverse-proxy/</loc><lastmod>2022-10-31T14:06:29&#43;01:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>http://localhost:1313/tags/web-server/</loc><lastmod>2022-10-31T14:06:29&#43;01:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>http://localhost:1313/tags/docker/</loc><lastmod>2022-10-31T14:06:29&#43;01:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>http://localhost:1313/docker-compose/</loc><lastmod>2022-10-31T14:06:29&#43;01:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>http://localhost:1313/docker-cli/</loc><lastmod>2022-10-31T14:06:29&#43;01:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>http://localhost:1313/2022/10/docker-compose/</loc><lastmod>2022-10-31T14:06:29&#43;01:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>http://localhost:1313/2022/10/docker-cli/</loc><lastmod>2022-10-31T14:06:29&#43;01:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>http://localhost:1313/tags/database/</loc><lastmod>2022-10-31T14:06:29&#43;01:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>http://localhost:1313/mariadb-setup/</loc><lastmod>2022-10-31T14:06:29&#43;01:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>http://localhost:1313/2022/10/mariadb-setup/</loc><lastmod>2022-10-31T14:06:29&#43;01:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>http://localhost:1313/tags/sql/</loc><lastmod>2022-10-31T14:06:29&#43;01:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>http://localhost:1313/categories/cheat-sheet/</loc><lastmod>2022-10-06T02:42:12&#43;02:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>http://localhost:1313/categories/documentation/</loc><lastmod>2022-10-06T02:12:21&#43;02:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url></urlset>
+            <loc>http://localhost:1313/categories/documentation/</loc><lastmod>2022-10-06T02:12:21&#43;02:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>http://localhost:1313/offline/</loc><lastmod>2024-02-26T13:22:32&#43;01:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url></urlset>
